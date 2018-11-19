@@ -1,0 +1,80 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Concordia Univeristy",
+        "country": "Canada"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.578489,
+          45.495257
+        ],
+        "type": "Point"
+      },
+      "id": "288f82e35c1e5fc258b3e225701c1b75"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Asia-pasific University",
+        "country": "Malaysia"
+      },
+      "geometry": {
+        "coordinates": [
+          101.70049,
+          3.055227
+        ],
+        "type": "Point"
+      },
+      "id": "87448e7d394621accbc1901e031dd285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cape Peninsula University of Technology",
+        "country": "South-Africa"
+      },
+      "geometry": {
+        "coordinates": [
+          18.431001,
+          -33.931333
+        ],
+        "type": "Point"
+      },
+      "id": "a9b7f5457ce12ba59fa9aa852ffb4b6e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Manipal Institut of Technology",
+        "country": "India"
+      },
+      "geometry": {
+        "coordinates": [
+          74.785615,
+          13.355412
+        ],
+        "type": "Point"
+      },
+      "id": "b8a30ae299fc7beb00a56ee4884e044c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Straffordshire University",
+        "country": "United-Kingdom"
+      },
+      "geometry": {
+        "coordinates": [
+          -2.181097,
+          53.00987
+        ],
+        "type": "Point"
+      },
+      "id": "e69ef40f280bcea06311f23a314062e3"
+    }
+  ],
+  "type": "FeatureCollection"
+}

@@ -1,19 +1,46 @@
-<template>
+  <template>
   <div id="app">
-    <router-view/>
+      <Navbar/>
+      <MainMap/>
+
+      <b-container class="bv-example-row">
+          <b-row>
+              <b-button type="submit" variant="primary" @click="onSubmit">Test</b-button>
+          </b-row>
+      </b-container>
+
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+    //import Map from './components/HelloWorld.vue'
+    import MainMap from "./components/MainMap";
+    import Navbar from "./components/Navbar";
+
+    export default {
+      name: 'app',
+      components: {
+          Navbar,
+          MainMap
+      },
+
+        methods: {
+            onSubmit (evt) {
+                evt.preventDefault();
+                alert("coucou")
+            }
+        }
+
+    }
+
+
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+#map {
+    width: 100%;
+    height: 500px;
 }
 </style>
