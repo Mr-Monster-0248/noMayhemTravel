@@ -2,30 +2,25 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
-        <b-container class="bv-example-row">
-            <b-row>
-                <b-button type="submit" variant="primary" @click="onSubmit">Test</b-button>
-            </b-row>
-        </b-container>
+        <MainForm/>
     </div>
 </template>
 
 <script>
 import MainMap from "./components/MainMap";
 import Navbar from "./components/Navbar";
+import MainForm from "./components/MainForm";
 
 export default {
   name: "app",
   components: {
-    Navbar,
-    MainMap
+      MainForm,
+      Navbar,
+      MainMap
   },
 
   methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert("coucou");
-    }
+
   }
 };
 </script>
