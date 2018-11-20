@@ -11,28 +11,28 @@
 </template>
 
 <script>
-    import MainMap from "./components/MainMap";
-    import Navbar from "./components/Navbar";
+import MainMap from "./components/MainMap";
+import Navbar from "./components/Navbar";
 
-    export default {
-        name: 'app',
-        components: {
-            Navbar,
-            MainMap
-        },
+export default {
+  name: "app",
+  components: {
+    Navbar,
+    MainMap
+  },
 
-        methods: {
-            onSubmit(evt) {
-                evt.preventDefault();
-                alert("coucou")
-            }
-        }
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault();
+      alert("coucou");
     }
+  }
+};
 </script>
 
 <style>
-    #map {
-        width: 100%;
-        height: 500px;
-    }
+#map {
+  width: 100%;
+  height: 500px;
+}
 </style>

@@ -5,32 +5,37 @@
     ></mapbox>
 </template>
 <script>
-    /* eslint-disable no-console */
+/* eslint-disable no-console */
 
-    import Mapbox from 'mapbox-gl-vue'
-    import destination from "../assets/features"
+import Mapbox from "mapbox-gl-vue";
 
-    export default {
-        name: 'MainMap',
-        components: {Mapbox},
-        methods: {
-            createPopUp: function (map, place) {
-                var popup = new mapboxgl.Popup({closeOnClick: true})
-                    .setLngLat(place.geometry.coordinates)
-                    .setHTML('<h2>Destination: ' + place.properties.country + '!</h2>' +
-                        '<br/><p>' + place.properties.name + '</p>')
-                    .addTo(map);
-            },
-            mapClicked: function (map, e) {
-                var features = map.queryRenderedFeatures(e.point);
-                //var features = map.queryRenderedFeatures(e.point, { layers: ['destination'] });
-                console.log(JSON.stringify(features, null, 2));
-                console.log(features);
-                if (features.length) {
-                    var clickedPoint = features[0];
-                    this.createPopUp(map, clickedPoint);
-                }
-            }
-        }
+export default {
+  name: "MainMap",
+  components: { Mapbox },
+  methods: {
+    createPopUp: function(map, place) {
+      var popup = new mapboxgl.Popup({ closeOnClick: true })
+        .setLngLat(place.geometry.coordinates)
+        .setHTML(
+          "<h2>Destination: " +
+            place.properties.country +
+            "!</h2>" +
+            "<br/><p>" +
+            place.properties.name +
+            "</p>"
+        )
+        .addTo(map);
+    },
+    mapClicked: function(map, e) {
+      var features = map.queryRenderedFeatures(e.point);
+      //var features = map.queryRenderedFeatures(e.point, { layers: ['destination'] });
+      console.log(JSON.stringify(features, null, 2));
+      console.log(features);
+      if (features.length) {
+        var clickedPoint = features[0];
+        this.createPopUp(map, clickedPoint);
+      }
     }
+  }
+};
 </script>
