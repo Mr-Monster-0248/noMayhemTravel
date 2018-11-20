@@ -2,6 +2,7 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
+        <PopupCard/>
         <MainForm/>
     </div>
 </template>
@@ -10,13 +11,15 @@
 import MainMap from "./components/MainMap";
 import Navbar from "./components/Navbar";
 import MainForm from "./components/MainForm";
+import  PopupCard from "./components/PopupCard";
 
 export default {
   name: "app",
   components: {
       MainForm,
       Navbar,
-      MainMap
+      MainMap,
+      PopupCard
   },
 
   methods: {
