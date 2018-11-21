@@ -2,8 +2,9 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
-        <PopupCard/>
+        <popup-card/>
         <MainForm/>
+        <Footer/>
     </div>
 </template>
 
@@ -11,15 +12,17 @@
 import MainMap from "./components/MainMap";
 import Navbar from "./components/Navbar";
 import MainForm from "./components/MainForm";
-import  PopupCard from "./components/PopupCard";
+import Footer from "./components/Footer"
+import  PopupCard from "./components/PopupCard"
 
 export default {
   name: "app",
   components: {
+      PopupCard,
+      Footer,
       MainForm,
       Navbar,
-      MainMap,
-      PopupCard
+      MainMap
   },
 
   methods: {

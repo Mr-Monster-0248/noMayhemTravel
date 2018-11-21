@@ -42,11 +42,7 @@ export default {
         var clickedPoint = features[0];
         this.createPopUp(map, clickedPoint);
       }
-    },
-
-      test () {
-          alert("test");
-      }
+    }
   }
 };
 </script>
