@@ -1,0 +1,30 @@
+#before_script:
+#  - npm install -g gulp-cli
+# script: gulp
+
+
+
+language: node_js
+node_js:
+- "8"
+
+
+sudo: false # route your build to the container-based infrastructure for a faster build
+
+# Optional: disable email notifications about the outcome of your builds
+notifications:
+  email: false
+
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITH UB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
+  target-branch: master
+  local-dir: _site
+  repo: immersiontime/immersiontime.github.io
+  name: Immersion Bot
+  verbose: true
