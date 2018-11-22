@@ -8,6 +8,7 @@ language: node_js
 node_js:
 - "8"
 
+script: 'true'
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
