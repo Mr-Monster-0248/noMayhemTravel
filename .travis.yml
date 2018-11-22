@@ -2,13 +2,11 @@
 #  - npm install -g gulp-cli
 # script: gulp
 
-
-
 language: node_js
 node_js:
 - "8"
 
-script: 'true'
+script: 'dir'
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
