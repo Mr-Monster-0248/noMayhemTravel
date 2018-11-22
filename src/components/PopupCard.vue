@@ -18,6 +18,7 @@
 
 <script>
     import { vueSlideoutPanelService } from 'vue2-slideout-panel';
+    import SliderTest from './subcomponents/sliderTest' 
 
     export default {
         name: "PopupCard",
@@ -33,8 +34,8 @@
             sideBar() {
                 //this.show = false;
                 const panel1Handle = vueSlideoutPanelService.show({
-                    component: 'slideout-panel',
-                    width: '700px', //customize the width
+                    component: 'SliderTest',
+                    width: '800px', //customize the width
                     keepAlive: true,
                 });
 
