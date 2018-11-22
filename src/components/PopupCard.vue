@@ -8,11 +8,11 @@
                 <div class="cols-6">
                     <h1>Titre</h1>
                     <p>text dans la carte</p>
-                    <b-button @click="test">En savoir plus</b-button>
+                    <b-button @click="sideBar">En savoir plus</b-button>
                 </div>
             </div>
         </div>
-        <slideout-panel></slideout-panel>
+
     </div>
 </template>
 
@@ -30,7 +30,7 @@
 
         methods: {
 
-            test() {
+            sideBar() {
                 //this.show = false;
                 const panel1Handle = vueSlideoutPanelService.show({
                     component: 'slideout-panel',
@@ -38,9 +38,11 @@
                     keepAlive: true,
                 });
 
-
+                this.$emit('sideBar')
             }
-        }
+        },
+
+
     }
 </script>
 

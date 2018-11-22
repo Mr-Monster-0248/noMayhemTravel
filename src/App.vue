@@ -2,9 +2,9 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
-        <popup-card/>
         <MainForm/>
         <Footer/>
+        <slideout-panel></slideout-panel>
     </div>
 </template>
 
