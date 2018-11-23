@@ -1,7 +1,3 @@
-#before_script:
-#  - npm install -g gulp-cli
-# script: gulp
-
 language: node_js
 node_js:
 - "8"
@@ -9,12 +5,9 @@ node_js:
 install: 'npm ci'
 script: 'npm run build'
 
-sudo: false # route your build to the container-based infrastructure for a faster build
-
 # Optional: disable email notifications about the outcome of your builds
 notifications:
   email: false
-
 
 deploy:
   provider: pages
