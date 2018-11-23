@@ -18,7 +18,7 @@
 
 <script>
     import { vueSlideoutPanelService } from 'vue2-slideout-panel';
-    import SliderTest from './subcomponents/sliderTest' 
+    import SliderTest from './subcomponents/sliderTest'
 
     export default {
         name: "PopupCard",
