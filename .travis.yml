@@ -24,7 +24,7 @@ deploy:
   on:
     branch: master
   target-branch: master
-  local-dir: '/dist'
+  local-dir: '${TRAVIS_BUILD_DIR}/dist'
   repo: immersiontime/immersiontime.github.io
   name: Immersion Bot
   verbose: true
