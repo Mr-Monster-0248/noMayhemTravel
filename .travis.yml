@@ -6,6 +6,7 @@ language: node_js
 node_js:
 - "8"
 
+install: 'npm ci'
 script: 'npm run build'
 
 sudo: false # route your build to the container-based infrastructure for a faster build
@@ -23,7 +24,7 @@ deploy:
   on:
     branch: master
   target-branch: master
-  local-dir: dist
+  local-dir: '/dist'
   repo: immersiontime/immersiontime.github.io
   name: Immersion Bot
   verbose: true
