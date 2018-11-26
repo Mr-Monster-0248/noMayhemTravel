@@ -2,7 +2,7 @@
     <div id="mainForm">
         <b-container>
             <h2>Find your destination</h2>
-            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+            <b-form @submit="onSubmit" @reset="onReset">
                 <b-form-group id="inputSectionGroupe"
                               label="Votre section:"
                               label-for="inputSection">
@@ -16,7 +16,7 @@
                               label="Classement en L1"
                               label-for="inputClassement">
                     <b-form-input id="inputClassement"
-                                  type="integer"
+                                  type="number"
                                   v-model="form.classement"
                                   required
                                   placeholder="Votre classement en L1">
@@ -26,7 +26,7 @@
                               label="GPA du S3"
                               label-for="inputGPAGroup">
                     <b-form-input id="inputGPA"
-                                  type="integer"
+                                  type="number"
                                   v-model="form.gpa"
                                   placeholder="GPA du S3">
                     </b-form-input>
@@ -35,7 +35,7 @@
                               label="Budget"
                               label-for="inputBudgetGroup">
                     <b-form-input id="inputBudget"
-                                  type="integer"
+                                  type="number"
                                   v-model="form.budget"
                                   placeholder="Votre budget">
                     </b-form-input>
@@ -47,6 +47,38 @@
                         <b-form-checkbox value="bourse">Boursier</b-form-checkbox>
                     </b-form-checkbox-group>
                 </b-form-group>
+
+                <b-form-group id="choiceGroupe">
+                    <b-form-checkbox v-model="show" value="true">Spécifiez des choix</b-form-checkbox>
+                </b-form-group>
+                <b-card v-if="show" bg-variant="light">
+                    <b-form-group horizontal label="Vos choix" label-size="lg" class="mb-0">
+                        <b-input-group horizontal label="1er choix" label-class="text-sm-right" label-for="firstChoice">
+                            <b-form-select id="firstChoice"
+                                           type="text"
+                                           v-model="form.choices[0]"
+                                           :options="destination"
+                                           placeholder="Votre choix">
+                            </b-form-select>
+                        </b-input-group>
+                        <b-form_group horizontal label="2ème choix" label-for="secChoice" prepend="1">
+                            <b-form-select id="secChoice"
+                                           v-model="form.choices[1]"
+                                           type="text"
+                                           :options="destination"
+                                           placeholder="Votre choix">
+                            </b-form-select>
+                        </b-form_group>
+                        <b-form_group horizontal>
+                            <b-form-select v-model="form.choices[2]"
+                                           type="text"
+                                           :options="destination"
+                                           placeholder="Votre choix">
+                                <div class="input-group-text">test</div>
+                            </b-form-select>
+                        </b-form_group>
+                    </b-form-group>
+                </b-card>
                 <b-button type="submit" variant="primary">Submit</b-button>
                 <b-button type="reset" variant="danger">Reset</b-button>
             </b-form>
@@ -66,10 +98,12 @@
                     classement: null,
                     gpa: null,
                     budget: null,
-                    checked: []
+                    checked: [],
+                    choices: []
                 },
                 section: ['International', 'Classique', 'Bio-numérique', 'Renforcé'],
-                show: true
+                destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie'],
+                show: false
             }
         },
 
@@ -86,6 +120,7 @@
                 this.form.gpa = null;
                 this.form.budget = null;
                 this.form.checked = [];
+                this.form.choices = [];
                 /* Trick to reset/clear native browser form validation state */
                 this.$nextTick(() => { this.show = true });
             }
