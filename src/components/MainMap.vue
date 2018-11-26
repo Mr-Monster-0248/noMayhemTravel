@@ -11,6 +11,7 @@
     import Mapbox from "mapbox-gl-vue";
     import PopupCard from "./PopupCard";
     import Vue from "vue"
+    import mapboxgl from "mapbox-gl";
 
 export default {
   name: "MainMap",
@@ -26,7 +27,7 @@ export default {
 
     createPopUp: function(map, place) {
 
-      var popup = new mapboxgl.Popup({ closeOnClick: true })
+      new mapboxgl.Popup({ closeOnClick: true })
         .setLngLat(place.geometry.coordinates)
         .setHTML("<div id='vue-popup-content'></div>")
         .addTo(map);
@@ -35,9 +36,6 @@ export default {
     },
     mapClicked: function(map, e) {
       var features = map.queryRenderedFeatures(e.point);
-      //var features = map.queryRenderedFeatures(e.point, { layers: ['destination'] });
-      console.log(JSON.stringify(features, null, 2));
-      console.log(features);
       if (features.length) {
         var clickedPoint = features[0];
         this.createPopUp(map, clickedPoint);
