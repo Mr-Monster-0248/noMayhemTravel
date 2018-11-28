@@ -55,30 +55,36 @@
                 </b-form-group>
                 <b-card v-if="show" bg-variant="light">
                     <b-form-group horizontal label="Vos choix" label-size="lg" class="mb-0">
-                        <b-input-group horizontal label="1er choix" label-class="text-sm-right" label-for="firstChoice">
-                            <b-form-select id="firstChoice"
-                                           type="text"
-                                           v-model="form.choices[0]"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                            </b-form-select>
-                        </b-input-group>
-                        <b-form_group horizontal label="2ème choix" label-for="secChoice" prepend="1">
-                            <b-form-select id="secChoice"
-                                           v-model="form.choices[1]"
-                                           type="text"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                            </b-form-select>
-                        </b-form_group>
-                        <b-form_group horizontal>
-                            <b-form-select v-model="form.choices[2]"
-                                           type="text"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                                <div class="input-group-text">test</div>
-                            </b-form-select>
-                        </b-form_group>
+                        <b-form-group>
+                            <b-input-group horizontal label="1er choix" label-class="text-sm-right" label-for="firstChoice" prepend="1°">
+                                <b-form-select id="firstChoice"
+                                               type="text"
+                                               v-model="form.choices[0]"
+                                               :options="destination"
+                                               placeholder="Votre choix">
+                                </b-form-select>
+                            </b-input-group>
+                        </b-form-group>
+                        <b-form-group>
+                            <b-input-group horizontal label="2ème choix" label-for="secChoice" prepend="2°">
+                                <b-form-select id="secChoice"
+                                               v-model="form.choices[1]"
+                                               type="text"
+                                               :options="destination"
+                                               placeholder="Votre choix">
+                                </b-form-select>
+                            </b-input-group>
+                        </b-form-group>
+                        <b-form-group>
+                            <b-input-group prepend="3°">
+                                <b-form-select v-model="form.choices[2]"
+                                               type="text"
+                                               :options="destination"
+                                               placeholder="Votre choix">
+                                    <div class="input-group-text">test</div>
+                                </b-form-select>
+                            </b-input-group>
+                        </b-form-group>
                     </b-form-group>
                 </b-card>
                 <b-button type="submit" variant="primary">Submit</b-button>
@@ -112,6 +118,9 @@
         methods: {
             onSubmit (evt) {
                 evt.preventDefault();
+                if (this.show === false) {
+                    this.form.choices = []
+                }
                 alert(JSON.stringify(this.form));
             },
             onReset (evt) {
@@ -125,7 +134,7 @@
                 this.form.choices = [];
                 /* Trick to reset/clear native browser form validation state */
                 this.$nextTick(() => { this.show = true });
-            }
+            },
         }
     }
 </script>
