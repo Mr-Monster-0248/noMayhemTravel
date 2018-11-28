@@ -34,11 +34,13 @@
                 <b-form-group id="inputBudgetGroup"
                               label="Budget"
                               label-for="inputBudgetGroup">
-                    <b-form-input id="inputBudget"
-                                  type="number"
-                                  v-model="form.budget"
-                                  placeholder="Votre budget">
-                    </b-form-input>
+                    <b-input-group append="€">
+                        <b-form-input id="inputBudget"
+                                      type="number"
+                                      v-model="form.budget"
+                                      placeholder="Votre budget">
+                        </b-form-input>
+                    </b-input-group>
                 </b-form-group>
 
                 <b-form-group id="exampleGroup4">
