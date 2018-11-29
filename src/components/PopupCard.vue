@@ -1,13 +1,13 @@
 <template>
     <div id="popupCard">
-        <div class="container" v-show="show">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="cols-6">
                     <img src="../img/no-image-2.png" alt="img description" style="height: 200px; width: 200px">
                 </div>
                 <div class="cols-6">
-                    <h1>Titre</h1>
-                    <p>text dans la carte</p>
+                    <h1>{{ this.destination.country }}</h1>
+                    <p>{{ this.destination.name }}</p>
                     <b-button @click="sideBar">En savoir plus</b-button>
                 </div>
             </div>
@@ -20,17 +20,28 @@
     import { vueSlideoutPanelService } from 'vue2-slideout-panel';
     import SliderTest from './subcomponents/sliderTest'
 
+
     export default {
         name: "PopupCard",
+
+        props: {
+          destination: {
+              name: "",
+              country: ""
+          }
+        },
+
         data () {
             return {
-                proprieties: Object,
-                show : true
-            }
+
+        }
+        },
+
+        created () {
+            console.log(this.destination)
         },
 
         methods: {
-
             sideBar() {
                 //this.show = false;
                 const panel1Handle = vueSlideoutPanelService.show({

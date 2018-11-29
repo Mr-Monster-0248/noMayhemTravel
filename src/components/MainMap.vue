@@ -27,12 +27,18 @@ export default {
 
     createPopUp: function(map, place) {
 
+        console.log(place.properties);
+
       new mapboxgl.Popup({ closeOnClick: true })
         .setLngLat(place.geometry.coordinates)
         .setHTML("<div id='vue-popup-content'></div>")
         .addTo(map);
 
-      new this.PopupContent().$mount('#vue-popup-content')
+      new this.PopupContent({
+          propsData: {
+              destination: place.properties
+          }
+      }).$mount('#vue-popup-content')
     },
     mapClicked: function(map, e) {
       var features = map.queryRenderedFeatures(e.point);
