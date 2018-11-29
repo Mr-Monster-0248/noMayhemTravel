@@ -7,7 +7,7 @@
                 </div>
                 <div class="cols-6">
                     <h1>{{ this.destination.country }}</h1>
-                    <p>{{ this.destination.name }}</p>
+                    <h3>{{ this.destination.name }}</h3>
                     <b-button @click="sideBar">En savoir plus</b-button>
                 </div>
             </div>
