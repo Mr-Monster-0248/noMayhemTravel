@@ -13,40 +13,44 @@
     import Vue from "vue"
     import mapboxgl from "mapbox-gl";
 
-export default {
-  name: "MainMap",
-  components: {
-      Mapbox
-  },
-    data() {
-      return {
-          PopupContent: Vue.extend(PopupCard)
-      }
-    },
-  methods: {
+    export default {
+        name: "MainMap",
+        components: {
+            Mapbox
+        },
+        data() {
+            return {
+                PopupContent: Vue.extend(PopupCard)
+            }
+        },
+        methods: {
 
-    createPopUp: function(map, place) {
+            createPopUp: function (map, place) {
 
-        console.log(place.properties);
+                console.log(place.properties);
 
-      new mapboxgl.Popup({ closeOnClick: true })
-        .setLngLat(place.geometry.coordinates)
-        .setHTML("<div id='vue-popup-content'></div>")
-        .addTo(map);
 
-      new this.PopupContent({
-          propsData: {
-              destination: place.properties
-          }
-      }).$mount('#vue-popup-content')
-    },
-    mapClicked: function(map, e) {
-      var features = map.queryRenderedFeatures(e.point);
-      if (features.length) {
-        var clickedPoint = features[0];
-        this.createPopUp(map, clickedPoint);
-      }
-    }
-  }
-};
+                var div = window.document.createElement('div');
+                div.id = 'vue-popup-content';
+                new mapboxgl.Popup({closeOnClick: true})
+                    .setLngLat(place.geometry.coordinates)
+                    .setDOMContent(div)
+                    .addTo(map);
+
+                new this.PopupContent({
+                    propsData: {
+                        destination: place.properties
+                    }
+                }).$mount('#vue-popup-content')
+
+            },
+            mapClicked: function (map, e) {
+                var features = map.queryRenderedFeatures(e.point);
+                if (features.length) {
+                    var clickedPoint = features[0];
+                    this.createPopUp(map, clickedPoint);
+                }
+            }
+        }
+    };
 </script>
