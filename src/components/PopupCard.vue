@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="cols-6">
-                    <img src="../img/no-image-2.png" alt="img description" style="height: 200px; width: 200px">
+                    <img :src="this.destination.thumbnail" :alt="this.destination.name">
                 </div>
                 <div class="cols-6">
                     <h1>{{ this.destination.country }}</h1>
@@ -27,18 +27,14 @@
         props: {
           destination: {
               name: "",
-              country: ""
+              country: "",
+              thumbnail: ""
           }
         },
 
         data () {
             return {
-
         }
-        },
-
-        created () {
-            console.log(this.destination)
         },
 
         methods: {
