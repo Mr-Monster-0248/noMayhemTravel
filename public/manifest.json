@@ -9,7 +9,7 @@
   "theme_color": "#41637C",
   "description": "Le site pour tout savoir sur l'immersion en L3 à l'Efrei Paris",
   "orientation": "any",
-  "background_color": "pick",
+  "background_color": "red",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
