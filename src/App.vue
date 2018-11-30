@@ -13,12 +13,10 @@ import MainMap from "./components/MainMap";
 import Navbar from "./components/Navbar";
 import MainForm from "./components/MainForm";
 import Footer from "./components/Footer"
-import  PopupCard from "./components/PopupCard"
 
 export default {
   name: "app",
   components: {
-      PopupCard,
       Footer,
       MainForm,
       Navbar,

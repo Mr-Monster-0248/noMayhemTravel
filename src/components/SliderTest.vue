@@ -1,24 +1,18 @@
 <template>
-    <p>coucou</p>
+    <h1>coucou</h1>
 </template>
 
 <script>
+
     export default {
         name: 'sliderTest',
-        props: {
-            data: {
-                type: Object,
-                required: true
-            }
-        },
+
         data() {
             return {};
         },
         methods: {
             closePanel() {
-                this.$emit('closePanel', {
-                    name: this.form.name
-                });
+                alert("coucou")
             }
         }
     };
