@@ -3,16 +3,17 @@
 </template>
 
 <script>
+    console.log("10");
 
     export default {
-        name: 'sliderTest',
-
+        name: 'PanelCountry',
         data() {
             return {};
         },
         methods: {
             closePanel() {
-                alert("coucou")
+                alert("coucou");
+                this.$emit("closePanel", {});
             }
         }
     };

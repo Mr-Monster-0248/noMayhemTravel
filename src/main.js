@@ -7,6 +7,7 @@ Vue.config.productionTip = false;
 Vue.use(bootstrapVue);
 Vue.component('slideout-panel', VueSlideoutPanel);
 
+
 new Vue({
   render: h => h(App)
 }).$mount("#app");
