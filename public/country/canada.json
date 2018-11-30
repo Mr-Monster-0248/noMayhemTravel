@@ -1,0 +1,36 @@
+{
+  "university": "Le nom du truc",
+  "link_website": "machin bidule",
+  "country": {
+    "name": "Canada",
+    "flag_url": "..."
+  },
+  "admission": {
+    "gpa": "4",
+    "mark": "18"
+  },
+  "comments": [
+    {
+      "name": "Frédéric D.",
+      "prom": "2020",
+      "text": "C'était super! J'ai adoré payer!"
+    },
+    {
+      "name": "J D.",
+      "prom": "2020",
+      "text": "C'était naze. J'ai adoré payer!"
+    }
+  ],
+  "hints": [
+    {
+      "text": "Attention à ne pas trop sécher."
+    },
+    {
+      "text": "C'était naze. J'ai adoré payer!"
+    }
+  ],
+  "price": {
+    "plane": "200",
+    "bus": "83938"
+  }
+}
