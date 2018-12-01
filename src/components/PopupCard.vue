@@ -21,11 +21,6 @@
     import PanelCountry from "./PanelCountry";
 
     import Vue from 'vue';
-    // import { VueSlideoutPanel } from 'vue2-slideout-panel';
-
-    // Vue.component('slideout-panel', VueSlideoutPanel);
-
-    //Vue.component('slideout-panel', vueSlideoutPanelService);
 
     import {EventBus} from './../event-bus.js';
 
@@ -46,41 +41,10 @@
         },
 
         methods: {
-            /*showPanel() {
-                const panel = this.$showPanel({
-                    component: "panel-1",
-                    cssClass: "panel-1",
-                    props: {}
-                });
-            }*/
             launchPanel() {
-                //this.show = false;
-                /*  const panelInstance = vueSlideoutPanelService.show({
-                      component: 'PanelCountry',
-                      width: '400', //customize the width
 
-                  });
-                  //panelInstance.$showPanel();
-                  this.$emit('PanelCountry');
-
-  */
                 console.log("WTF");
                 EventBus.$emit('clickPanel', 1);
-                // this.$root.$emit('clickPanel');
-                //this.$root.$on('clickPanel');
-                //this.$root.$on.$emit('clickPanel');
-                /*const panelInstance = this.$showPanel.show({
-                    component: 'PanelCountry',
-                    props: {
-                        //any data you want passed to your component
-                    }
-                });*/
-
-                /*panelInstance.promise
-                    .then(result => {
-
-                    });
-            */
             }
 
         },
