@@ -2,7 +2,18 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
-        <MainForm/>
+        <b-container>
+            <b-row>
+                <b-col>
+                    <MainInfo/>
+                </b-col>
+                <b-col>
+                    <MainForm/>
+                </b-col>
+            </b-row>
+
+        </b-container>
+
         <Footer/>
         <CustomPanel/>
 
@@ -13,6 +24,7 @@
     import MainMap from "./components/MainMap";
     import Navbar from "./components/Navbar";
     import MainForm from "./components/MainForm";
+    import MainInfo from "./components/MainInfo";
     import Footer from "./components/Footer"
     import CustomPanel from "./components/CustomPanel"
 
@@ -25,8 +37,7 @@
             Navbar,
             MainMap,
             CustomPanel,
-
-
+            MainInfo
         },
 
         methods: {}
@@ -37,5 +48,13 @@
     #map {
         width: 100%;
         height: 500px;
+    }
+
+    #mainForm {
+        margin-top: 20px;
+    }
+
+    #mainInfo {
+        margin-top: 20px;
     }
 </style>

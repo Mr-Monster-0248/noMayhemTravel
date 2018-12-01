@@ -110,7 +110,7 @@
                     choices: []
                 },
                 section: ['International', 'Classique', 'Bio-numérique', 'Renforcé'],
-                destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie'],
+                destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie', 'India'],
                 show: false
             }
         },
@@ -140,7 +140,5 @@
 </script>
 
 <style scoped>
-    #mainForm {
-        margin-top: 20px;
-    }
+
 </style>
