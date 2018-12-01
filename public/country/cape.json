@@ -1,89 +1,87 @@
 {
-  "university": "Cape Peninsula University of Technology",
-  "link_website": "machin bidule",
-  "country": {
-    "name": "South Africa",
-    "flag_url": "..."
-  },
-  "admission": {
-    "gpa": {
-      "min": "0.93",
-      "max": "3.5",
-      "average": "1.7"
-    },
+	"university": "Cape Peninsula University of Technology",
+	"link_website": "https://www.cput.ac.za/homepage",
+	"country": {
+		"name": "South Africa",
+		"flag_url": "..."
+	},
+	"admission": {
+		"gpa": {
+			"min": "0.93",
+			"max": "3.5",
+			"average": "1.7"
+		},
 
-    "mark": {
-      "min": "11",
-      "max": "14",
-      "average": "12.5"
-    },
+		"mark": {
+			"min": "11",
+			"max": "14",
+			"average": "12.5"
+		},
 
-    "toeic": {
-      "min": "550",
-      "max": "815",
-      "average": "685"
-    }
-  },
-  "prices": {
-    "plane": {
-      "min": "500",
-      "max": "1500",
-      "average": "1000"
-    },
-    "food": {
-      "min": "100",
-      "max": "400",
-      "average": "250"
-    },
-    "rent": {
-      "min": "500",
-      "max": "1000",
-      "average": "750"
-    },
-    "trains and bus": {
-      "min": "50",
-      "max": "150",
-      "average": "100"
-    },
-    "transport": {
-      "min": "20",
-      "max": "60",
-      "average": "40"
-    },
-    "extras": {
-      "min": "150",
-      "max": "500",
-      "average": "300"
-    }
-  },
-  "hints": [
-    {
-      "currency": "Rand -> 1 € = 15.55 ZAR"
-    },
-    {
-      "text": "Traverser le troittoir quans c'est pas notre tour est passible de 50 euros d'ammende"
-    },
-    {
-      "text": "Toujours donner des tips !"
-    },
-    {
-      "text": "Prendre un bon adaptateur qui ne soit passif."
-    },
-    {
-      "text": "Il vaut mieux payer en espèces et non pas en en carte, à cause des taxes."
-    },
-    {
-      "text": "Faire les courses à organiser des repas à plusieurs pour éviter de payer trop cher."
-    }
+		"toeic": {
+			"min": "550",
+			"max": "815",
+			"average": "685"
+		}
+	},
+	"prices": {
+		"plane": {
+			"min": "500",
+			"max": "1500",
+			"average": "1000"
+		},
+		"food": {
+			"min": "100",
+			"max": "400",
+			"average": "250"
+		},
+		"rent": {
+			"min": "500",
+			"max": "1000",
+			"average": "750"
+		},
+		"trains and bus": {
+			"min": "50",
+			"max": "150",
+			"average": "100"
+		},
+		"transport": {
+			"min": "20",
+			"max": "60",
+			"average": "40"
+		},
+		"extras": {
+			"min": "150",
+			"max": "500",
+			"average": "300"
+		}
+	},
+	"hints": [{
+			"currency": "Rand -> 1 € = 15.55 ZAR"
+		},
+		{
+			"text": "Traverser le trottoir quand c'est pas notre tour est passible de 50 euros d'ammende"
+		},
+		{
+			"text": "Toujours donner des tips !"
+		},
+		{
+			"text": "Prendre un bon adaptateur qui ne soit passif."
+		},
+		{
+			"text": "Il vaut mieux payer en espèces et non pas en en carte, à cause des taxes."
+		},
+		{
+			"text": "Faire les courses à organiser des repas à plusieurs pour éviter de payer trop cher."
+		}
 
-  ],
-  "comments": [
-    {
-      "text": "Attention le sixième semestre en France sera rude car on repasse sur des horraires de 8h à 18h.",
+	],
+	"comments": [{
+			"text": "Attention le sixième semestre en France sera rude car on repasse sur des horraires de 8h à 18h."
 
-    },
-    {
-      "text": "Tous les professeurs Tous les profs sont très compétents, beaucoup de chose à faire dans Montréal et autour."
-    }
-  ]
+		},
+		{
+			"text": "Tous les professeurs Tous les profs sont très compétents, beaucoup de chose à faire dans Montréal et autour."
+		}
+	]
 }
