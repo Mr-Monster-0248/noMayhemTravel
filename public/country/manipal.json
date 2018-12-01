@@ -1,0 +1,73 @@
+{
+  "university": "Manipal Institut of Technology",
+  "link_website": "machin bidule",
+  "country": {
+    "name": "India",
+    "flag_url": "..."
+  },
+  "admission": {
+    "gpa": {
+      "min": "0.9",
+      "max": "1.5",
+      "average": "1.25"
+    },
+    "mark": {
+      "min": "10",
+      "max": "15",
+      "average": "12.5"
+    },
+    "toeic": {
+      "min": "835",
+      "max": "865",
+      "average": "850"
+    }
+  },
+  "prices": {
+    "plane": {
+      "min": "500",
+      "max": "2500",
+      "average": "1000"
+    },
+    "food": {
+      "min": "500",
+      "max": "1000",
+      "average": "600"
+    },
+    "rent": {
+      "min": "300",
+      "max": "500",
+      "average": "400"
+    },
+    "trains and bus": {
+      "min": "5",
+      "max": "10",
+      "average": "5"
+    },
+    "transport": {
+      "min": "5",
+      "max": "10",
+      "average": "5"
+    },
+    "extras": {
+      "min": "70",
+      "max": "250",
+      "average": "150"
+    }
+  },
+  "hints": [
+    {
+      "currency": "Roupie -> 1 € = 79.45 INR"
+    },
+    {
+      "text": "Ne pas boire l'eau du robinet sinon on tombe malade !"
+    },
+    {
+      "text": "Il y a des coins dangereux, écouter les autochtones."
+    }
+  ],
+  "comments": [
+    {
+      "text": "Aucun regrets, meilleure immersion d'après moi !"
+    }
+  ]
+}

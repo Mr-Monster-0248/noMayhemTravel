@@ -6,8 +6,53 @@
     "flag_url": "..."
   },
   "admission": {
-    "gpa": "4",
-    "mark": "18"
+    "gpa": {
+      "min": "2.8",
+      "max": "3.9",
+      "average": "3.5"
+    },
+    "mark": {
+      "min": "13.5",
+      "max": "15.9",
+      "average": "14.7"
+    },
+    "toeic": {
+      "min": "630",
+      "max": "975",
+      "average": "750"
+    }
+  },
+  "prices": {
+    "plane": {
+      "min": "250",
+      "max": "500",
+      "average": "375"
+    },
+    "food": {
+      "min": "100",
+      "max": "300",
+      "average": "200"
+    },
+    "rent": {
+      "min": "500",
+      "max": "2500",
+      "average": "1000"
+    },
+    "trains and bus": {
+      "min": "30",
+      "max": "100",
+      "average": "65"
+    },
+    "transport": {
+      "min": "30",
+      "max": "100",
+      "average": "65"
+    },
+    "extras": {
+      "min": "50",
+      "max": "700",
+      "average": "355"
+    }
   },
   "comments": [
     {

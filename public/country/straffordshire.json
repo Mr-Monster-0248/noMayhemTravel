@@ -1,0 +1,82 @@
+{
+  "university": "Straffordshire University",
+  "link_website": "machin bidule",
+  "country": {
+    "name": "England",
+    "flag_url": "..."
+  },
+  "admission": {
+    "gpa": {
+      "min": "0.4",
+      "max": "1.5",
+      "average": "1"
+    },
+    "mark": {
+      "min": "11",
+      "max": "16.08",
+      "average": "13"
+    },
+    "toeic": {
+      "min": "600",
+      "max": "850",
+      "average": "725"
+    }
+  },
+  "prices": {
+    "plane": {
+      "min": "400",
+      "max": "600",
+      "average": "500"
+    },
+    "food": {
+      "min": "150",
+      "max": "300",
+      "average": "220"
+    },
+    "rent": {
+      "min": "300",
+      "max": "2500",
+      "average": "500"
+    },
+    "trains and bus": {
+      "min": "50",
+      "max": "200",
+      "average": "125"
+    },
+    "transport": {
+      "min": "20",
+      "max": "100",
+      "average": "40"
+    },
+    "extras": {
+      "min": "150",
+      "max": "300",
+      "average": "225"
+    }
+  },
+  "hints": [
+    {
+      "currency": "Livre Sterling -> 1 € = 0.89 £"
+    },
+    {
+      "text": "Beaucoup d'ammendes !"
+    },
+    {
+      "text": "Les anglais ivres sont violents surtout en soir de match."
+    },
+    {
+      "text": "Ne pas trop manquer les cours."
+    },
+    {
+      "text": "N'hésitez pas à voyager à Liverpool et Manchester."
+    }
+  ],
+  "comments": [
+    {
+      "text": "Destination incroyable avec un campus de malade, des cours excellents, je recommande à 200%"
+    },
+    {
+      "text": "On y apprend à devenir autonome !"
+    }
+  ]
+}

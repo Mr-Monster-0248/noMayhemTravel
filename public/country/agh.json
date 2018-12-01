@@ -1,0 +1,79 @@
+{
+  "university": "AGH University",
+  "link_website": "machin bidule",
+  "country": {
+    "name": "Poland",
+    "flag_url": "..."
+  },
+  "admission": {
+    "gpa": {
+      "min": "2.54",
+      "max": "2.54",
+      "average": "2.54"
+    },
+    "mark": {
+      "min": "12.5",
+      "max": "12.5",
+      "average": "12.5"
+    },
+    "toeic": {
+      "min": "600",
+      "max": "920",
+      "average": "760"
+    }
+  },
+  "prices": {
+    "plane": {
+      "min": "250",
+      "max": "500",
+      "average": "375"
+    },
+    "food": {
+      "min": "100",
+      "max": "350",
+      "average": "225"
+    },
+    "rent": {
+      "min": "500",
+      "max": "1000",
+      "average": "750"
+    },
+    "trains and bus": {
+      "min": "10",
+      "max": "50",
+      "average": "30"
+    },
+    "transport": {
+      "min": "10",
+      "max": "20",
+      "average": "15"
+    },
+    "extras": {
+      "min": "50",
+      "max": "250",
+      "average": "150"
+    }
+  },
+  "hints": [
+    {
+      "currency": "Zloty -> 1 € = 4.29 PLN"
+    },
+    {
+      "text": "Pays sans danger mais malheureusement assez raciste."
+    },
+    {
+      "text": "L'alcool est interdit dans les rues."
+    },
+    {
+      "text": "On travaille beaucoup."
+    }
+  ],
+  "comments": [
+    {
+      "text": "Magnifique immersion avec la possibilité de voyager car l’Europe De l’Est est très peu cher ! Je recommande "
+    },
+    {
+      "text": "Meilleure destination ! Il fait froid mais on regrette rien "
+    }
+  ]
+}

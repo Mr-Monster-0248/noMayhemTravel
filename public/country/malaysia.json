@@ -1,0 +1,85 @@
+{
+  "university": "Asia-Pasific University",
+  "link_website": "machin bidule",
+  "country": {
+    "name": "Malaysia",
+    "flag_url": "..."
+  },
+  "admission": {
+    "gpa": {
+      "min": "1.47",
+      "max": "3.5",
+      "average": "2.5"
+    },
+    "mark": {
+      "min": "12",
+      "max": "15",
+      "average": "13.8"
+    },
+    "toeic": {
+      "min": "500",
+      "max": "830",
+      "average": "650"
+    }
+  },
+  "prices": {
+    "plane": {
+      "min": "700",
+      "max": "1500",
+      "average": "900"
+    },
+    "food": {
+      "min": "70",
+      "max": "300",
+      "average": "110"
+    },
+    "rent": {
+      "min": "400",
+      "max": "1000",
+      "average": "500"
+    },
+    "trains and bus": {
+      "min": "25",
+      "max": "50",
+      "average": "30"
+    },
+    "transport": {
+      "min": "20",
+      "max": "50",
+      "average": "35"
+    },
+    "extras": {
+      "min": "60",
+      "max": "420",
+      "average": "200"
+    }
+  },
+  "hints": [
+    {
+      "currency": "Ringgit -> 1 € = 4.76 MYR"
+    },
+    {
+      "text": "La consommation de drogue (cannabis ou autres) est passible de peine de mort donc ne pas en consommer au moins 1 mois avant le départ."
+    },
+    {
+      "text": "Tous les projets sont à la fin et c'est pas facile si on est pas organisé. Pas le droit aux Jeans dans l'Université, attention aux vols de téléphones portables dans la rue.***Faire les vaccins à l'avance"
+    },
+    {
+      "text": "Faire les vaccins à l'avance."
+    },
+    {
+      "text": "Acheter ses billets tout seul (ex: Air Asia)."
+    },
+    {
+      "text": "Utiliser Grab au lieu de Uber."
+    }
+  ],
+  "comments": [
+    {
+      "text": "Le faible cout permet de voyager pas mal dans le pays mais également en dehors comme la Corée du Sud, Singapour, Japon, iles."
+    },
+    {
+      "text": "Destination géniale et magnifique paysages."
+    }
+  ]
+}
