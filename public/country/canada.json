@@ -1,6 +1,6 @@
 {
-  "university": "Le nom du truc",
-  "link_website": "machin bidule",
+  "university": "Concordia University",
+  "link_website": "https://www.concordia.ca/",
   "country": {
     "name": "Canada",
     "flag_url": "..."
@@ -11,22 +11,22 @@
   },
   "comments": [
     {
-      "name": "Frédéric D.",
-      "prom": "2020",
+      "name": "Frédéric",
+      "year": "2020",
       "text": "C'était super! J'ai adoré payer!"
     },
     {
-      "name": "J D.",
-      "prom": "2020",
+      "name": "Paul",
+      "year": "2020",
       "text": "C'était naze. J'ai adoré payer!"
     }
   ],
-  "hints": [
+  "info": [
     {
       "text": "Attention à ne pas trop sécher."
     },
     {
-      "text": "C'était naze. J'ai adoré payer!"
+      "text": "Le coût de la vie est différent !"
     }
   ],
   "price": {

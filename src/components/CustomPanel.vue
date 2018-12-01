@@ -1,6 +1,8 @@
 <template>
     <div id="customPanel">
-        <vue-modaltor :visible="open" @hide="hideModal">
+        <!-- Trans: bgOverlay="rgb(0,0,0,0.8)" -->
+        <vue-modaltor :visible="open" :resize-width='{1200:"60%",992:"75%",768:"93%"}'@hide="hideModal"
+>
             <PanelCountry></PanelCountry>
         </vue-modaltor>
     </div>
@@ -35,7 +37,7 @@
             EventBus.$on('clickPanel', () => {
                 // eslint-disable-next-line
                 console.log("Test");
-                window.vue2PanelDebug = true;
+                // window.vue2PanelDebug = true;
                 this.open = true;
 
             })
