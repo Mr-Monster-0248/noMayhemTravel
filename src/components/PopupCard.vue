@@ -8,7 +8,8 @@
 
                 <div class="row align-items-center">
                     <div class="cols-6">
-                        <b-img :src="this.destination.thumbnail" :alt="this.destination.name" width="200" height="200"
+                        <b-img :src="this.destination.thumbnail" :alt="this.destination.name"
+                               width="200" height="200"
                                rounded fluid/>
                     </div>
                     <div class="cols-6 popuptext">
@@ -25,21 +26,15 @@
 </template>
 
 <script>
-    import {vueSlideoutPanelService} from 'vue2-slideout-panel';
-    import PanelCountry from "./PanelCountry";
-
-    import Vue from 'vue';
-
     import {EventBus} from './../event-bus.js';
 
     export default {
         name: "PopupCard",
-
-
         props: {
             destination: {
                 name: "",
                 country: "",
+                id: "",
                 thumbnail: ""
             }
         },
@@ -50,13 +45,9 @@
 
         methods: {
             launchPanel() {
-                console.log("WTF");
-                EventBus.$emit('clickPanel', 1);
+                EventBus.$emit('clickPanel', this.destination.id);
             }
-
         },
-
-
     }
 </script>
 

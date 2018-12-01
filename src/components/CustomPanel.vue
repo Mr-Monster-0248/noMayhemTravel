@@ -1,15 +1,16 @@
 <template>
     <div id="customPanel">
-        <!-- Trans: bgOverlay="rgb(0,0,0,0.8)" -->
-        <vue-modaltor :visible="open" :resize-width='{1200:"60%",992:"75%",768:"93%"}'@hide="hideModal"
->
-            <PanelCountry></PanelCountry>
+        <!-- To put transparent: bgOverlay="rgb(0,0,0,0.8)" -->
+        <vue-modaltor :visible="this.open" :resize-width='{1200:"60%",992:"75%",768:"93%"}' @hide="hideModal">
+            <div v-if="this.open">
+                <PanelCountry :idJson="this.idJson"></PanelCountry>
+            </div>
         </vue-modaltor>
+
     </div>
 </template>
 
 <script>
-    import Vue from 'vue';
     import {EventBus} from './../event-bus.js';
     import PanelCountry from "./PanelCountry";
 
@@ -19,27 +20,17 @@
             PanelCountry,
         },
 
-        props: {
-            destination: {
-                name: "",
-                country: "",
-                thumbnail: ""
-            }
-        },
-
         data() {
             return {
-                open: false
+                open: false,
+                idJson: 'none'
             }
         },
 
         mounted() {
-            EventBus.$on('clickPanel', () => {
-                // eslint-disable-next-line
-                console.log("Test");
-                // window.vue2PanelDebug = true;
+            EventBus.$on('clickPanel', (idJson) => {
                 this.open = true;
-
+                this.idJson = idJson;
             })
         },
 

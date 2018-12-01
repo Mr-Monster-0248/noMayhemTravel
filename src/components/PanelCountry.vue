@@ -23,32 +23,20 @@
 </template>
 
 <script>
-    import canadajson from "../../public/country/canada.json";
-
-    console.log("10");
-
     export default {
         name: 'PanelCountry',
+        props: ['idJson'],
         data: function () {
             return {
-                destination: canadajson
+                destination: {}
             };
-            /*return {
-                destination: canadajson
-            };*/
         },
         created() {
-            console.log("10");
-            fetch('country/canada.json').then(response => response.json()).then(json => {
+            // console.log("PanelCountry created...");
+            // Fetch the right file, put it in this.destination
+            fetch('country/' + this.idJson + '.json').then(response => response.json()).then(json => {
                 this.destination = json
             })
-
-        },
-        methods: {
-            closePanel() {
-                alert("coucou");
-                this.$emit("closePanel", {});
-            }
         }
     };
 </script>

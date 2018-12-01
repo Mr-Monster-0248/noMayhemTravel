@@ -24,14 +24,27 @@
             }
         },
         methods: {
+            mapClicked: function (map, e) {
+                // We get the features from the point we clicked
+                var features = map.queryRenderedFeatures(e.point);
 
+
+                // If clickd on a point of our layer...
+                if (features.length && features[0].layer.id === "namestest") {
+                    // Select the main feature (our layer is first)
+                    var clickedPoint = features[0];
+                    this.createPopUp(map, clickedPoint);
+                }
+            },
             createPopUp: function (map, place) {
+                // To check if properties were updated by Mapbox
+                // console.log(place.properties);
 
-                console.log(place.properties);
-
-
+                // Create an element <div id="vue-popup-content">
                 var div = window.document.createElement('div');
                 div.id = 'vue-popup-content';
+
+                // Create a new Mapbox Popup, put it in the DOM
                 new mapboxgl.Popup({closeOnClick: true})
                     .setLngLat(place.geometry.coordinates)
                     .setDOMContent(div)
@@ -42,14 +55,6 @@
                         destination: place.properties
                     }
                 }).$mount('#vue-popup-content')
-
-            },
-            mapClicked: function (map, e) {
-                var features = map.queryRenderedFeatures(e.point);
-                if (features.length) {
-                    var clickedPoint = features[0];
-                    this.createPopUp(map, clickedPoint);
-                }
             }
         }
     };
