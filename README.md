@@ -34,3 +34,14 @@ Not implemented at the moment.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Compatibility
+### Browser targets
+- Chrome 70+
+- Edge 44+
+- Firefox 61+
+
+### Development
+- Windows 10 October 18
+- Ubuntu 12+ on Travis CI (see .travis.yml for configuration)
+
