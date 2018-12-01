@@ -1,9 +1,11 @@
 # ImmersionTime ! [![Build Status](https://travis-ci.com/Mr-Monster-0248/noMayhemTravel.svg?token=VnzgyfzJ8sr4KrEsgqsq&branch=master)](https://travis-ci.com/Mr-Monster-0248/noMayhemTravel)
 
 Project aimed to help Efrei students choose their Immersion (abroad study) destination.
+## Install
+### Prerequisites
+- Node 10.X.X with npm
 
-
-## Project setup
+### Project setup
 ```
 npm install
 ```
@@ -28,6 +30,7 @@ No tests implemented at the moment.
 ```
 npm run lint
 ```
+Not implemented at the moment.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
