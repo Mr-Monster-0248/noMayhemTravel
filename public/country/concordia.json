@@ -4,6 +4,7 @@
   "country": {
     "name": "Canada",
     "flag_url": "..."
+   "currency": "Dollar canadien -> 1 € = 1.51 $"
   },
   "admission": {
     "gpa": {
@@ -57,9 +58,7 @@
     }
   },
   "hints": [
-    {
-      "currency": "Dollar canadien -> 1 € = 1.51 $"
-    },
+
     {
       "text": "Traverser le troittoir au feu rouge est passible de 50 euros d'ammende"
     },
