@@ -1,0 +1,50 @@
+{
+  "university": "Korea Advanced Institute of Science and Technology",
+  "link_website": "https://www.kaist.ac.kr/html/en/",
+  "country": {
+    "name": "South Corea",
+    "flag_url": "\uD83C\uDDF5\uD83C\uDDF1",
+    "currency": "Won Sud Corréen -> 1€ = 1273.35 W"
+  },
+  "admission": {
+    "GPA": {
+      "min": "3.0"
+    },
+    "mark": {
+      "min": "14"
+    },
+    "toefl": {
+      "min": "80"
+    }
+    "toeic": {
+      "min": "720"
+    }
+  },
+  "prices": {
+    "plane": {
+      "link_website": "https://www.kayak.fr/"
+    },
+    "food": {
+      "min": "100",
+      "max": "300",
+      "average": "20"
+    },
+    "rent": {
+      "link_website": "https://www.kaist.ac.kr/html/en/campus/campus_0501.html"
+    },
+    "transport": {
+      "min": "0",
+      "max": "20",
+      "average": "10"
+    },
+  }
+  "hints": [
+
+    {
+      "text": "Se tenir au courant des vaccins à faire."
+    },
+    {
+      "text": "Des exercices d'attaques sont régulièrement effectuées (à cause des tensions avec la Corée du Nord)"
+    },
+  ]
+}
