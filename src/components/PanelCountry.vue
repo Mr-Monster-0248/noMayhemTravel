@@ -3,7 +3,12 @@
         <h1>
             <a :href="destination.link_website">{{ destination.university }}</a>
         </h1>
-        <h2>{{ destination.country.name }}</h2>
+
+        <div v-if="destination.country"><h2> {{ destination.country.name }}{{ destination.country.flag_url }}</h2></div>
+
+
+        <b-table striped hover :items="cost"></b-table>
+
         <div v-for="info in destination.info" v-bind:key="info.text">
             <b-alert show variant="info">{{ info.text }}</b-alert>
         </div>
@@ -21,7 +26,7 @@
 
         </div>
         <h2>Astuces d'anciens voyageurs</h2>
-        <div v-for="hint in destination.hints" v-if="hint.text" v-bind:key="hint.text">
+        <div v-for="hint in destination.hints" v-bind:key="hint.text">
             <b-card>
                 <blockquote class="blockquote">
                     <p class="card-text">"{{ hint.text }}"</p>
@@ -38,19 +43,35 @@
         props: ['idJson'],
         data: function () {
             return {
-                destination: {}
+                destination: {},
+                cost: {}
             };
         },
         created() {
+
             // console.log("PanelCountry created...");
             // Fetch the right file, put it in this.destination
             fetch('country/' + this.idJson + '.json').then(response => response.json()).then(json => {
                 this.destination = json
             })
+            this.cost = this.destination.prices;
+            console.debug(this.cost);
+            console.debug("YAS")
         }
     };
 </script>
 
 <style scoped>
+    h1 {
+        font-size: 2rem
+    }
 
+    h2 {
+        font-size: 1.6rem
+    }
+
+    .blockquote{
+        margin-bottom: 0rem;
+        font-size: 1rem;
+    }
 </style>

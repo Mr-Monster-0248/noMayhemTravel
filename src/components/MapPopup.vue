@@ -56,6 +56,10 @@
         padding-right: 0px;
         padding-left: 0px;
     }
+    .img-fluid {
+        max-width: 60%;
+        height: auto;
+    }
 
     .popuptext {
         margin-left: 10px;
@@ -63,6 +67,22 @@
 
     .card-header h1 {
         margin-bottom: 0rem;
+    }
+    .card-body{
+        padding-top: 1rem;
+        padding-right: 1.3rem;
+        padding-bottom: 1rem;
+        padding-left: 0.1rem;
+    }
+
+    h1 {
+        font-size: 2rem
+    }
+
+    h2 {
+        font-size: 1.6rem
+    } h2 {
+        font-size: 1.25rem
     }
 
     .card-header {

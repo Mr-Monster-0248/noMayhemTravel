@@ -56,7 +56,8 @@ Choses à savoir :
 
 Témoignage :
 - Absolument excellente :D Meilleur semestre de loin de ma scolarité, on regrette tous d'être rentrés. Cours très intéressants et enfin enrichissants. Attention le retour en France sera rude (le S6), car on repasse sur du 8-18h toute la semaine avec des cours très théoriques, et c'est particulièrement frustrant quand on a fait du pratique au S5.
-- Expérience incroyable ! En quelques mois on a pu vivre les 4 saisons de l'année. Énormément de choses à voir à Montréal, au Canada et les Etats-Unis à côté. Les gens sont d'une amabilité incroyable ! La résidence est ouf, vous avez salle de sport et piscine/sauna à l'intérieur, à 20min à pied de l'école. Si vous faites les courses au bon endroit, cela vous reviendra moins cher qu'ici. Quant à Concordia, les cours sont de qualités avec des profs très compétents et très sympathiques, cela vous changera de Paris ! - Super destination, tous les profs sont très compétents, beaucoup de chose à faire dans Montréal et autour. - C'est cool, mais on a peu de contact avec la population locale.
+- Expérience incroyable ! En quelques mois on a pu vivre les 4 saisons de l'année. Énormément de choses à voir à Montréal, au Canada et les Etats-Unis à côté. Les gens sont d'une amabilité incroyable ! La résidence est ouf, vous avez salle de sport et piscine/sauna à l'intérieur, à 20min à pied de l'école. Si vous faites les courses au bon endroit, cela vous reviendra moins cher qu'ici. Quant à Concordia, les cours sont de qualités avec des profs très compétents et très sympathiques, cela vous changera de Paris ! - Super destination, tous les profs sont très compétents, beaucoup de chose à faire dans Montréal et autour.
+- C'est cool, mais on a peu de contact avec la population locale.
 
 INDE
 ---
@@ -81,7 +82,10 @@ Témoignage :
 MALAISIE
 ----
 Monnaie : Ringgit -> 1 € = 4.76 MYR
-Moyenne : 2.9 GPA 13.5/20 Loyer : 500 – 1 000€ Alimentation : 100 – 150€ Transports : 30 – 40€ Extras : 400 – 450€ Avion : 500 – 1 000€ (3 mois à l’avance) Train/bus : -
+Moyenne : 2.9 GPA 13.5/20 Loyer : 500 – 1 000€
+Alimentation : 100 – 150€ Transports : 30 – 40€
+Extras : 400 – 450€
+Avion : 500 – 1 000€ (3 mois à l’avance) Train/bus : -
 
 Choses à savoir :
 - La consommation de drogue (cannabis ou autres) est passible de peine de mort.

@@ -4,10 +4,10 @@
         <MainMap/>
         <b-container>
             <b-row>
-                <b-col>
+                <b-col class="maincol" sm="12" md="6">
                     <MainInfo/>
                 </b-col>
-                <b-col>
+                <b-col class="maincol" sm="12" md="6">
                     <MainForm/>
                 </b-col>
             </b-row>
@@ -54,7 +54,13 @@
         margin-top: 20px;
     }
 
-    #mainInfo {
-        margin-top: 20px;
-    }
+
+        .maincol {
+            padding: 25px;
+
+        }
+
+
+
+
 </style>

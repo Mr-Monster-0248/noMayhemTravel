@@ -43,8 +43,8 @@
                 var div = window.document.createElement('div');
                 div.id = 'vue-popup-content';
                 // Add a 100px square in the div so it will go in the right place
-                div.style.height="100px";
-                div.style.width="200px";
+                div.style.height="90px";
+                div.style.width="120px";
 
 
                 // Create a new Mapbox Popup, put it in the DOM
