@@ -28,7 +28,6 @@
                 // We get the features from the point we clicked
                 var features = map.queryRenderedFeatures(e.point);
 
-
                 // If clickd on a point of our layer...
                 if (features.length && features[0].layer.id === "namestest") {
                     // Select the main feature (our layer is first)
@@ -43,6 +42,10 @@
                 // Create an element <div id="vue-popup-content">
                 var div = window.document.createElement('div');
                 div.id = 'vue-popup-content';
+                // Add a 100px square in the div so it will go in the right place
+                div.style.height="100px";
+                div.style.width="200px";
+
 
                 // Create a new Mapbox Popup, put it in the DOM
                 new mapboxgl.Popup({closeOnClick: true})
