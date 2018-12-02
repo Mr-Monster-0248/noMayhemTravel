@@ -21,12 +21,12 @@
 </template>
 
 <script>
-    import MainMap from "./components/MainMap";
-    import Navbar from "./components/Navbar";
+    import MainMap from "./components/Map";
+    import Navbar from "./components/TheNavbar";
     import MainForm from "./components/MainForm";
     import MainInfo from "./components/MainInfo";
-    import Footer from "./components/Footer"
-    import CustomPanel from "./components/CustomPanel"
+    import Footer from "./components/TheFooter"
+    import CustomPanel from "./components/MapPanel"
 
 
     export default {

@@ -9,7 +9,7 @@
 <script>
 
     import Mapbox from "mapbox-gl-vue";
-    import PopupCard from "./PopupCard";
+    import PopupCard from "./MapPopup";
     import Vue from "vue"
     import mapboxgl from "mapbox-gl";
 

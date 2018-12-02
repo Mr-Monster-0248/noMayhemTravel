@@ -11,13 +11,23 @@
             <b-card>
                 <blockquote class="blockquote">
                     <p class="card-text">"{{ comment.text }}"</p>
-
-                    <footer class="blockquote-footer">
-                        {{ comment.name }} parti en <cite>{{ comment.year }} </cite>
-                    </footer>
+                    <div v-if="comment.name">
+                        <footer class="blockquote-footer">
+                            {{ comment.name }} parti en <cite>{{ comment.year }} </cite>
+                        </footer>
+                    </div>
                 </blockquote>
-            </b-card
-            >
+            </b-card>
+
+        </div>
+        <h2>Astuces d'anciens voyageurs</h2>
+        <div v-for="hint in destination.hints" v-if="hint.text" v-bind:key="hint.text">
+            <b-card>
+                <blockquote class="blockquote">
+                    <p class="card-text">"{{ hint.text }}"</p>
+                </blockquote>
+            </b-card>
+
         </div>
     </div>
 </template>
