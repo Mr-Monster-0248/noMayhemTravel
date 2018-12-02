@@ -3,7 +3,8 @@
   "link_website": "http://www.staffs.ac.uk/",
   "country": {
     "name": "England",
-    "flag_url": "..."
+    "flag_url": "...",
+    "currency": "Livre Sterling -> 1 € = 0.89 £"
   },
   "admission": {
     "gpa": {

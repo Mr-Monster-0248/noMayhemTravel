@@ -3,7 +3,8 @@
 	"link_website": "https://www.cput.ac.za/homepage",
 	"country": {
 		"name": "South Africa",
-		"flag_url": "..."
+		"flag_url": "...",
+		"currency": "Rand -> 1 € = 15.55 ZAR"
 	},
 	"admission": {
 		"gpa": {
@@ -56,9 +57,7 @@
 			"average": "300"
 		}
 	},
-	"hints": [{
-			"currency": "Rand -> 1 € = 15.55 ZAR"
-		},
+	"hints": [
 		{
 			"text": "Traverser le trottoir quand c'est pas notre tour est passible de 50 euros d'ammende"
 		},

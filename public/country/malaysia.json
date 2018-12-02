@@ -3,7 +3,8 @@
   "link_website": "http://www.apu.edu.my/",
   "country": {
     "name": "Malaysia",
-    "flag_url": "..."
+    "flag_url": "...",
+  "currency": "Ringgit -> 1 € = 4.76 MYR"
   },
   "admission": {
     "gpa": {
@@ -55,23 +56,21 @@
     }
   },
   "hints": [
-    {
-      "currency": "Ringgit -> 1 € = 4.76 MYR"
-    },
+
     {
       "text": "La consommation de drogue (cannabis ou autres) est passible de peine de mort donc ne pas en consommer au moins 1 mois avant le départ."
     },
     {
-      "text": "Tous les projets sont à la fin et c'est pas facile si on est pas organisé. Pas le droit aux Jeans dans l'Université, attention aux vols de téléphones portables dans la rue.***Faire les vaccins à l'avance"
+      "text": "Tous les projets sont à la fin et c'est pas facile si on est pas organisé. Pas le droit aux Jeans dans l'Université, attention aux vols de téléphones portables dans la rue."
     },
     {
-      "text": "Faire les vaccins à l'avance."
+      "text": "Faites les vaccins à l'avance."
     },
     {
-      "text": "Acheter ses billets tout seul (ex: Air Asia)."
+      "text": "Achetez vos billets tout seul (ex: Air Asia)."
     },
     {
-      "text": "Utiliser Grab au lieu de Uber."
+      "text": "Sur place, utiliser Grab au lieu de Uber."
     }
   ],
   "comments": [

@@ -58,20 +58,22 @@
     {
       "name": "Frédéric",
       "year": "2020",
-      "text": "C'était super! J'ai adoré payer!"
+      "text": "Absolument excellente :D Meilleur semestre de loin de ma scolarité, on regrette tous d'être rentrés. Cours très intéressants et enfin enrichissants. Attention le retour en France sera rude (le S6), car on repasse sur du 8-18h toute la semaine avec des cours très théoriques, et c'est particulièrement frustrant quand on a fait du pratique au S5."
     },
     {
       "name": "Paul",
       "year": "2020",
-      "text": "C'était naze. J'ai adoré payer!"
+      "text": "Expérience incroyable ! En quelques mois on a pu vivre les 4 saisons de l'année. Énormément de choses à voir à Montréal, au Canada et les Etats-Unis à côté. Les gens sont d'une amabilité incroyable ! La résidence est ouf, vous avez salle de sport et piscine/sauna à l'intérieur, à 20min à pied de l'école. Si vous faites les courses au bon endroit, cela vous reviendra moins cher qu'ici. Quant à Concordia, les cours sont de qualités avec des profs très compétents et très sympathiques, cela vous changera de Paris ! - Super destination, tous les profs sont très compétents, beaucoup de chose à faire dans Montréal et autour. - C'est cool, mais on a peu de contact avec la population locale."
     }
   ],
-  "info": [
+  "hints": [
     {
-      "text": "Attention à ne pas trop sécher."
+      "text": "Les prix sont affichés sans taxes (+15% à prévoir) sauf pour la nourriture.."
+    },{
+      "text": "Acheter ses vêtements (chaussures, manteaux...) en avance car très chers sur place (même pour de la qualité, ça reste cher)."
     },
     {
-      "text": "Le coût de la vie est différent !"
+      "text": "Les tips sont obligatoires lorsque l'on mange au restaurant, à donner en plus de la note. Ne jamais traverser le trottoir quand ce n'est pas à nous de traverser, nous ne sommes pas en France ! Sinon vous prenez 50 euros d'amende."
     }
   ],
   "price": {

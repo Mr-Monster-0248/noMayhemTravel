@@ -3,7 +3,8 @@
   "link_website": "https://www.agh.edu.pl/en",
   "country": {
     "name": "Poland",
-    "flag_url": "..."
+    "flag_url": "...",
+    "currency": "Zloty -> 1 € = 4.29 PLN"
   },
   "admission": {
     "gpa": {
@@ -55,9 +56,7 @@
     }
   },
   "hints": [
-    {
-      "currency": "Zloty -> 1 € = 4.29 PLN"
-    },
+
     {
       "text": "Pays sans danger mais malheureusement assez raciste."
     },

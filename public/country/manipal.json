@@ -3,7 +3,8 @@
   "link_website": "https://manipal.edu/mu.html",
   "country": {
     "name": "India",
-    "flag_url": "..."
+    "flag_url": "...",
+    "currency": "Roupie -> 1 € = 79.45 INR"
   },
   "admission": {
     "gpa": {
@@ -55,9 +56,6 @@
     }
   },
   "hints": [
-    {
-      "currency": "Roupie -> 1 € = 79.45 INR"
-    },
     {
       "text": "Ne pas boire l'eau du robinet sinon on tombe malade !"
     },
