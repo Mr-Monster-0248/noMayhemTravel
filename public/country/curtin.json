@@ -1,0 +1,50 @@
+{
+  "university": "Curtin University",
+  "link_website": "https://www.curtin.edu.au/",
+  "country": {
+    "name": "Australia",
+    "flag_url": "\uD83C\uDDF5\uD83C\uDDF1",
+    "currency": "Dollar Australien -> 1€ = 1.55 $"
+  },
+  "admission": {
+    "mark": {
+      "min": "12"
+    },
+    "toefl": {
+      "min": "79"
+    }
+    "ielts": {
+      "min": "6.5"
+    }
+  },
+  "prices": {
+    "plane": {
+      "link_website": "https://www.kayak.fr/"
+    },
+    "food": {
+      "min": "350",
+      "max": "550",
+      "average": "450"
+    },
+    "rent": {
+      "link_website": "https://www.student.com/fr-fr/au/perth/curtin"
+    },
+    "transport": {
+      "min": "50",
+      "max": "200",
+      "average": "135"
+    },
+  }
+  "hints": [
+
+    {
+      "text": "Faire très attention au soleil"
+    },
+    {
+      "text": "Pensez à un adaptateur"
+    },
+    {
+      "text": "Rester sur ses gardes quand aux animaux (araignées, requins, ...)"
+    }
+  ]
+}
