@@ -50,14 +50,9 @@
         height: 500px;
     }
 
-    #mainForm {
-        margin-top: 20px;
-    }
-
-
         .maincol {
             padding: 25px;
-
+            margin-top: 20px;
         }
 
 
