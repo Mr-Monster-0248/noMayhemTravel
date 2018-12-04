@@ -27,9 +27,12 @@
             mapClicked: function (map, e) {
                 // We get the features from the point we clicked
                 var features = map.queryRenderedFeatures(e.point);
-
-                // If clickd on a point of our layer...
-                if (features.length && features[0].layer.id === "namestest") {
+                // console.log(features);
+                // If clicked on a point of our layers...
+                //
+                if (features.length && (features[0].layer.id === "namestest" || features[0].layer.id === "solo"
+                    || features[0].layer.id === "solo (1)"
+                    || features[0].layer.id === "points")) {
                     // Select the main feature (our layer is first)
                     var clickedPoint = features[0];
                     this.createPopUp(map, clickedPoint);

@@ -1,0 +1,40 @@
+{
+  "university": "University College of Cork (UCC)",
+  "link_website": "https://www.ucc.ie/",
+  "country": {
+    "name": "Ireland",
+    "flag_url": "\uD83C\uDDEE\uD83C\uDDEA",
+    "currency": "Euro"
+  },
+  "admission": {
+    "mark": {
+      "min": "12"
+    },
+    "toefl": {
+      "min": "Don't need anything"
+    },
+    "prices": {
+      "plane": {
+        "link_website": "https://www.kayak.fr/"
+      },
+      "food": {
+        "min": "200",
+        "max": "400",
+        "average": "300"
+      },
+      "rent": {
+        "link_website": "https://www.ucc.ie/en/campusaccom/student-accom/"
+      },
+      "transport": {
+        "min": "80",
+        "max": "120",
+        "average": "100"
+      }
+    },
+    "hints": [
+      {
+        "text": "Penser à prendre sa carte européenne d'assurance maladie."
+      }
+    ]
+  }
+}

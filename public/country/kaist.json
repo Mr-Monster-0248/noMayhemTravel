@@ -15,7 +15,7 @@
     },
     "toefl": {
       "min": "80"
-    }
+    },
     "toeic": {
       "min": "720"
     }
@@ -36,8 +36,8 @@
       "min": "0",
       "max": "20",
       "average": "10"
-    },
-  }
+    }
+  },
   "hints": [
 
     {
@@ -45,6 +45,6 @@
     },
     {
       "text": "Des exercices d'attaques sont régulièrement effectuées (à cause des tensions avec la Corée du Nord)"
-    },
+    }
   ]
 }

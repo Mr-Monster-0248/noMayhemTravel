@@ -7,7 +7,7 @@ Alimentation : 350 – 450€
 Avion : https://www.kayak.fr/
 
 
-Curtin University – Australie
+# Curtin University – Australie
 Monnaie : Dollar Australien -> 1€ = 1.55 $
 Moyenne : 12/20
 TOEIC/TOEFL/IELTS : 6.5 – IELTS OU 79 – TOEFL OU Lettre de l’école qui atteste du niveau d’anglais
@@ -16,7 +16,7 @@ Alimentation : 350 - 450€
 Avion : https://www.kayak.fr/
 
 
-Nanyang University – Singapour
+# Nanyang University – Singapour
 Monnaie : Dollar Singapourien -> 1€ = 1.56 $
 Moyenne : 12/20
 TOEIC/TOEFL/IELTS : No need
@@ -25,8 +25,8 @@ Alimentation : 400 – 500 €
 Avion : https://www.kayak.fr/
 
 
-Stony Brook University – USA
-Monnaie : Dollar Américain -> 1€ = 1.56 $
+# Stony Brook University – USA
+Mo  nnaie : Dollar Américain -> 1€ = 1.56 $
 Moyenne : 12/20
 TOEIC/TOEFL/IELTS : 80 – TOEFL ou 7.0 – IELTS
 Loyer : https://www.student.com/fr-fr/us/new-york-city/u/stony-brook-university
