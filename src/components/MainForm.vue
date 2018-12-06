@@ -11,25 +11,45 @@
                                v-model="form.section">
                 </b-form-select>
             </b-form-group>
-            <b-form-group id="inputClassementGroup"
-                          label="Classement en L1"
-                          label-for="inputClassement">
-                <b-form-input id="inputClassement"
+
+            <b-form-group v-if="form.section == 'International'" id="examplesolo">
+                <b-form-checkbox v-model="form.solo" value="true">Destinations solo</b-form-checkbox>
+            </b-form-group>
+
+            <b-form-group id="inputGpaMoyenneGroupe"
+                          label="GPA ou Moyenne L1:"
+                          label-for="inputGpaMoyenne">
+                <b-form-select id="inputGpaMoyenne"
+                               :options="gpamoyenne"
+                               required
+                               v-model="form.gpamoyenne">
+                </b-form-select>
+            </b-form-group>
+
+            <b-form-group v-if="form.gpamoyenne == 'Moyenne'"
+                          id="inputMoyenneGroup"
+                          label="Moyenne en L1"
+                          label-for="inputMoyenne">
+                <b-form-input id="inputMoyenne"
                               type="number"
                               v-model="form.classement"
                               required
                               placeholder="Votre classement en L1">
                 </b-form-input>
             </b-form-group>
-            <b-form-group id="inputGPAGroup"
-                          label="GPA du S3"
-                          label-for="inputGPAGroup">
+
+            <b-form-group v-if="form.gpamoyenne == 'GPA'"
+                          id="inputGPAGroup"
+                          label="GPA en L1"
+                          label-for="inputGPA">
                 <b-form-input id="inputGPA"
                               type="number"
-                              v-model="form.gpa"
-                              placeholder="GPA du S3">
+                              v-model="form.classement"
+                              required
+                              placeholder="Votre GPA en L1">
                 </b-form-input>
             </b-form-group>
+
             <b-form-group id="inputBudgetGroup"
                           label="Budget"
                           label-for="inputBudgetGroup">
@@ -101,6 +121,7 @@
             return {
                 form: {
                     section: null,
+                    solo: [],
                     classement: null,
                     gpa: null,
                     budget: null,
@@ -108,6 +129,7 @@
                     choices: []
                 },
                 section: ['International', 'Classique', 'Bio-numérique', 'Renforcé'],
+                gpamoyenne: ['GPA', 'Moyenne'],
                 destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie', 'India'],
                 show: false
             }
@@ -125,6 +147,7 @@
                 evt.preventDefault();
                 /* Reset our form values */
                 this.form.section = null;
+                this.form.solo = [];
                 this.form.classement = null;
                 this.form.gpa = null;
                 this.form.budget = null;
