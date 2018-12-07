@@ -2,7 +2,7 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
-        <b-container>
+        <b-container fluid>
             <b-row>
                 <b-col class="maincol" sm="12" md="6">
                     <MainInfo/>
