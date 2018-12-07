@@ -3,7 +3,10 @@
 
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-        <b-navbar-brand href="#">Immersion Time</b-navbar-brand>
+        <b-navbar-brand href="#">
+            <img src="img/logo.png" alt="logo" style="width: 50px; height: 51px">
+            IMMERSION TIME
+        </b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
 
