@@ -65,3 +65,10 @@
         }
     };
 </script>
+
+<style scoped>
+    #mainMap {
+        width: 100%;
+        height: 60vh;
+    }
+</style>
