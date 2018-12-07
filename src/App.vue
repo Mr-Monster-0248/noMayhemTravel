@@ -2,6 +2,7 @@
     <div id="app">
         <Navbar/>
         <MainMap/>
+        <MapLegend/>
         <b-container fluid>
             <b-row>
                 <b-col class="maincol" sm="12" md="6">
@@ -27,11 +28,13 @@
     import MainInfo from "./components/MainInfo";
     import Footer from "./components/TheFooter"
     import CustomPanel from "./components/MapPanel"
+    import MapLegend from "./components/MapLegend";
 
 
     export default {
         name: "app",
         components: {
+            MapLegend,
             Footer,
             MainForm,
             Navbar,
