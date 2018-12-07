@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="ok">
         <h1>
             <a :href="destination.link_website">{{ destination.university }}</a>
         </h1>
@@ -35,6 +35,9 @@
 
         </div>
     </div>
+    <div v-else>
+        <b-alert show variant="danger">Couldn't load data !</b-alert>
+    </div>
 </template>
 
 <script>
@@ -44,16 +47,27 @@
         data: function () {
             return {
                 destination: {},
-                cost: {}
+                cost: {},
+                ok: false
             };
         },
         created() {
 
             // console.log("PanelCountry created...");
             // Fetch the right file, put it in this.destination
-            fetch('country/' + this.idJson + '.json').then(response => response.json()).then(json => {
-                this.destination = json
-            })
+
+            fetch('country/' + this.idJson + '.json')
+                .then(response => response.text())
+                .then(text => {
+                    try {
+                        const data = JSON.parse(text);
+                        this.destination = data;
+                        this.ok = true;
+                    } catch (err) {
+                        // It is text, do you text handling here
+                        this.ok = false;
+                    }
+                });
             this.cost = this.destination.prices;
             console.debug(this.cost);
             console.debug("YAS")
@@ -70,7 +84,7 @@
         font-size: 1.6rem
     }
 
-    .blockquote{
+    .blockquote {
         margin-bottom: 0rem;
         font-size: 1rem;
     }

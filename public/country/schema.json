@@ -1,0 +1,535 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "university",
+    "link_website",
+    "country",
+    "admission",
+    "prices",
+    "hints",
+    "comments"
+  ],
+  "properties": {
+    "university": {
+      "$id": "#/properties/university",
+      "type": "string",
+      "title": "The University Schema",
+      "default": "",
+      "examples": [
+        "Concordia University"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "link_website": {
+      "$id": "#/properties/link_website",
+      "type": "string",
+      "title": "The Link_website Schema",
+      "default": "",
+      "examples": [
+        "https://www.concordia.ca/"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "country": {
+      "$id": "#/properties/country",
+      "type": "object",
+      "title": "The Country Schema",
+      "required": [
+        "name",
+        "flag_url",
+        "currency"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/country/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "Canada"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "flag_url": {
+          "$id": "#/properties/country/properties/flag_url",
+          "type": "string",
+          "title": "The Flag_url Schema",
+          "default": "",
+          "examples": [
+            "🇨🇦"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "currency": {
+          "$id": "#/properties/country/properties/currency",
+          "type": "string",
+          "title": "The Currency Schema",
+          "default": "",
+          "examples": [
+            "Dollar canadien -> 1 € = 1.51 $"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "admission": {
+      "$id": "#/properties/admission",
+      "type": "object",
+      "title": "The Admission Schema",
+      "required": [
+        "gpa",
+        "mark",
+        "toeic"
+      ],
+      "properties": {
+        "gpa": {
+          "$id": "#/properties/admission/properties/gpa",
+          "type": "object",
+          "title": "The Gpa Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/admission/properties/gpa/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "2.8"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/admission/properties/gpa/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "3.9"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/admission/properties/gpa/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "3.5"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "mark": {
+          "$id": "#/properties/admission/properties/mark",
+          "type": "object",
+          "title": "The Mark Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/admission/properties/mark/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "13.5"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/admission/properties/mark/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "15.9"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/admission/properties/mark/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "14.7"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "toeic": {
+          "$id": "#/properties/admission/properties/toeic",
+          "type": "object",
+          "title": "The Toeic Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/admission/properties/toeic/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "630"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/admission/properties/toeic/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "975"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/admission/properties/toeic/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "750"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "prices": {
+      "$id": "#/properties/prices",
+      "type": "object",
+      "title": "The Prices Schema",
+      "required": [
+        "plane",
+        "food",
+        "rent",
+        "trains and bus",
+        "transport",
+        "extras"
+      ],
+      "properties": {
+        "plane": {
+          "$id": "#/properties/prices/properties/plane",
+          "type": "object",
+          "title": "The Plane Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/plane/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "250"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/plane/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "500"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/plane/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "375"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "food": {
+          "$id": "#/properties/prices/properties/food",
+          "type": "object",
+          "title": "The Food Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/food/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "100"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/food/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "300"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/food/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "200"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "rent": {
+          "$id": "#/properties/prices/properties/rent",
+          "type": "object",
+          "title": "The Rent Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/rent/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "500"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/rent/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "2500"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/rent/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "1000"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "trains and bus": {
+          "$id": "#/properties/prices/properties/trains and bus",
+          "type": "object",
+          "title": "The Trains and bus Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/trains and bus/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "30"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/trains and bus/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "100"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/trains and bus/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "65"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "transport": {
+          "$id": "#/properties/prices/properties/transport",
+          "type": "object",
+          "title": "The Transport Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/transport/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "30"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/transport/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "100"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/transport/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "65"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "extras": {
+          "$id": "#/properties/prices/properties/extras",
+          "type": "object",
+          "title": "The Extras Schema",
+          "required": [
+            "min",
+            "max",
+            "average"
+          ],
+          "properties": {
+            "min": {
+              "$id": "#/properties/prices/properties/extras/properties/min",
+              "type": "string",
+              "title": "The Min Schema",
+              "default": "",
+              "examples": [
+                "50"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "max": {
+              "$id": "#/properties/prices/properties/extras/properties/max",
+              "type": "string",
+              "title": "The Max Schema",
+              "default": "",
+              "examples": [
+                "700"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "average": {
+              "$id": "#/properties/prices/properties/extras/properties/average",
+              "type": "string",
+              "title": "The Average Schema",
+              "default": "",
+              "examples": [
+                "355"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "hints": {
+      "$id": "#/properties/hints",
+      "type": "array",
+      "title": "The Hints Schema",
+      "items": {
+        "$id": "#/properties/hints/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "$id": "#/properties/hints/items/properties/text",
+            "type": "string",
+            "title": "The Text Schema",
+            "default": "",
+            "examples": [
+              "Traverser le troittoir au feu rouge est passible de 50 euros d'ammende"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "comments": {
+      "$id": "#/properties/comments",
+      "type": "array",
+      "title": "The Comments Schema",
+      "items": {
+        "$id": "#/properties/comments/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "$id": "#/properties/comments/items/properties/text",
+            "type": "string",
+            "title": "The Text Schema",
+            "default": "",
+            "examples": [
+              "Attention le sixième semestre en France sera rude car on repasse sur des horraires de 8h à 18h."
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

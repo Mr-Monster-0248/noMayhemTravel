@@ -12,32 +12,32 @@
     },
     "toefl": {
       "rule": "Don't need anything"
+    }
+  },
+  "prices": {
+    "plane": {
+      "link_website": "https://www.kayak.fr/"
     },
-    "prices": {
-      "plane": {
-        "link_website": "https://www.kayak.fr/"
-      },
-      "food": {
-        "min": "400",
-        "max": "500",
-        "average": "450"
-      },
-      "rent": {
-        "link_website": "https://www.student.com/fr-fr/sg/singapore/nanyang-technological-university-singapore "
-      },
-      "transport": {
-        "min": "0",
-        "max": "36",
-        "average": "18"
-      }
+    "food": {
+      "min": "400",
+      "max": "500",
+      "average": "450"
     },
-    "hints": [
-      {
-        "text": "Toute infraction est passable d'amende (interdit de fumer, de mâcher un chewing-gum, de jeter des déchets par terre, ...), faire très attention !"
-      },
-      {
-        "text": "Consommer de la drogue est sévèrement puni."
-      }
-    ]
-  }
+    "rent": {
+      "link_website": "https://www.student.com/fr-fr/sg/singapore/nanyang-technological-university-singapore "
+    },
+    "transport": {
+      "min": "0",
+      "max": "36",
+      "average": "18"
+    }
+  },
+  "hints": [
+    {
+      "text": "Toute infraction est passable d'amende (interdit de fumer, de mâcher un chewing-gum, de jeter des déchets par terre, ...), faire très attention !"
+    },
+    {
+      "text": "Consommer de la drogue est sévèrement puni."
+    }
+  ]
 }
