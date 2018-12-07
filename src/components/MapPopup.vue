@@ -7,13 +7,9 @@
                     class="text-center">
 
                 <div class="row align-items-center">
-                    <div class="cols-6">
-                        <b-img :src="this.destination.thumbnail" :alt="this.destination.name"
-                               width="200" height="200"
-                               rounded fluid/>
-                    </div>
-                    <div class="cols-6 popuptext">
 
+                    <div class="popuptext">
+                        <h3> {{this.destination.city}}</h3>
                         <h3>{{ this.destination.name }}</h3>
                         <b-button class="d-flex align-items-end" @click="launchPanel">En savoir plus</b-button>
                     </div>
@@ -35,7 +31,7 @@
                 name: "",
                 country: "",
                 id: "",
-                thumbnail: ""
+                city: ""
             }
         },
 
@@ -72,17 +68,17 @@
         padding-top: 1rem;
         padding-right: 1.3rem;
         padding-bottom: 1rem;
-        padding-left: 0.1rem;
     }
 
     h1 {
-        font-size: 2rem
+        font-size: 1.75rem
     }
 
-    h2 {
-        font-size: 1.6rem
-    } h2 {
-        font-size: 1.25rem
+    h3 {
+        font-size: 1.2rem
+    }
+    h3 {
+        font-size: 1.2rem
     }
 
     .card-header {
