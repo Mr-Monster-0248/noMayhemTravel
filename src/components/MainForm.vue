@@ -12,11 +12,7 @@
                 </b-form-select>
             </b-form-group>
 
-            <b-form-group v-if="form.section == 'Internationale'" id="examplesolo">
-                <b-form-checkbox v-model="form.solo" value="true">Destinations solo</b-form-checkbox>
-            </b-form-group>
-
-            <b-form-group v-if="form.solo == 'true'"
+            <b-form-group v-if="form.section == 'Internationale'"
                           id="inputToeicGroup"
                           label="Toeic en fin L1"
                           label-for="inputToiec">
