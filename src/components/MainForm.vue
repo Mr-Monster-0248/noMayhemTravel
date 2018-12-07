@@ -12,39 +12,39 @@
                 </b-form-select>
             </b-form-group>
 
-            <b-form-group v-if="form.section == 'International'" id="examplesolo">
+            <b-form-group v-if="form.section == 'Internationale'" id="examplesolo">
                 <b-form-checkbox v-model="form.solo" value="true">Destinations solo</b-form-checkbox>
             </b-form-group>
 
-            <b-form-group id="inputGpaMoyenneGroupe"
-                          label="GPA ou Moyenne L1:"
-                          label-for="inputGpaMoyenne">
-                <b-form-select id="inputGpaMoyenne"
-                               :options="gpamoyenne"
-                               required
-                               v-model="form.gpamoyenne">
-                </b-form-select>
+            <b-form-group v-if="form.solo == 'true'"
+                          id="inputToeicGroup"
+                          label="Toeic en fin L1"
+                          label-for="inputToiec">
+                <b-form-input id="inputToiec"
+                              type="number"
+                              v-model="form.toiec"
+                              required
+                              placeholder="Votre Toeic en fin L1">
+                </b-form-input>
             </b-form-group>
 
-            <b-form-group v-if="form.gpamoyenne == 'Moyenne'"
-                          id="inputMoyenneGroup"
+            <b-form-group id="inputMoyenneGroup"
                           label="Moyenne en L1"
                           label-for="inputMoyenne">
                 <b-form-input id="inputMoyenne"
                               type="number"
-                              v-model="form.classement"
+                              v-model="form.moyenne"
                               required
                               placeholder="Votre classement en L1">
                 </b-form-input>
             </b-form-group>
 
-            <b-form-group v-if="form.gpamoyenne == 'GPA'"
-                          id="inputGPAGroup"
+            <b-form-group id="inputGPAGroup"
                           label="GPA en L1"
                           label-for="inputGPA">
                 <b-form-input id="inputGPA"
                               type="number"
-                              v-model="form.classement"
+                              v-model="form.gpa"
                               required
                               placeholder="Votre GPA en L1">
                 </b-form-input>
@@ -68,44 +68,7 @@
                     <b-form-checkbox value="bourse">Boursier</b-form-checkbox>
                 </b-form-checkbox-group>
             </b-form-group>
-
-            <b-form-group id="choiceGroupe">
-                <b-form-checkbox v-model="show" value="true">Spécifiez des choix</b-form-checkbox>
-            </b-form-group>
-            <b-card v-if="show" bg-variant="light">
-                <b-form-group horizontal label="Vos choix" label-size="lg" class="mb-0">
-                    <b-form-group>
-                        <b-input-group horizontal label="1er choix" label-class="text-sm-right" label-for="firstChoice" prepend="1°">
-                            <b-form-select id="firstChoice"
-                                           type="text"
-                                           v-model="form.choices[0]"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                            </b-form-select>
-                        </b-input-group>
-                    </b-form-group>
-                    <b-form-group>
-                        <b-input-group horizontal label="2ème choix" label-for="secChoice" prepend="2°">
-                            <b-form-select id="secChoice"
-                                           v-model="form.choices[1]"
-                                           type="text"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                            </b-form-select>
-                        </b-input-group>
-                    </b-form-group>
-                    <b-form-group>
-                        <b-input-group prepend="3°">
-                            <b-form-select v-model="form.choices[2]"
-                                           type="text"
-                                           :options="destination"
-                                           placeholder="Votre choix">
-                                <div class="input-group-text">test</div>
-                            </b-form-select>
-                        </b-input-group>
-                    </b-form-group>
-                </b-form-group>
-            </b-card>
+            
             <b-button type="submit" variant="primary">Submit</b-button>
             <b-button type="reset" variant="danger">Reset</b-button>
         </b-form>
@@ -122,15 +85,19 @@
                 form: {
                     section: null,
                     solo: [],
-                    classement: null,
+                    toeic: null,
+                    moyenne: null,
                     gpa: null,
                     budget: null,
                     checked: [],
-                    choices: []
+                    choices: [],
+                    choicessolo: []
                 },
-                section: ['International', 'Classique', 'Bio-numérique', 'Renforcé'],
+                section: ['Internationale', 'Classique', 'Bio-numérique', 'Renforcée'],
                 gpamoyenne: ['GPA', 'Moyenne'],
                 destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie', 'India'],
+                destinationsolo: ['Angleterre', 'Australie', 'Singapour', 'USA', 'Corée du Sud', 'Irelande'],
+                destinationsolonul: ['Irelande', 'Singapour'],
                 show: false
             }
         },
