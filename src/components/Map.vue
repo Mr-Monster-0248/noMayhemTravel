@@ -30,12 +30,18 @@
                 // console.log(features);
                 // If clicked on a point of our layers...
                 //
-                if (features.length && (features[0].layer.id === "namestest" || features[0].layer.id === "solo"
-                    || features[0].layer.id === "solo (1)"
-                    || features[0].layer.id === "points")) {
-                    // Select the main feature (our layer is first)
-                    var clickedPoint = features[0];
-                    this.createPopUp(map, clickedPoint);
+                if (features.length !== 0) {
+                    if (features[0].layer.id === "namestest" || features[0].layer.id === "solo"
+                        || features[0].layer.id === "solo (1)"
+                        || features[0].layer.id === "points"
+                        || features[0].layer.id === "solo_label"
+                        || features[0].layer.id === "group_label"
+                        || features[0].layer.id === "test (1)"
+                    ) {
+                        // Select the main feature (our layer is first)
+                        var clickedPoint = features[0];
+                        this.createPopUp(map, clickedPoint);
+                    }
                 }
             },
             createPopUp: function (map, place) {
@@ -46,8 +52,8 @@
                 var div = window.document.createElement('div');
                 div.id = 'vue-popup-content';
                 // Add a 100px square in the div so it will go in the right place
-                div.style.height="90px";
-                div.style.width="120px";
+                div.style.height = "90px";
+                div.style.width = "120px";
 
 
                 // Create a new Mapbox Popup, put it in the DOM
@@ -63,7 +69,8 @@
                 }).$mount('#vue-popup-content')
             }
         }
-    };
+    }
+    ;
 </script>
 
 <style scoped>
