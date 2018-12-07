@@ -50,12 +50,9 @@
         height: 500px;
     }
 
-        .maincol {
-            padding: 25px;
-            margin-top: 20px;
-        }
-
-
-
-
+    .maincol {
+        padding: 25px;
+        margin-top: 20px;
+    }
+    
 </style>
