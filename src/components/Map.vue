@@ -31,12 +31,12 @@
                 // If clicked on a point of our layers...
                 //
                 if (features.length !== 0) {
-                    if (features[0].layer.id === "namestest" || features[0].layer.id === "solo"
-                        || features[0].layer.id === "solo (1)"
-                        || features[0].layer.id === "points"
+                    if (features[0].layer.id === "solo"
+
                         || features[0].layer.id === "solo_label"
                         || features[0].layer.id === "group_label"
-                        || features[0].layer.id === "test (1)"
+                        || features[0].layer.id === "group"
+                        || features[0].layer.id === "points"
                     ) {
                         // Select the main feature (our layer is first)
                         var clickedPoint = features[0];
@@ -75,5 +75,5 @@
 
 <style scoped>
 
-    
+
 </style>
