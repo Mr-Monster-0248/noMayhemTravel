@@ -1,7 +1,8 @@
 <template>
     <div id="customPanel">
         <!-- To put transparent: bgOverlay="rgb(0,0,0,0.8)" -->
-        <vue-modaltor :visible="this.open" :resize-width='{1200:"60%",992:"75%",768:"93%"}' @hide="hideModal">
+        <vue-modaltor :bgPanel="'#00222E'" :resize-width='{1200:"60%",992:"75%",768:"93%"}' :visible="this.open"
+                      @hide="hideModal">
             <div v-if="this.open">
                 <PanelCountry :idJson="this.idJson"></PanelCountry>
             </div>
@@ -43,5 +44,7 @@
 </script>
 
 <style scoped>
-
+    #customPanel {
+        background-color: #00222E;
+    }
 </style>

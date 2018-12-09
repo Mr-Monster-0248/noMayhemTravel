@@ -1,10 +1,19 @@
 <template>
-    <div v-if="ok">
-        <h1>
-            <a :href="destination.link_website">{{ destination.university }}</a>
-        </h1>
+    <div id="panelCountry" v-if="ok">
+        <b-row>
+            <b-col sm="12" md="2">
+                <b-img blank blank-color="#ccc" width="100px" alt="country thumbnail"/>
+            </b-col>
+            <b-col sm="12" md="10">
+                <h1>
+                    <a :href="destination.link_website">{{ destination.university }}</a>
+                </h1>
 
-        <div v-if="destination.country"><h2> {{ destination.country.name }}{{ destination.country.flag_url }}</h2></div>
+                <h2 v-if="destination.country"> {{ destination.country.name }}</h2>
+                <!-- TODO : add to h2 {{ destination.country.flag_url }} -->
+            </b-col>
+        </b-row>
+
 
 
         <b-table striped hover :items="cost"></b-table>
@@ -12,28 +21,31 @@
         <div v-for="info in destination.info" v-bind:key="info.text">
             <b-alert show variant="info">{{ info.text }}</b-alert>
         </div>
-        <div v-for="comment in destination.comments" v-bind:key="comment.text">
-            <b-card>
-                <blockquote class="blockquote">
-                    <p class="card-text">"{{ comment.text }}"</p>
-                    <div v-if="comment.name">
-                        <footer class="blockquote-footer">
-                            {{ comment.name }} parti en <cite>{{ comment.year }} </cite>
-                        </footer>
-                    </div>
-                </blockquote>
-            </b-card>
 
-        </div>
-        <h2>Astuces d'anciens voyageurs</h2>
-        <div v-for="hint in destination.hints" v-bind:key="hint.text">
-            <b-card>
-                <blockquote class="blockquote">
-                    <p class="card-text">"{{ hint.text }}"</p>
-                </blockquote>
-            </b-card>
+        <b-row>
+            <b-col sm="12" lg="6">
+                <h2>Commentaires</h2>
+                <b-card v-for="comment in destination.comments" v-bind:key="comment.text">
+                    <b-media>
+                        <h3 v-if="comment.name">{{ comment.name }}</h3>
+                        <b-img slot="aside" blank blank-color="#ccc" width="64" alt="profil picture"/>
+                        <p class="card-text">{{ comment.text }}</p>
+                    </b-media>
+                </b-card>
+            </b-col>
+            <b-col sm="12" lg="6">
+                <h2>Astuces d'anciens voyageurs</h2>
+                <div v-for="hint in destination.hints" v-bind:key="hint.text">
+                    <b-card>
+                        <b-media>
+                            <b-img slot="aside" blank blank-color="#ccc" width="64" alt="profil picture"/>
+                            <p class="card-text">{{ hint.text }}</p>
+                        </b-media>
+                    </b-card>
+                </div>
+            </b-col>
+        </b-row>
 
-        </div>
     </div>
     <div v-else>
         <b-alert show variant="danger">Couldn't load data !</b-alert>
@@ -76,11 +88,20 @@
 </script>
 
 <style scoped>
+
+
+    a {
+        color: #fff;
+        font-size: 2rem;
+    }
+
     h1 {
-        font-size: 2rem
+        text-align: left;
+        text-transform: uppercase;
     }
 
     h2 {
+        color: #fff;
         font-size: 1.6rem
     }
 
