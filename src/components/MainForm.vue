@@ -1,6 +1,6 @@
 <template>
     <div id="mainForm">
-        <h2>Find your destination</h2>
+        <!--<h2>Find your destination</h2>-->
         <b-form @submit="onSubmit" @reset="onReset">
             <b-form-group id="inputSectionGroupe"
                           label="Votre section:"
@@ -65,8 +65,8 @@
                 </b-form-checkbox-group>
             </b-form-group>
             
-            <b-button type="submit" variant="primary">Submit</b-button>
-            <b-button type="reset" variant="danger">Reset</b-button>
+            <b-button type="submit" variant="primary">Décoller ✈️</b-button>
+            <b-button type="reset" style="margin-left:10px" variant="danger">Réinitialiser</b-button>
         </b-form>
     </div>
 </template>

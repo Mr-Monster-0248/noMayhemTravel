@@ -9,7 +9,7 @@
                     <MainInfo/>
                 </b-col>
                 <b-col class="maincol" sm="12" md="6">
-                    <MainForm/>
+                    <MainFormLoader/>
                 </b-col>
             </b-row>
 
@@ -24,7 +24,7 @@
 <script>
     import MainMap from "./components/Map";
     import Navbar from "./components/TheNavbar";
-    import MainForm from "./components/MainForm";
+    import MainFormLoader from "./components/MainFormLoader";
     import MainInfo from "./components/MainInfo";
     import Footer from "./components/TheFooter"
     import CustomPanel from "./components/MapPanel"
@@ -36,7 +36,7 @@
         components: {
             MapLegend,
             Footer,
-            MainForm,
+            MainFormLoader,
             Navbar,
             MainMap,
             CustomPanel,
