@@ -49,7 +49,9 @@
         justify-content: center;
     }
 
-    .center.open{height: auto;}
+    .center.open {
+        height: auto;
+    }
 
     .open-button {
         transition: all 0.3s ease;
@@ -59,9 +61,7 @@
         border-radius: 95px;
         box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
         cursor: pointer;
-
         margin: auto;
-
     }
 
     .open-button.open {

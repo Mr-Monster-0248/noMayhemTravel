@@ -3,7 +3,7 @@
         <Navbar/>
         <MainMap/>
         <MapLegend/>
-        <b-container fluid>
+        <b-container fluid style="max-width: 1700px;">
             <b-row>
                 <b-col class="maincol" sm="12" md="6">
                     <MainInfo/>
