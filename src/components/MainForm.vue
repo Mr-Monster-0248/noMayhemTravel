@@ -111,6 +111,7 @@
                 evt.preventDefault();
                 /* Reset our form values */
                 this.form.section = null;
+                this.form.toeic = null;
                 this.form.moyenne = null;
                 this.form.gpa = null;
                 this.form.budget = null;
