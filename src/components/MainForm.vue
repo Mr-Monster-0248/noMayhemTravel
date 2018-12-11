@@ -12,39 +12,47 @@
                 </b-form-select>
             </b-form-group>
 
-            <b-form-group v-if="form.section == 'Internationale'"
-                          id="inputToeicGroup"
-                          label="Toeic en fin L1"
-                          label-for="inputToiec">
-                <b-form-input id="inputToiec"
-                              type="number"
-                              v-model="form.toiec"
-                              required
-                              placeholder="Votre Toeic en fin L1">
-                </b-form-input>
-            </b-form-group>
-
-            <b-form-group id="inputMoyenneGroup"
-                          label="Moyenne en L1"
-                          label-for="inputMoyenne">
-                <b-form-input id="inputMoyenne"
-                              type="number"
-                              v-model="form.moyenne"
-                              required
-                              placeholder="Votre classement en L1">
-                </b-form-input>
-            </b-form-group>
-
-            <b-form-group id="inputGPAGroup"
-                          label="GPA en L1"
-                          label-for="inputGPA">
-                <b-form-input id="inputGPA"
-                              type="number"
-                              v-model="form.gpa"
-                              required
-                              placeholder="Votre GPA en L1">
-                </b-form-input>
-            </b-form-group>
+            <b-row>
+                <b-col sm="6">
+                    <b-form-group v-if="form.section == 'Internationale'"
+                                  id="inputToeicGroup"
+                                  label="Toeic en fin L1"
+                                  label-for="inputToiec">
+                        <b-form-input id="inputToiec"
+                                      type="number"
+                                      v-model="form.toiec"
+                                      required
+                                      placeholder="Votre Toeic en fin L1">
+                        </b-form-input>
+                    </b-form-group>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col sm="6">
+                    <b-form-group id="inputMoyenneGroup"
+                                  label="Moyenne en L1"
+                                  label-for="inputMoyenne">
+                        <b-form-input id="inputMoyenne"
+                                      type="number"
+                                      v-model="form.moyenne"
+                                      required
+                                      placeholder="Votre classement en L1">
+                        </b-form-input>
+                    </b-form-group>
+                </b-col>
+                <b-col>
+                    <b-form-group id="inputGPAGroup"
+                                  label="GPA en L1"
+                                  label-for="inputGPA">
+                        <b-form-input id="inputGPA"
+                                      type="number"
+                                      v-model="form.gpa"
+                                      required
+                                      placeholder="Votre GPA en L1">
+                        </b-form-input>
+                    </b-form-group>
+                </b-col>
+            </b-row>
 
             <b-form-group id="inputBudgetGroup"
                           label="Budget"
@@ -80,20 +88,13 @@
             return {
                 form: {
                     section: null,
-                    solo: [],
                     toeic: null,
                     moyenne: null,
                     gpa: null,
                     budget: null,
                     checked: [],
-                    choices: [],
-                    choicessolo: []
                 },
                 section: ['Internationale', 'Classique', 'Bio-numérique', 'Renforcée'],
-                gpamoyenne: ['GPA', 'Moyenne'],
-                destination: ['Canada', 'Afrique du sud', 'Pologne', 'UK', 'Malaisie', 'India'],
-                destinationsolo: ['Angleterre', 'Australie', 'Singapour', 'USA', 'Corée du Sud', 'Irelande'],
-                destinationsolonul: ['Irelande', 'Singapour'],
                 show: false
             }
         },
@@ -110,12 +111,10 @@
                 evt.preventDefault();
                 /* Reset our form values */
                 this.form.section = null;
-                this.form.solo = [];
-                this.form.classement = null;
+                this.form.moyenne = null;
                 this.form.gpa = null;
                 this.form.budget = null;
                 this.form.checked = [];
-                this.form.choices = [];
                 /* Trick to reset/clear native browser form validation state */
                 this.$nextTick(() => { this.show = true });
             },
