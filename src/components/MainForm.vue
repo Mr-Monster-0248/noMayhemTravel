@@ -36,7 +36,7 @@
                                       type="number"
                                       v-model="form.moyenne"
                                       required
-                                      placeholder="Votre classement en L1">
+                                      placeholder="Votre moyenne en L1">
                         </b-form-input>
                     </b-form-group>
                 </b-col>
