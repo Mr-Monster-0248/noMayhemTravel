@@ -1,11 +1,11 @@
 <template>
     <div id="mainInfo">
         <h2>Qu'est ce qu'Immersion Time?</h2>
-        <p>Dans le cadre du projet de programmation de L2, Mayhem Adventure présente un site dédié exclusivement aux étudiants d’Efrei Paris. 
-           Il permet, à titre théorique, d’étudier vos possibilités de mobilités à l’international. 
-           Notre équipe a pour ambition de te faire découvrir des destinations auxquelles tu n’avais peut-être pas pensé.
-           Cependant, ce site ne peut en aucun cas vous assurer l’application des destinations obtenues. 
-           Ces dernières évoluant en fonction de paramètres étant propres à chaque promotions d’Efrei Paris.
+       <p>Dans le cadre du projet de programmation de L2, Mayhem Adventure présente un site dédié exclusivement aux étudiants d’Efrei Paris.</p> 
+       <br>Il permet, à titre théorique, d’étudier vos possibilités de mobilités à l’international. </br>
+       <br>Notre équipe a pour ambition de te faire découvrir des destinations auxquelles tu n’avais peut-être pas pensé.</br>
+       <br>Cependant, ce site ne peut en aucun cas vous assurer l’application des destinations obtenues. </br>
+        <br>Ces dernières évoluant en fonction de paramètres étant propres à chaque promotions d’Efrei Paris.</br>
            </p>
         <h3>L'Équipe de Mayhem Adventure</h3>
         <b-table striped hover :items="items"></b-table>
