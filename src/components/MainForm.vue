@@ -80,6 +80,7 @@
 </template>
 
 <script>
+    import test from './../algo'
 
     export default {
         name: "MainForm",
@@ -105,7 +106,8 @@
                 if (this.show === false) {
                     this.form.choices = []
                 }
-                alert(JSON.stringify(this.form));
+
+                test(this.form);
             },
             onReset (evt) {
                 evt.preventDefault();
