@@ -184,9 +184,7 @@
         "plane",
         "food",
         "rent",
-        "trains and bus",
-        "transport",
-        "extras"
+        "transport"
       ],
       "properties": {
         "plane": {
@@ -288,7 +286,7 @@
             }
           }
         },
-        "trains and bus": {
+        "trains-bus": {
           "$id": "#/properties/prices/properties/trains and bus",
           "type": "object",
           "title": "The Trains and bus Schema",
