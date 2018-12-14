@@ -4,7 +4,10 @@
   "country": {
     "name": "Poland",
     "flag_url": "\uD83C\uDDF5\uD83C\uDDF1",
-    "currency": "Zloty -> 1 € = 4.29 PLN"
+    "currency": {
+      "name": "Zloty",
+      "exchange_rate": 4.29
+    }
   },
   "admission": {
     "gpa": {
@@ -30,34 +33,34 @@
       "average": "6600"
     },
     "plane": {
-      "min": "250",
-      "max": "500",
-      "average": "375"
+      "min": 250,
+      "max": 500,
+      "average": 375
     },
     "food": {
-      "min": "100",
-      "max": "350",
-      "average": "225"
+      "min": 100,
+      "max": 350,
+      "average": 225
     },
     "rent": {
-      "min": "500",
-      "max": "1000",
-      "average": "750"
+      "min": 500,
+      "max": 1000,
+      "average": 750
     },
     "trains and bus": {
-      "min": "10",
-      "max": "50",
-      "average": "30"
+      "min": 10,
+      "max": 50,
+      "average": 30
     },
     "transport": {
-      "min": "10",
-      "max": "20",
-      "average": "15"
+      "min": 10,
+      "max": 20,
+      "average": 15
     },
     "extras": {
-      "min": "50",
-      "max": "250",
-      "average": "150"
+      "min": 50,
+      "max": 250,
+      "average": 150
     }
   },
   "hints": [
