@@ -107,7 +107,7 @@
                     this.form.choices = []
                 }
 
-                test(this.form);
+                alert(JSON.stringify(test(this.form)))
             },
             onReset (evt) {
                 evt.preventDefault();
