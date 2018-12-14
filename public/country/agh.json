@@ -24,7 +24,7 @@
     }
   },
   "prices": {
-    "Total Price": {
+    "total price": {
       "min": "920",
       "max": "1820",
       "average": "1545"
