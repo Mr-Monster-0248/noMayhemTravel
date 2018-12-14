@@ -4,7 +4,10 @@
   "country": {
     "name": "India",
     "flag_url": "\uD83C\uDDEE\uD83C\uDDF3",
-    "currency": "Roupie -> 1 € = 79.45 INR"
+    "currency": {
+      "name": "Roupie",
+      "rate_exchange": 79.45
+    }
   },
   "admission": {
     "gpa": {

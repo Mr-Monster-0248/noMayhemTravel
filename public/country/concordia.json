@@ -4,57 +4,62 @@
   "country": {
     "name": "Canada",
     "flag_url": "\uD83C\uDDE8\uD83C\uDDE6",
-    "currency": "Dollar canadien -> 1 € = 1.51 $"
+      "exchange_rate": 1.51
   },
   "admission": {
     "gpa": {
-      "min": "2.8",
-      "max": "3.9",
-      "average": "3.5"
+      "min": 2.8,
+      "max": 3.9,
+      "average": 3.5
     },
 
     "mark": {
-      "min": "13.5",
-      "max": "15.9",
-      "average": "14.7"
+      "min": 13.5,
+      "max": 15.9,
+      "average": 14.7
     },
 
     "toeic": {
-      "min": "630",
-      "max": "975",
-      "average": "750"
+      "min": 630,
+      "max": 975,
+      "average": 750
     }
   },
   "prices": {
+    "total_price": {
+      "min": 4560,
+      "max": 5505,
+      "average": 5032
+    },
     "plane": {
-      "min": "250",
-      "max": "500",
-      "average": "375"
+      "min": 250,
+      "max": 500,
+      "average": 375
     },
     "food": {
-      "min": "100",
-      "max": "300",
-      "average": "200"
+      "min": 100,
+      "max": 300,
+      "average": 200
     },
     "rent": {
-      "min": "500",
-      "max": "2500",
-      "average": "1000"
+      "min": 400,
+      "max": 500,
+      "average": 450
     },
     "trains and bus": {
-      "min": "30",
-      "max": "100",
-      "average": "65"
+      "min": 30,
+      "max": 100,
+      "average": 65
     },
     "transport": {
-      "min": "30",
-      "max": "100",
-      "average": "65"
+      "min": 30,
+      "max": 100,
+      "average": 65
     },
     "extras": {
-      "min": "50",
-      "max": "700",
-      "average": "355"
+      "min": 50,
+      "max": 700,
+      "average": 355
     }
   },
   "hints": [

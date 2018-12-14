@@ -12,6 +12,12 @@
         </p>
         <h3>L'Équipe de Mayhem Adventure</h3>
         <b-table striped hover :items="items"></b-table>
+=======
+        Il permet, à titre théorique, d’étudier vos possibilités de mobilités à l’international. Notre équipe a pour ambition de te faire découvrir des destinations auxquelles tu n’avais peut-être pas pensé
+        Cependant, ce site ne peut en aucun cas vous assurer l’application des destinations obtenues. Ces dernières évoluant en fonction de paramètres étant propres à chaque promotions d’Efrei Paris.</p>
+        <h3>Team</h3>
+        <p>The team was composed of LEPEZ Thibault, LEMDANI Aïda, BOUREY Louise, DUGNY Gabriel and LACROUTS Vincent; P2022, L2 INT</p>
+>>>>>>> Stashed changes
     </div>
 </template>
 
