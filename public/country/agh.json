@@ -1,6 +1,7 @@
 {
   "university": "AGH University",
   "link_website": "https://www.agh.edu.pl/en",
+  "city": "Cracovie",
   "country": {
     "name": "Poland",
     "flag_url": "\uD83C\uDDF5\uD83C\uDDF1",
@@ -11,26 +12,26 @@
   },
   "admission": {
     "gpa": {
-      "min": "0.5",
-      "max": "2.54",
-      "average": "2.54"
+      "min": 0.5,
+      "max": 2.54,
+      "average": 1.5
     },
     "mark": {
-      "min": "10",
-      "max": "12.5",
-      "average": "12.5"
+      "min": 10,
+      "max": 12.5,
+      "average": 11.25
     },
     "toeic": {
-      "min": "400",
-      "max": "920",
-      "average": "760"
+      "min": 400,
+      "max": 920,
+      "average": 760
     }
   },
   "prices": {
     "total_price": {
-      "min": "3850",
-      "max": "7600",
-      "average": "6600"
+      "min": 3700,
+      "max": 7450,
+      "average": 5575
     },
     "plane": {
       "min": 250,

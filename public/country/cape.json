@@ -1,65 +1,69 @@
 {
 	"university": "Cape Peninsula University of Technology",
+	"city": "Cape Town",
 	"link_website": "https://www.cput.ac.za/homepage",
 	"country": {
 		"name": "South Africa",
 		"flag_url": "\uD83C\uDDFF\uD83C\uDDE6",
-		"currency": "Rand -> 1 € = 15.55 ZAR"
+		"currency": {
+			"name": "Rand",
+			"exchange_rate" : 15.55
+		}
 	},
 	"admission": {
 		"gpa": {
-			"min": "0.93",
-			"max": "3.5",
-			"average": "1.7"
+			"min": 0.93,
+			"max": 3.5,
+			"average": 1.7
 		},
 
 		"mark": {
-			"min": "11",
-			"max": "14",
-			"average": "12.5"
+			"min": 11,
+			"max": 14,
+			"average": 12.5
 		},
 
 		"toeic": {
-			"min": "550",
-			"max": "815",
-			"average": "685"
+			"min": 550,
+			"max": 815,
+			"average": 685
 		}
 	},
 	"prices": {
 		"total_price": {
-			"min": "5100",
-			"max": "13550",
-			"average": "9200"
+			"min": 3350,
+			"max": 8300,
+			"average": 5825
 		},
 		"plane": {
-			"min": "500",
-			"max": "1500",
-			"average": "1000"
+			"min": 500,
+			"max": 750,
+			"average": 625
 		},
 		"food": {
-			"min": "100",
-			"max": "400",
-			"average": "250"
+			"min": 100,
+			"max": 400,
+			"average": 250
 		},
 		"rent": {
-			"min": "500",
-			"max": "1000",
-			"average": "750"
+			"min": 200,
+			"max": 500,
+			"average": 350
 		},
 		"trains and bus": {
-			"min": "50",
-			"max": "150",
-			"average": "100"
+			"min": 50,
+			"max": 150,
+			"average": 100
 		},
 		"transport": {
-			"min": "20",
-			"max": "60",
-			"average": "40"
+			"min": 20,
+			"max": 60,
+			"average": 40
 		},
 		"extras": {
-			"min": "150",
-			"max": "500",
-			"average": "300"
+			"min": 500,
+			"max": 1000,
+			"average": 300
 		}
 	},
 	"hints": [
