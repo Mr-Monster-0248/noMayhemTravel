@@ -81,7 +81,6 @@
 
 <script>
     import findDest from './../algo'
-    import EventBus from './../event-bus'
 
     export default {
         name: "MainForm",
@@ -107,6 +106,8 @@
                 if (this.show === false) {
                     this.form.choices = []
                 }
+
+                console.log(JSON.stringify(findDest(this.form)))
 
                 //TODO: find a way to pass result to result panel
             },

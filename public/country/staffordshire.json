@@ -24,6 +24,11 @@
     }
   },
   "prices": {
+    "total_price": {
+      "min": "4150",
+      "max": "8200",
+      "average": "7850"
+    },
     "plane": {
       "min": "400",
       "max": "600",
@@ -36,8 +41,8 @@
     },
     "rent": {
       "min": "300",
-      "max": "2500",
-      "average": "500"
+      "max": "500",
+      "average": "400"
     },
     "trains and bus": {
       "min": "50",
