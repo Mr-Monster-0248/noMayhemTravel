@@ -3,7 +3,7 @@
         <!--<h2>Find your destination</h2>-->
         <b-form @submit="onSubmit" @reset="onReset">
             <b-form-group id="inputSectionGroupe"
-                          label="Votre section:"
+                          label="Votre section"
                           label-for="inputSection">
                 <b-form-select id="inputSection"
                                :options="section"
@@ -55,7 +55,7 @@
 
             <b-form-group id="inputBudgetGroup"
                           label-for="inputBudgetGroup">
-                <b- v-b-tooltip.hover title="Votre budget total sur les 5 mois comprenant le transport (aller-retour)">Budget</b->
+                <span v-b-tooltip.hover title="Votre budget total sur les 5 mois comprenant le transport (aller-retour)">Budget</span>
                 <b-input-group append="€">
                     <b-form-input id="inputBudget"
                                   type="number"
@@ -79,7 +79,9 @@
 </template>
 
 <script>
-    import findDest from './../algo'
+    import findDest from './../algo';
+    import {EventBus} from './../event-bus.js';
+
 
     export default {
         name: "MainForm",
@@ -108,6 +110,7 @@
 
                 console.log(JSON.stringify(findDest(this.form)))
 
+                EventBus.$emit('displayRes', findDest(this.form))
                 //TODO: find a way to pass result to result panel
             },
             onReset (evt) {
