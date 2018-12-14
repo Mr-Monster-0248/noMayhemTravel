@@ -1,6 +1,7 @@
 {
   "university": "Coventry University",
   "link_website": "https://www.coventry.ac.uk/",
+  "city" : "Coventry",
   "country": {
     "name": "England",
     "flag_url": "\uD83C\uDDEC\uD83C\uDDE7",
@@ -11,28 +12,41 @@
   },
   "admission": {
     "mark": {
-      "min": "12"
+      "min": 12,
+      "max": 20,
+      "average": 16
     },
     "toeic": {
-      "min": "700"
+      "min": 700,
+      "max": 990,
+      "average": 845
     }
   },
   "prices": {
+    "total_price":{
+      "min" : 890,
+      "max": 2420,
+      "average": 1655
+    },
     "plane": {
-      "link_website": "https://www.kayak.fr/"
+      "min": 100,
+      "max": 280,
+      "average": 140
     },
     "food": {
-      "min": "300",
-      "max": "500",
-      "average": "400"
+      "min": 300,
+      "max": 500,
+      "average": 400
     },
     "rent": {
-      "link_website": "https://www.student.com/fr-fr/uk/coventry"
+      "min": 470,
+      "max": 1600,
+      "average": 1000
     },
     "transport": {
-      "min": "20",
-      "max": "40",
-      "average": "30"
+      "min": 20,
+      "max": 40,
+      "average": 30
     }
   },
   "hints": [

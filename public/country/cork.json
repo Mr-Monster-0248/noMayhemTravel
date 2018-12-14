@@ -1,34 +1,46 @@
 {
   "university": "University College of Cork (UCC)",
   "link_website": "https://www.ucc.ie/",
+  "city": "Cork",
   "country": {
     "name": "Ireland",
     "flag_url": "\uD83C\uDDEE\uD83C\uDDEA",
-    "currency": "Euro"
+    "currency":{
+      "name": "Euro",
+      "exchange_rate": 1
+    }
   },
   "admission": {
     "mark": {
-      "min": "12"
-    },
-    "toefl": {
-      "min": "Don't need anything"
+      "min": 12,
+      "max": 20,
+      "average": 16
     },
     "prices": {
+      "total_price": {
+        "min": 730,
+        "max": 1800,
+        "average": 1265
+      },
       "plane": {
-        "link_website": "https://www.kayak.fr/"
+        "min": 100,
+        "max": 280,
+        "average": 140
       },
       "food": {
-        "min": "200",
-        "max": "400",
-        "average": "300"
+        "min": 200,
+        "max": 400,
+        "average": 300
       },
       "rent": {
-        "link_website": "https://www.ucc.ie/en/campusaccom/student-accom/"
+        "min": 350,
+        "max": 1000,
+        "average": 675
       },
       "transport": {
-        "min": "80",
-        "max": "120",
-        "average": "100"
+        "min": 80,
+        "max": 120,
+        "average": 100
       }
     },
     "hints": [

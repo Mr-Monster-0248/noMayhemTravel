@@ -1,35 +1,47 @@
 {
   "university": "Nanyang Technological University (NTU)",
   "link_website": "http://www.ntu.edu.sg/Pages/home.aspx",
+  "city": "Singpour",
   "country": {
-    "name": "Singapore",
+    "name": "Singapour",
     "flag_url": "\uD83C\uDDF8\uD83C\uDDEC",
-    "currency": "Dollar Singapourien -> 1€ = 1.56 $ "
+    "currency": {
+      "name": "Dollar de Singapour",
+      "exchange_rate": 1.56
+    }
   },
   "admission": {
     "mark": {
-      "min": "12"
-    },
-    "toefl": {
-      "rule": "Don't need anything"
+      "min": 12,
+      "max": 20,
+      "average": 16
     }
   },
   "prices": {
+    "total_price": {
+      "min": 1385,
+      "max": 5741,
+      "average": 3563
+    },
     "plane": {
-      "link_website": "https://www.kayak.fr/"
+      "min": 335,
+      "max": 605,
+      "average": 470
     },
     "food": {
-      "min": "400",
-      "max": "500",
-      "average": "450"
+      "min": 400,
+      "max": 500,
+      "average": 450
     },
     "rent": {
-      "link_website": "https://www.student.com/fr-fr/sg/singapore/nanyang-technological-university-singapore "
+      "min": 650,
+      "max": 4600,
+      "average": 2625
     },
     "transport": {
-      "min": "0",
-      "max": "36",
-      "average": "18"
+      "min": 0,
+      "max": 36,
+      "average": 18
     }
   },
   "hints": [

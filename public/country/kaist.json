@@ -1,41 +1,58 @@
 {
   "university": "Korea Advanced Institute of Science and Technology",
   "link_website": "https://www.kaist.ac.kr/html/en/",
+  "city": "Daejeon",
   "country": {
     "name": "South Korea",
     "flag_url": "\uD83C\uDDF0\uD83C\uDDF7",
-    "currency": "Won Sud Corréen -> 1€ = 1273.35 W"
+    "currency": {
+      "name": "Won Sud Coréen",
+      "exchange_rate": 1273.35
+    }
   },
   "admission": {
     "GPA": {
-      "min": "3.0"
+      "min": 3.0
     },
     "mark": {
-      "min": "14"
+      "min": 14,
+      "max": 20,
+      "average": 16
     },
     "toefl": {
-      "min": "80"
+      "min": 80
     },
     "toeic": {
-      "min": "720"
+      "min": 720,
+      "max": 990,
+      "average": 845
     }
   },
   "prices": {
+    "total_price": {
+      "min" : 758,
+      "max": 10740,
+      "average": 5749
+    },
     "plane": {
-      "link_website": "https://www.kayak.fr/"
+      "min": 318,
+      "max": 7520,
+      "average": 3900
     },
     "food": {
-      "min": "100",
-      "max": "300",
-      "average": "20"
+      "min": 100,
+      "max": 300,
+      "average": 200
     },
     "rent": {
-      "link_website": "https://www.kaist.ac.kr/html/en/campus/campus_0501.html"
+      "min": 340,
+      "max": 2900,
+      "average": 1620
     },
     "transport": {
-      "min": "0",
-      "max": "20",
-      "average": "10"
+      "min": 0,
+      "max": 20,
+      "average": 10
     }
   },
   "hints": [
