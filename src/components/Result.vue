@@ -1,10 +1,8 @@
 <template>
     <div id="result">
-    <div class="res" v-for="uni in this.result.easy.univ">
-        <p>{{ uni }}</p>
-    </div>
-
-
+        <div class="res" v-for="uni in this.result.easy.univ" v-bind:key="uni">
+            <p>{{ uni }}</p>
+        </div>
     </div>
 </template>
 
@@ -12,17 +10,19 @@
     export default {
         name: "Result",
 
-        props: {
-            result: {
-                easy: {
-                    univ: [],
-                    comments: []
-                },
-                hard: {
-                    univ: [],
-                    issue: []
+        data: function () {
+            return {
+                result: {
+                    easy: {
+                        univ: [],
+                        comments: []
+                    },
+                    hard: {
+                        univ: [],
+                        issue: []
+                    }
                 }
-            }
+            };
         }
     }
 </script>
