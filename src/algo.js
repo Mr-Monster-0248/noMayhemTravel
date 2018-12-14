@@ -16,7 +16,10 @@ export default function test (form) {
         if (form.section === "Internationale") {
             if (form.moyenne > 12) {
                 if (form.toeic > 700) {
-                    result.easy.push("");
+                    result.easy.push("cork");
+                    result.easy.push("coventry");
+                    result.easy.push("kaist");
+                    result.easy.push("curtin");
                 }
                 else {
                     result.easy.push("");
