@@ -81,7 +81,6 @@
 
 <script>
     import findDest from './../algo'
-    import EventBus from './../event-bus'
 
     export default {
         name: "MainForm",
