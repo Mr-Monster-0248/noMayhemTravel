@@ -80,7 +80,8 @@
 </template>
 
 <script>
-    import test from './../algo'
+    import findDest from './../algo'
+    import EventBus from './../event-bus'
 
     export default {
         name: "MainForm",
@@ -107,7 +108,7 @@
                     this.form.choices = []
                 }
 
-                alert(JSON.stringify(test(this.form)))
+                //TODO: find a way to pass result to result panel
             },
             onReset (evt) {
                 evt.preventDefault();

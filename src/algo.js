@@ -1,4 +1,4 @@
-export default function test (form) {
+export default function findDest (form) {
     const limit = new Date(Date.UTC(2019, 5, 1, 0,0,0,0));
     let result = {
         easy: {

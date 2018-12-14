@@ -12,7 +12,7 @@
                     <MainFormLoader/>
                 </b-col>
             </b-row>
-
+            <result/>
         </b-container>
 
         <Footer/>
@@ -29,11 +29,13 @@
     import Footer from "./components/TheFooter"
     import CustomPanel from "./components/MapPanel"
     import MapLegend from "./components/MapLegend";
+    import Result from "./components/Result";
 
 
     export default {
         name: "app",
         components: {
+            Result,
             MapLegend,
             Footer,
             MainFormLoader,
