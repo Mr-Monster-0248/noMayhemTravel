@@ -11,7 +11,6 @@
                                v-model="form.section">
                 </b-form-select>
             </b-form-group>
-
             <b-row>
                 <b-col sm="6">
                     <b-form-group v-if="form.section == 'Internationale'"
@@ -55,13 +54,13 @@
             </b-row>
 
             <b-form-group id="inputBudgetGroup"
-                          label="Budget"
                           label-for="inputBudgetGroup">
+                <b- v-b-tooltip.hover title="Votre budget total sur les 5 mois comprenant le transport (aller-retour)">Budget</b->
                 <b-input-group append="€">
                     <b-form-input id="inputBudget"
                                   type="number"
                                   v-model="form.budget"
-                                  placeholder="Votre budget">
+                                  placeholder="Votre budget total">
                     </b-form-input>
                 </b-input-group>
             </b-form-group>
