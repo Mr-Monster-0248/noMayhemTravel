@@ -6,6 +6,7 @@
   "title": "Destination Data Format",
   "required": [
     "university",
+    "city",
     "link_website",
     "country",
     "admission",
@@ -19,6 +20,15 @@
       "title": "The University Schema",
       "examples": [
         "Concordia University"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "city": {
+      "$id": "#/properties/university",
+      "type": "string",
+      "title": "The City Schema",
+      "examples": [
+        "Montréal"
       ],
       "pattern": "^(.*)$"
     },

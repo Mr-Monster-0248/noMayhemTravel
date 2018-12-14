@@ -1,10 +1,14 @@
 {
   "university": "Concordia University",
+  "city": "Montréal",
   "link_website": "https://www.concordia.ca/",
   "country": {
     "name": "Canada",
     "flag_url": "\uD83C\uDDE8\uD83C\uDDE6",
+    "currency": {
+      "name": "Dollar canadien",
       "exchange_rate": 1.51
+    }
   },
   "admission": {
     "gpa": {
@@ -12,13 +16,11 @@
       "max": 3.9,
       "average": 3.5
     },
-
     "mark": {
       "min": 13.5,
       "max": 15.9,
       "average": 14.7
     },
-
     "toeic": {
       "min": 630,
       "max": 975,
@@ -63,9 +65,8 @@
     }
   },
   "hints": [
-
     {
-      "text": "Traverser le troittoir au feu rouge est passible de 50 euros d'ammende"
+      "text": "Traverser le trottoir au feu rouge est passible de 50$ d'amende."
     },
     {
       "text": "Toujours donner des tips !"
@@ -74,20 +75,18 @@
       "text": "Prendre un bon adaptateur qui ne soit pas passif."
     },
     {
-      "text": "A cause des taxes, il vaut mieux payer en espèces et non pas en en carte."
+      "text": "À cause des taxes, il vaut mieux payer en espèces et non pas en en carte."
     },
     {
       "text": "Faire les courses et organiser les repas à plusieurs pour éviter de payer trop cher."
     }
-
   ],
   "comments": [
     {
-      "text": "Attention le sixième semestre en France sera rude car on repasse sur des horraires de 8h à 18h."
-
+      "text": "Tous les professeurs sont très compétents, beaucoup d'activités à faire et de choses à voir dans Montréal et autour."
     },
     {
-      "text": "Tous les professeurs sont très compétents, beaucoup d'activités à faire et de choses à voir dans Montréal et autour."
+      "text": "Attention le sixième semestre en France sera rude car on repasse sur des horaires de 8h à 18h."
     }
   ]
 }
