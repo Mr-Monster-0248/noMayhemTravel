@@ -24,8 +24,6 @@
         background-color: #00222E;
         color: white;
         min-height: 30px;
-
-
     }
 
     .legendbar p {

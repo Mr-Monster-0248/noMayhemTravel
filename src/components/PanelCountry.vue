@@ -91,11 +91,13 @@
 <style scoped>
     .header {
         background-size: cover;
+        background-position: center;
         height: 150px;
     }
 
     .header-content {
         padding: 15px;
+        color: #fff;
     }
 
     a {
@@ -109,7 +111,6 @@
     }
 
     h2 {
-        color: #fff;
         font-size: 1.6rem
     }
 
