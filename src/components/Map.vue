@@ -56,6 +56,9 @@
                 // To check if properties were updated by Mapbox
                 // console.log(place.properties);
 
+                map.flyTo({
+                    center: place.geometry.coordinates
+                });
                 // Create an element <div id="vue-popup-content">
                 var div = window.document.createElement('div');
                 div.id = 'vue-popup-content';
