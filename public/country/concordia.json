@@ -4,10 +4,7 @@
   "country": {
     "name": "Canada",
     "flag_url": "\uD83C\uDDE8\uD83C\uDDE6",
-    "currency": {
-      "name": "Dollar canadien",
       "exchange_rate": 1.51
-    }
   },
   "admission": {
     "gpa": {
