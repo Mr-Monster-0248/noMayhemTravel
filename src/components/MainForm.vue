@@ -108,6 +108,8 @@
                     this.form.choices = []
                 }
 
+                console.log(JSON.stringify(findDest(this.form)))
+
                 //TODO: find a way to pass result to result panel
             },
             onReset (evt) {

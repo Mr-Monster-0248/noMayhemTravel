@@ -8,17 +8,17 @@
   },
   "admission": {
     "gpa": {
-      "min": "2.54",
+      "min": "0.5",
       "max": "2.54",
       "average": "2.54"
     },
     "mark": {
-      "min": "12.5",
+      "min": "10",
       "max": "12.5",
       "average": "12.5"
     },
     "toeic": {
-      "min": "600",
+      "min": "400",
       "max": "920",
       "average": "760"
     }
