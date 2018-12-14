@@ -1,7 +1,10 @@
 export default function test (form) {
     const limit = new Date(Date.UTC(2019, 5, 1, 0,0,0,0));
     let result = {
-        easy: [],
+        easy: {
+            univ: [],
+            comments: []
+        },
         hard: {
             univ: [],
             issue: []
@@ -16,13 +19,13 @@ export default function test (form) {
         if (form.section === "Internationale") {
             if (form.moyenne > 12) {
                 if (form.toeic > 700) {
-                    result.easy.push("cork");
-                    result.easy.push("coventry");
-                    result.easy.push("kaist");
-                    result.easy.push("curtin");
+                    result.easy.univ.push("cork");
+                    result.easy.univ.push("coventry");
+                    result.easy.univ.push("kaist");
+                    result.easy.univ.push("curtin");
                 }
                 else {
-                    result.easy.push("");
+                    result.easy.univ.push("");
                     result.hard.issue.push("teoic level to low");
                     result.hard.univ.push("");
                 }
@@ -31,13 +34,13 @@ export default function test (form) {
         }
 
         if (form.gpa > 2) {
-            result.easy.push("concordia");
-            result.easy.push("malaysia");
+            result.easy.univ.push("concordia");
+            result.easy.univ.push("malaysia");
         }
         else {
-            result.easy.push("cape");
-            result.easy.push("manipal");
-            result.easy.push("staffordshire");
+            result.easy.univ.push("cape");
+            result.easy.univ.push("manipal");
+            result.easy.univ.push("staffordshire");
 
             result.hard.univ.push("concordia");
             result.hard.univ.push("malaysia");
