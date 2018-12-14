@@ -10,14 +10,6 @@
 
         <b-collapse is-nav id="nav_collapse">
 
-            <b-navbar-nav>
-                <b-nav-item href="#">À propos</b-nav-item>
-                <b-nav-item-dropdown text="Lang." right>
-                    <b-dropdown-item href="#">English</b-dropdown-item>
-                    <b-dropdown-item href="#">Français</b-dropdown-item>
-                </b-nav-item-dropdown>
-            </b-navbar-nav>
-
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
                 <b-nav-form>
