@@ -24,15 +24,20 @@
     }
   },
   "prices": {
+    "total_price": {
+      "min": "3400",
+      "max": "10350",
+      "average": "5800"
+    },
     "plane": {
       "min": "500",
       "max": "2500",
       "average": "1000"
     },
     "food": {
-      "min": "500",
-      "max": "1000",
-      "average": "600"
+      "min": "100",
+      "max": "300",
+      "average": "200"
     },
     "rent": {
       "min": "300",
