@@ -1,8 +1,9 @@
 <template>
     <div id="popupCard">
         <div class="popupcard-container container">
-            <b-card bg-variant="dark"
-                    :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1> <h2 class=\'popup\'>('+this.destination.city+')</h2>'"
+            <b-card v-if="this.destination.country !== this.destination.city"
+                    bg-variant="dark"
+                    :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1><h2 class=\'popup\'>('+this.destination.city+')</h2>'"
                     text-variant="white"
                     class="text-center">
 
@@ -18,7 +19,24 @@
                 </div>
 
             </b-card>
+            <b-card v-else
+                    bg-variant="dark"
+                    :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1>'"
+                    text-variant="white"
+                    class="text-center">
+                <div class="row align-items-center">
+                    <div class="popuptext">
+                        <h2 class='popup'>{{ this.destination.name }}</h2>
+                        <div class="button">
+                            <b-button variant="primary"
+                                      class="d-flex align-items-end"
+                                      @click="launchPanel">En savoir plus
+                            </b-button>
+                        </div>
+                    </div>
+                </div>
 
+            </b-card>
         </div>
 
     </div>
@@ -63,8 +81,14 @@
     }
 
     .popuptext {
+        max-width: 250px;
         margin-left: 7px;
         margin-right: 7px;
+    }
+
+    button.popuptext {
+        text-align:center;
+        margin: auto;
     }
 
     .card-header h1 {
@@ -94,10 +118,10 @@
 
     /* Set infos size */
     h1.popup {
-         font-size: 1.5rem;
-     }
+        font-size: 1.4rem;
+    }
 
-    h2.popup  {
-        font-size: 1.1rem;
+    h2.popup {
+        font-size: 1rem;
     }
 </style>
