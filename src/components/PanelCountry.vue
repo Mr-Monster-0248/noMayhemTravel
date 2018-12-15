@@ -111,7 +111,8 @@
     }
 
     h2 {
-        font-size: 1.6rem
+        font-size: 1.6rem;
+        color: #fff;
     }
 
     .dark {

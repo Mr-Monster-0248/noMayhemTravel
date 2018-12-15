@@ -1,6 +1,7 @@
 {
   "university": "Nanyang Technological University (NTU)",
   "link_website": "http://www.ntu.edu.sg/Pages/home.aspx",
+  "city": "Singapour",
   "country": {
     "name": "Singapore",
     "flag_url": "\uD83C\uDDF8\uD83C\uDDEC",
@@ -8,10 +9,10 @@
   },
   "admission": {
     "mark": {
-      "min": "12"
+      "min": 12
     },
     "toefl": {
-      "rule": "Don't need anything"
+      "rule": 0
     }
   },
   "prices": {
@@ -19,17 +20,17 @@
       "link_website": "https://www.kayak.fr/"
     },
     "food": {
-      "min": "400",
-      "max": "500",
-      "average": "450"
+      "min": 400,
+      "max": 500,
+      "average": 450
     },
     "rent": {
       "link_website": "https://www.student.com/fr-fr/sg/singapore/nanyang-technological-university-singapore "
     },
     "transport": {
-      "min": "0",
-      "max": "36",
-      "average": "18"
+      "min": 0,
+      "max": 36,
+      "average": 18
     }
   },
   "hints": [

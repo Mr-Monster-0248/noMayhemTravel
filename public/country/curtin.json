@@ -1,6 +1,7 @@
 {
   "university": "Curtin University",
   "link_website": "https://www.curtin.edu.au/",
+  "city": "Perth",
   "country": {
     "name": "Australia",
     "flag_url": "\uD83C\uDDE6\uD83C\uDDFA",
@@ -8,13 +9,13 @@
   },
   "admission": {
     "mark": {
-      "min": "12"
+      "min": 12
     },
     "toefl": {
-      "min": "79"
+      "min": 79
     },
     "ielts": {
-      "min": "6.5"
+      "min": 6.5
     }
   },
   "prices": {
@@ -22,29 +23,28 @@
       "link_website": "https://www.kayak.fr/"
     },
     "food": {
-      "min": "350",
-      "max": "550",
-      "average": "450"
+      "min": 350,
+      "max": 550,
+      "average": 450
     },
     "rent": {
       "link_website": "https://www.student.com/fr-fr/au/perth/curtin"
     },
     "transport": {
-      "min": "50",
-      "max": "200",
-      "average": "135"
+      "min": 50,
+      "max": 200,
+      "average": 135
     }
   },
   "hints": [
-
     {
-      "text": "Faire très attention au soleil"
+      "text": "Faire très attention au soleil."
     },
     {
-      "text": "Pensez à un adaptateur"
+      "text": "Pensez à un adaptateur secteur."
     },
     {
-      "text": "Rester sur ses gardes quand aux animaux (araignées, requins, ...)"
+      "text": "Rester sur ses gardes quant aux animaux (araignées, requins, ...)"
     }
   ]
 }

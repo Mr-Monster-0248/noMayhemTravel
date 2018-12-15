@@ -1,20 +1,21 @@
 {
   "university": "Coventry University",
   "link_website": "https://www.coventry.ac.uk/",
+  "city": "Coventry",
   "country": {
     "name": "England",
     "flag_url": "\uD83C\uDDEC\uD83C\uDDE7",
     "currency": {
-      "name" : "Livre Sterling",
+      "name": "Livre Sterling",
       "exchange_rate": 0.89
     }
   },
   "admission": {
     "mark": {
-      "min": "12"
+      "min": 12
     },
     "toeic": {
-      "min": "700"
+      "min": 700
     }
   },
   "prices": {
@@ -22,17 +23,17 @@
       "link_website": "https://www.kayak.fr/"
     },
     "food": {
-      "min": "300",
-      "max": "500",
-      "average": "400"
+      "min": 300,
+      "max": 500,
+      "average": 400
     },
     "rent": {
       "link_website": "https://www.student.com/fr-fr/uk/coventry"
     },
     "transport": {
-      "min": "20",
-      "max": "40",
-      "average": "30"
+      "min": 20,
+      "max": 40,
+      "average": 30
     }
   },
   "hints": [
@@ -40,7 +41,7 @@
       "text": "Beaucoup d'amendes en Angleterre."
     },
     {
-      "text": "Pensez à un adaptateur"
+      "text": "Pensez à un adaptateur secteur."
     },
     {
       "text": "Prenez des habits chauds, il fait froid."

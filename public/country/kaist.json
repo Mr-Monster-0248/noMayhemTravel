@@ -1,23 +1,24 @@
 {
   "university": "Korea Advanced Institute of Science and Technology",
   "link_website": "https://www.kaist.ac.kr/html/en/",
+  "city": "Daejeon",
   "country": {
     "name": "South Korea",
     "flag_url": "\uD83C\uDDF0\uD83C\uDDF7",
     "currency": "Won Sud Corréen -> 1€ = 1273.35 W"
   },
   "admission": {
-    "GPA": {
-      "min": "3.0"
+    "gpa": {
+      "min": 3.0
     },
     "mark": {
-      "min": "14"
+      "min": 14
     },
     "toefl": {
-      "min": "80"
+      "min": 80
     },
     "toeic": {
-      "min": "720"
+      "min": 720
     }
   },
   "prices": {
@@ -25,17 +26,17 @@
       "link_website": "https://www.kayak.fr/"
     },
     "food": {
-      "min": "100",
-      "max": "300",
-      "average": "20"
+      "min": 100,
+      "max": 300,
+      "average": 20
     },
     "rent": {
       "link_website": "https://www.kaist.ac.kr/html/en/campus/campus_0501.html"
     },
     "transport": {
-      "min": "0",
-      "max": "20",
-      "average": "10"
+      "min": 0,
+      "max": 20,
+      "average": 10
     }
   },
   "hints": [
@@ -44,7 +45,7 @@
       "text": "Se tenir au courant des vaccins à faire."
     },
     {
-      "text": "Des exercices d'attaques sont régulièrement effectuées (à cause des tensions avec la Corée du Nord)"
+      "text": "Des exercices d'attaques sont régulièrement effectuées (à cause des tensions avec la Corée du Nord)."
     }
   ]
 }

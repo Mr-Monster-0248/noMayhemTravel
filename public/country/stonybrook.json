@@ -1,6 +1,7 @@
 {
   "university": "Stony Brook University",
   "link_website": "https://www.stonybrook.edu/",
+  "city": "New York",
   "country": {
     "name": "USA",
     "flag_url": "\uD83C\uDDFA\uD83C\uDDF8",
@@ -8,13 +9,13 @@
   },
   "admission": {
     "mark": {
-      "min": "12"
+      "min": 12
     },
     "toefl": {
-      "min": "80"
+      "min": 80
     },
     "ielts": {
-      "min": "7.0"
+      "min": 7.0
     }
   },
   "prices": {
@@ -22,15 +23,15 @@
       "link_website": "https://www.kayak.fr/"
     },
     "food": {
-      "min": "300",
-      "max": "500",
-      "average": "400"
+      "min": 300,
+      "max": 500,
+      "average": 400
     },
     "rent": {
       "link_website": "https://www.student.com/fr-fr/us/new-york-city/u/stony-brook-university"
     },
     "transport": {
-      "card_per_month": "106"
+      "card_per_month": 106
     }
   },
   "hints": [
