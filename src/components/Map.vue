@@ -4,7 +4,16 @@
                 accessToken='pk.eyJ1IjoidGhpYmF1bHRsZXBleiIsImEiOiJjam9rODhlOHIwMXBqM3FteDY3cjVnMmk4In0.1y1C0L8RxjVOkndgeo5xMg'
                 @map-click="mapClicked"
                 @map-mousemove="mouseOverLabel"
+                @map-load="mapLoaded"
+                @map-init="mapInit"
+                :fullscreen-control="{
+                    show: true,
+                    position: 'top-right'
+                }"
+
         ></mapbox>
+
+        <!--<button v-on:click="flyTo('cork')">Test FlyTo cork</button>-->
     </div>
 </template>
 <script>
@@ -21,10 +30,39 @@
         },
         data() {
             return {
-                PopupContent: Vue.extend(PopupCard)
+                PopupContent: Vue.extend(PopupCard),
+                map: Object,
+                source: Object
             }
         },
         methods: {
+            mapInit: function (map) {
+                this.map = map;
+            },
+            mapLoaded: function (map) {
+                // list all layers
+                // console.log(map.getSource('composite').vectorLayerIds);
+
+                // Get all points from our layers
+                var source_solo = map.querySourceFeatures('composite', {
+                    'sourceLayer': 'solo'
+                });
+                var source_group = map.querySourceFeatures('composite', {
+                    'sourceLayer': 'test'
+                });
+
+                // Merge them and keep only the geometry (coordinates)
+                var ar = {};
+                for (var i = 0; i < source_group.length; i++) {
+                    // console.log(source_group[i]);
+                    ar[source_group[i].properties.id] = source_group[i].geometry;
+                }
+                for (var i = 0; i < source_solo.length; i++) {
+                    //  console.log(source_solo[i]);
+                    ar[source_solo[i].properties.id] = source_solo[i].geometry;
+                }
+                this.source = ar;
+            },
             mouseOverLabel: function (map, e) {
                 // Put the click cursor on our markers
                 const features = map.queryRenderedFeatures(e.point, {
@@ -38,7 +76,6 @@
                 var features = map.queryRenderedFeatures(e.point);
                 // console.log(features);
                 // If clicked on a point of our layers...
-                //
                 if (features.length !== 0) {
                     if (features[0].layer.id === "solo"
                         || features[0].layer.id === "group"
@@ -54,8 +91,6 @@
 
             createPopUp: function (map, place) {
                 // To check if properties were updated by Mapbox
-                // console.log(place.properties);
-
                 map.flyTo({
                     center: place.geometry.coordinates
                 });
@@ -78,6 +113,15 @@
                         destination: place.properties
                     }
                 }).$mount('#vue-popup-content')
+            },
+            flyTo: function (id) {
+                var data = this.source;
+                var goToFeature = data[id];
+
+                this.map.flyTo({
+                    center: goToFeature.coordinates
+                });
+
             }
         }
     }
