@@ -1,6 +1,8 @@
 {
   "name": "immersiontime",
-  "version": "0.1.0",
+  "description": "Discover all destinations with our app!",
+  "author": "Mayhem Adventure",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,7 +16,6 @@
     "mapbox-gl-vue": "^1.9.0",
     "vue": "^2.5.17",
     "vue-modaltor": "^1.3.4",
-    "vue2-slideout-panel": "^1.0.8",
     "webpack-cli": "^3.1.2"
   },
   "devDependencies": {
