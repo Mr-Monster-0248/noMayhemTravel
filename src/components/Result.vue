@@ -1,28 +1,26 @@
 <template>
     <div id="result">
-        <div class="res" v-for="uni in this.result.easy.univ" v-bind:key="uni">
-            <p>{{ uni }}</p>
-        </div>
+        <h2>test</h2>
+
     </div>
 </template>
 
 <script>
+    import {EventBus} from './../event-bus.js';
+
     export default {
         name: "Result",
 
-        data: function () {
+        data () {
             return {
-                result: {
-                    easy: {
-                        univ: [],
-                        comments: []
-                    },
-                    hard: {
-                        univ: [],
-                        issue: []
-                    }
-                }
+                result: {}
             };
+        },
+
+        mounted() {
+            EventBus.$on('displayRes', (result) => {
+                this.result = result;
+            })
         }
     }
 </script>

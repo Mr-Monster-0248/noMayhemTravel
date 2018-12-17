@@ -12,7 +12,7 @@
                     <MainFormLoader/>
                 </b-col>
             </b-row>
-            <result/>
+            <Result/>
         </b-container>
 
         <Footer/>
