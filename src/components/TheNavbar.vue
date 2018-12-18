@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Search from "./Search";
+import Search from "./TheSearch";
 export default {
   name: "Navbar",
     components: { Search}

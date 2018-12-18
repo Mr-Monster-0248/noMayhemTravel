@@ -2,7 +2,6 @@
 
 Project aimed to help Efrei students choose their Immersion (abroad study) destination.
 
-
 ## Install
 ### Prerequisites
 - Node 10.X.X with npm

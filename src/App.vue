@@ -32,14 +32,14 @@
 </template>
 
 <script>
-    import MainMap from "./components/Map";
+    import MainMap from "./components/MainMap";
     import Navbar from "./components/TheNavbar";
     import MainFormLoader from "./components/MainFormLoader";
     import MainInfo from "./components/MainInfo";
     import Footer from "./components/TheFooter"
     import CustomPanel from "./components/MapPanel"
     import MapLegend from "./components/MapLegend";
-    import Result from "./components/Result";
+    import Result from "./components/TheResult";
 
 
     export default {

@@ -107,7 +107,7 @@
                     this.form.choices = []
                 }
 
-                console.log(JSON.stringify(findDest(this.form)))
+                // console.log(JSON.stringify(findDest(this.form)))
 
                 EventBus.$emit('displayRes', findDest(this.form))
                 //TODO: find a way to pass result to result panel
