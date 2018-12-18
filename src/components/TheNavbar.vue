@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="md" type="dark" style="background-color: rgb(0, 34, 46)" >
+    <b-navbar id="theNavbar" toggleable="md" type="dark" style="background-color: rgb(0, 34, 46)" >
 
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 

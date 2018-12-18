@@ -4,7 +4,18 @@
 
             <div v-for="res in this.result" v-bind:key="res.univ[0]">
                 <b-card v-for="univ in res.univ" v-bind:key="univ">
-                    <h3>{{ univ }}</h3>
+                    <b-container>
+                        <b-row>
+                            <b-col sm="12" md="6"><h3>{{ univ }}</h3></b-col>
+                        </b-row>
+                        <b-row>
+                            <b-col sm="12" md="6">
+                                <b-button  @click="flyTo(univ)">Voir sur la carte</b-button>
+                            </b-col>
+                        </b-row>
+                    </b-container>
+
+
                 </b-card>
 
             </div>
@@ -95,6 +106,13 @@
             };
         },
 
+        methods: {
+            flyTo(id) {
+                EventBus.$emit('flyTo', id);
+                window.scrollTo(0, 0);
+            }
+        },
+
         mounted() {
             EventBus.$on('displayRes', (result) => {
                 this.result = result;
@@ -116,12 +134,6 @@
                 }*/
                 // TODO: fetch JSON
             });
-
-
-
-
-
-            console.log(JSON.stringify(this.univInfo))
         }
     }
 </script>
