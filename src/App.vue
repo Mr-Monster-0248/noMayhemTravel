@@ -13,11 +13,11 @@
                 </b-col>
             </b-row>
 
-            <row>
+            <b-row>
                 <b-col cols="12">
                     <Result/>
                 </b-col>
-            </row>
+            </b-row>
             
         </b-container>
 
