@@ -64,28 +64,28 @@
                         rate: 1.51
                     },
                     cork: {
-                        name: "University Colege of Cork",
-                        price: 4500,
-                        currency: "Livre",
-                        rate: 0.89
+                        name: "University College of Cork",
+                        price: 2720,
+                        currency: "Euro",
+                        rate: 1
                     },
                     coventry: {
                         name: "Coventry University",
-                        price: 4000,
-                        currency: "Livre",
+                        price: 3360,
+                        currency: "Livre Sterling",
                         rate: 0.89
                     },
                     curtin: {
                         name: "Curtin University",
-                        price: 4000,
+                        price: 4020,
                         currency: "Dollar Australien",
                         rate: 1.55
                     },
                     kaist: {
                         name: "korea Advanced Institute of Science and Technology",
-                        price: 3700,
-                        currency: "Zloty",
-                        rate: 4.29
+                        price: 2396,
+                        currency: "Won Sud Coréen",
+                        rate: 1273.35
                     },
                     malaysia: {
                         name: "Asia-Pacific University",
@@ -101,21 +101,21 @@
                     },
                     nanyang: {
                         name: "Nanyang Technological University",
-                        price: 3700,
-                        currency: "Zloty",
-                        rate: 4.29
+                        price: 4870,
+                        currency: "Dollar Singapourien",
+                        rate: 1.56
                     },
                     staffordshire: {
                         name: "Staffordshire Universtity",
-                        price: 3700,
-                        currency: "Zloty",
-                        rate: 4.29
+                        price: 3300,
+                        currency: "Livre Sterling",
+                        rate: 0.89
                     },
                     stonybrook: {
                         name: "Stony Brook University",
-                        price: 3700,
-                        currency: "Zloty",
-                        rate: 4.29
+                        price: 4600,
+                        currency: "Dollar Américain",
+                        rate: 1.56
                     }
 
                 }

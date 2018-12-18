@@ -13,7 +13,6 @@
   "admission": {
     "mark": {
       "min": 12,
-      "min": 12,
       "max": 20,
       "average": 16
     },
