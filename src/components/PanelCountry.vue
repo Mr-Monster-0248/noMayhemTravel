@@ -70,8 +70,6 @@
             };
         },
         created() {
-
-            // console.log("PanelCountry created...");
             // Fetch the right file, put it in this.destination
 
             fetch('country/' + this.idJson + '.json')

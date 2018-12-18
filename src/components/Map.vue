@@ -17,6 +17,7 @@
     </div>
 </template>
 <script>
+    import {EventBus} from './../event-bus.js';
 
     import Mapbox from "mapbox-gl-vue";
     import PopupCard from "./MapPopup";
@@ -34,6 +35,11 @@
                 map: Object,
                 source: Object
             }
+        },
+        mounted(){
+            EventBus.$on('flyTo', (id) => {
+                this.flyTo(id);
+            })
         },
         methods: {
             mapInit: function (map) {
@@ -120,7 +126,8 @@
                 var goToFeature = data[id];
 
                 this.map.flyTo({
-                    center: goToFeature.coordinates
+                    center: goToFeature.coordinates,
+                    zoom: 6
                 });
 
             }

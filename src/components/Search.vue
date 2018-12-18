@@ -1,16 +1,17 @@
 <template>
     <b-nav-form @submit.prevent>
         <b-form-input v-model="searchInput" v-on:change="search" v-on:keyup="search" v-on:keypress="search"
-                      @submit="search"
+                      @submit="search" @input="search"
                       v-on:keypress.enter="search"
+                      autocomplete="off"
                       size="sm" class="mr-sm-2" type="search" placeholder="Recherche"></b-form-input>
         <div class="autocomplete">
             <ul v-show="isOpen"
                 class="autocomplete-results">
-                <li v-for="result in  autocompleteList"
-
+                <li v-for="result in autocompleteList"
+                    @click="clickedResult(result[1])"
                     class="autocomplete-result">
-                    {{ result }}
+                    {{ (result[0]) }}
                 </li>
             </ul>
         </div>
@@ -19,15 +20,14 @@
 </template>
 
 <script>
-    //    import returnAutocomplete from "../searchtris"
-
+    import {EventBus} from './../event-bus.js';
 
     export default {
         name: "Search",
         data() {
             return {
                 searchInput: '',
-                isOpne: true,
+                isOpen: true,
                 endSym: Symbol.for('end'),
                 tree: Object,
                 dict: [],
@@ -98,23 +98,46 @@
 
             this.tree = this.createTrie();
             this.dict = [];
-            this.add("Concordia, Canada", "canada", ["concordiaa", "canadaa", "montreala", "canadien"]);
-            this.add("Cork, Irlande", "cork", ["corkk", "irlandee", "irelande", "irr"]);
-
+           // this.add("Concordia, Canada", "canada", ["concordia", "concordiaa", "canadaa", "montreala", "canadien"]);
+            //this.add("Cork, Irlande", "cork", ["cork", "corkk", "irlandee", "irelande", "irr"]);
+            this.add("Concordia, Canada", "concordia", ["concordia", "concordiaa", "canadaa", "montreala"]);
+            this.add("Cork, Irlande", "cork", ["cork", "corkk", "irlandee", "irelandee", "ire"]);
+            this.add("AGH, Pologne", "agh", ["agh", "aghh", "polognee", "cracoviee", "polo"]);
+            this.add("CAPE, Afrique du Sud", "cape", ["cape", "capee", "afrique du sude", "cape towne","afe"]);
+            this.add("Coventry, Angleterre", "coventry", ["coventry", "coventryy", "angleterree", "ane"]);
+            this.add("Curtin, Australie", "curtin", ["curtin", "curtine", "australiee", "ause", "perthe"]);
+            this.add("Kaist, Corée du Sud", "kaist", ["kaist","kaiste", "corée du sude", "coree", "coree du sude", "daejeonn"]);
+            this.add("Asia-Pasific, Malaisie", "malaysia", ["malaysia", "apu", "apue", "mal", "malaisiee", "malaysiee", "asia-pacificc", "asia pacificc", "kuala lumpur"]);
+            this.add("Manipal, Inde", "manipal", ["manipal", "indee", "manipale", "ind", "mani"]);
+            this.add("Nanyang, Singapour", "nanyang", ["nanyang", "singapoure", "sing", "nanyange"]);
+            this.add("Straffordshire, Angleterre", "straffordshire", ["straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
+            this.add("Stony brook, USA", "stonybrook", ["stonybrook", "stonybrooke", "usaa","états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
+            // console.log(this.returnAutocomplete('cor'));
             /* console.log(this.dict);
              console.log(this.TrieProto);
              console.log(this.TrieDesc);
              console.log(this.tree);
-
              console.log("Starting...")
              console.log(this.returnAutocomplete('cork'));
-             console.log(this.returnAutocomplete('cor'));
-
              console.log("Starting...")
              console.log(this.TrieProto.autoComplete(this.tree, "cor"));*/
         },
+        mounted() {
+            document.addEventListener('click', this.handleClickOutside)
+        },
+        destroyed() {
+            document.removeEventListener('click', this.handleClickOutside)
+        },
         methods: {
-
+            clickedResult(id) {
+                EventBus.$emit('flyTo', id);
+                this.isOpen = false;
+            },
+            handleClickOutside: function (evt) {
+                if (!this.$el.contains(evt.target)) {
+                    this.isOpen = false;
+                }
+            },
             createTrie: function () {
                 return Object.create(this.TrieProto, this.TrieDesc);
             },
@@ -140,20 +163,37 @@
                         return this.dict[i].name;
                     }
                 }
+            }, returnId: function (alias) {
+                for (var i = 0; i < this.dict.length; i++) {
+                    if (this.dict[i]["key"] == alias) {
+                        return this.dict[i].id;
+                    }
+                }
             },
             returnAutocomplete: function (input) {
                 var t = this.TrieProto.autoComplete(this.tree, input);
-                /*                console.log("Improtat");
-                                console.log(t);
-                  */
-                for (var i = 0; i < t.length; i++) {
-                    t[i] = this.returnName(t[i])
+
+                for ( i = 0; i < t.length; i++) {
+                    t[i] = this.returnId(t[i])
                 }
-                return [...new Set(t)];
+                t= [...new Set(t)];
+               //  console.log(t)
+                var v=[];
+                for (var i = 0; i < t.length; i++) {
+                    v[i]=[];
+                    v[i][0] = this.returnName(t[i])
+                    v[i][1] = this.returnId(t[i])
+                    v[i][2] = t[i]
+                }
+
+                // console.log(v);
+
+                return v;
             }
 
             ,
             search: function () {
+                this.isOpen = true;
                 // console.log(this.searchInput);
                 this.autocompleteList = this.returnAutocomplete(this.searchInput)
                 // console.log(this.returnAutocomplete(this.searchInput))
