@@ -12,18 +12,17 @@
 
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
-                <b-nav-form>
-                    <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Recherche"/>
-                    <b-button size="sm" class="my-2 my-sm-0" type="submit">Recherche</b-button>
-                </b-nav-form>
+                <search></search>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
 </template>
 
 <script>
+import Search from "./Search";
 export default {
-  name: "Navbar"
+  name: "Navbar",
+    components: { Search}
 };
 </script>
 
