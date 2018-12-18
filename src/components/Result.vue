@@ -42,61 +42,73 @@
                 },
                 univInfo: {
                     agh: {
+                        name: "AGH University",
                         price: 3700,
                         currency: "Zloty",
                         rate: 4.29
                     },
                     cape:{
+                        name: "Cape University of Technology",
                         price: 3350,
                         currency: "Rand",
                         rate: 15.55
                     },
                     concordia: {
+                        name: "Concordia University",
                         price: 4560,
                         currency: "Dollar Canadien",
                         rate: 1.51
                     },
                     cork: {
+                        name: "University Colege of Cork",
                         price: 4500,
                         currency: "Livre",
                         rate: 0.89
                     },
                     coventry: {
+                        name: "Coventry University",
                         price: 4000,
                         currency: "Livre",
                         rate: 0.89
                     },
                     curtin: {
+                        name: "Curtin University",
                         price: 4000,
                         currency: "Dollar Australien",
                         rate: 1.55
                     },
                     kaist: {
+                        name: "korea Advanced Institute of Science and Technology",
                         price: 3700,
                         currency: "Zloty",
                         rate: 4.29
                     },
                     malaysia: {
+                        name: "Asia-Pacific University",
                         price: 3395,
                         currency: "Ringgit",
                         rate: 4.76
                     },
                     manipal: {
+                        name: "Manipal Institute of Technology",
                         price: 3190,
                         currency: "Roupie",
                         rate: 79.45
                     },
                     nanyang: {
+                        name: "Nanyang Technological University",
                         price: 3700,
                         currency: "Zloty",
                         rate: 4.29
                     },
                     staffordshire: {
+                        name: "Staffordshire Universtity",
                         price: 3700,
                         currency: "Zloty",
                         rate: 4.29
                     },
                     stonybrook: {
+                        name: "Stony Brook University",
                         price: 3700,
                         currency: "Zloty",
                         rate: 4.29
