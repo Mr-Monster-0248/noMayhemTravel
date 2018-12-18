@@ -53,11 +53,12 @@
 
                 // Merge them and keep only the geometry (coordinates)
                 var ar = {};
-                for (var i = 0; i < source_group.length; i++) {
+                var i;
+                for (i = 0; i < source_group.length; i++) {
                     // console.log(source_group[i]);
                     ar[source_group[i].properties.id] = source_group[i].geometry;
                 }
-                for (var i = 0; i < source_solo.length; i++) {
+                for (i = 0; i < source_solo.length; i++) {
                     //  console.log(source_solo[i]);
                     ar[source_solo[i].properties.id] = source_solo[i].geometry;
                 }
