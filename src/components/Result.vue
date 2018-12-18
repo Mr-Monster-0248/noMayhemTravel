@@ -1,13 +1,13 @@
 <template>
-    <div id="result">
-        <h2>test</h2>
+    <div id="result" v-if="this.result.easy">
+        <h2>Découvrez: </h2>
 
+            <div v-for="res in this.result" v-bind:key="res.univ[0]">
+                <b-card v-for="univ in res.univ" v-bind:key="univ">
+                    <h3>{{ univ }}</h3>
+                </b-card>
 
-				<p v-for="res in this.result" v-bind:key="res.univ[0]">
-					<span v-for="univ in res.univ" v-bind:key="univ">
-						{{ univ }}
-					</span>
-				</p>
+            </div>
     </div>
 </template>
 
