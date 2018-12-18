@@ -1,16 +1,16 @@
 <template>
     <b-nav-form @submit.prevent>
-        <b-form-input v-model="searchInput" v-on:change="search" v-on:keyup="search" v-on:keypress="search"
-                      @submit="search" @input="search"
-                      v-on:keypress.enter="search"
-                      autocomplete="off"
-                      size="sm" class="mr-sm-2" type="search" placeholder="Recherche"></b-form-input>
+        <b-form-input @input="search" @submit="search" autocomplete="off" class="mr-sm-2"
+                      placeholder="Recherche" size="sm"
+                      type="search"
+                      v-model="searchInput"
+                      v-on:change="search" v-on:keypress="search" v-on:keypress.enter="search" v-on:keyup="search"></b-form-input>
         <div class="autocomplete">
-            <ul v-show="isOpen"
-                class="autocomplete-results">
-                <li v-for="result in autocompleteList"
-                    @click="clickedResult(result[1])"
-                    class="autocomplete-result">
+            <ul class="autocomplete-results"
+                v-show="isOpen">
+                <li @click="clickedResult(result[1])"
+                    class="autocomplete-result"
+                    v-for="result in autocompleteList">
                     {{ (result[0]) }}
                 </li>
             </ul>
@@ -22,6 +22,9 @@
 <script>
     // TODO: Refactor the search. Not really pretty.
     // Lots of scope problems etc...
+    // Too many loops, recursion
+    // Vue component mixed with trie
+    // My heads hurts
 
     import {EventBus} from './../event-bus.js';
 
@@ -72,10 +75,6 @@
                     },
                     autoComplete(tree, word_input) {
                         var point = this.goTo(tree.tree, word_input);
-                        /* console.log("tree");
-                         console.log(tree.tree);
-                         console.log(point);
-                         */
                         var stack = [];
 
                         function reduceObjToArr(obj, trace) {
@@ -87,10 +86,8 @@
                             }
                         }
 
-                        reduceObjToArr(point, '')
+                        reduceObjToArr(point, '');
                         return stack.map(function (e) {
-                            // console.log(word_input)
-                            // console.log(e)
                             return word_input + e
                         });
                     }
@@ -101,6 +98,8 @@
         created() {
             this.tree = this.createTrie();
             this.dict = [];
+
+            // TODO: Extract this kind of data from JSON files at build.
 
             this.add("Concordia, Canada", "concordia", ["*a", "concordia", "concordiaa", "canadaa", "montreala"]);
             this.add("Cork, Irlande", "cork", ["*b", "cork", "corkk", "irlandee", "irelandee", "ire"]);
@@ -114,15 +113,6 @@
             this.add("Nanyang, Singapour", "nanyang", ["*j", "nanyang", "singapoure", "sing", "nanyange"]);
             this.add("Straffordshire, Angleterre", "straffordshire", ["*k", "straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
             this.add("Stony brook, USA", "stonybrook", ["*l", "stonybrook", "stonybrooke", "usaa", "états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
-            // console.log(this.returnAutocomplete('cor'));
-            /* console.log(this.dict);
-             console.log(this.TrieProto);
-             console.log(this.TrieDesc);
-             console.log(this.tree);
-             console.log("Starting...")
-             console.log(this.returnAutocomplete('cork'));
-             console.log("Starting...")
-             console.log(this.TrieProto.autoComplete(this.tree, "cor"));*/
         },
         mounted() {
             document.addEventListener('click', this.handleClickOutside)
@@ -144,11 +134,8 @@
                 return Object.create(this.TrieProto, this.TrieDesc);
             },
             add: function (name, id, id_aliases) {
-                //console.log(id_aliases)
                 for (var i = 0; i < id_aliases.length; i++) {
-                    //console.log(id_aliases[i], name);
                     this.addToDic(name, id, id_aliases[i]);
-
                     this.tree.insert(id_aliases[i]);
                 }
             },
@@ -179,17 +166,12 @@
                     t[i] = this.returnId(t[i])
                 }
                 t = [...new Set(t)];
-                //  console.log(t)
                 var v = [];
                 for (var i = 0; i < t.length; i++) {
                     v[i] = [];
-                    v[i][0] = this.returnName(t[i])
+                    v[i][0] = this.returnName(t[i]);
                     v[i][1] = this.returnId(t[i])
-                    v[i][2] = t[i]
                 }
-
-                // console.log(v);
-
                 return v;
             }
 
@@ -197,9 +179,7 @@
             search: function () {
                 if (this.searchInput) {
                     this.isOpen = true;
-                    // console.log(this.searchInput);
                     this.autocompleteList = this.returnAutocomplete(this.searchInput.toLowerCase())
-                    // console.log(this.returnAutocomplete(this.searchInput))
                 }
             }
         }

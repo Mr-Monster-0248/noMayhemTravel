@@ -1,36 +1,36 @@
 <template>
     <div id="popupCard">
         <div class="popupcard-container container">
-            <b-card v-if="this.destination.country !== this.destination.city"
+            <b-card :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1><h2 class=\'popup\'>('+this.destination.city+')</h2>'"
                     bg-variant="dark"
-                    :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1><h2 class=\'popup\'>('+this.destination.city+')</h2>'"
+                    class="text-center"
                     text-variant="white"
-                    class="text-center">
+                    v-if="this.destination.country !== this.destination.city">
 
                 <div class="row align-items-center">
                     <div class="popuptext">
                         <h2 class='popup'>{{ this.destination.name }}</h2>
 
-                        <b-button variant="primary"
+                        <b-button @click="launchPanel"
                                   class="d-flex align-items-end"
-                                  @click="launchPanel">En savoir plus
+                                  variant="primary">En savoir plus
                         </b-button>
                     </div>
                 </div>
 
             </b-card>
-            <b-card v-else
+            <b-card :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1>'"
                     bg-variant="dark"
-                    :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1>'"
+                    class="text-center"
                     text-variant="white"
-                    class="text-center">
+                    v-else>
                 <div class="row align-items-center">
                     <div class="popuptext">
                         <h2 class='popup'>{{ this.destination.name }}</h2>
                         <div class="button">
-                            <b-button variant="primary"
+                            <b-button @click="launchPanel"
                                       class="d-flex align-items-end"
-                                      @click="launchPanel">En savoir plus
+                                      variant="primary">En savoir plus
                             </b-button>
                         </div>
                     </div>
@@ -75,11 +75,6 @@
         padding-left: 0px;
     }
 
-    .img-fluid {
-        max-width: 60%;
-        height: auto;
-    }
-
     .popuptext {
         max-width: 250px;
         margin-left: 7px;
@@ -87,7 +82,7 @@
     }
 
     button.popuptext {
-        text-align:center;
+        text-align: center;
         margin: auto;
     }
 

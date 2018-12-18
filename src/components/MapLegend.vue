@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="legendbar">
+    <b-container class="legendbar" fluid>
         <div class="d-flex justify-content-between">
             <div>
                 <p><span class="dot dest-group"></span> Destination en groupe <span class="dot dest-solo"></span>

@@ -1,8 +1,5 @@
-
-
-
-export default function findDest (form) {
-    const limit = new Date(Date.UTC(2019, 5, 1, 0,0,0,0));
+export default function findDest(form) {
+    const limit = new Date(Date.UTC(2019, 5, 1, 0, 0, 0, 0));
     let result = {
         easy: {
             univ: [],
@@ -17,8 +14,7 @@ export default function findDest (form) {
     if (Date.now() > limit.getTime() && !(form.checked.includes("passport"))) {
         result.easy.push("agh");
         result.hard.issue.push("invalid passport");
-    }
-    else {
+    } else {
         if (form.section === "Internationale") {
             if (form.moyenne >= 12) {
                 if (form.toeic >= 700) {
@@ -27,8 +23,7 @@ export default function findDest (form) {
                     result.easy.univ.push("curtin");
                     result.easy.univ.push("stonybrook");
                     result.easy.univ.push("cork");
-                }
-                else {
+                } else {
                     result.easy.univ.push("nanyang");
                     result.hard.univ.push("cork");
                     result.hard.issue.push("teoic level to low");
@@ -43,8 +38,7 @@ export default function findDest (form) {
             result.easy.univ.push("cape");
             result.easy.univ.push("manipal");
             result.easy.univ.push("staffordshire");
-        }
-        else {
+        } else {
             result.easy.univ.push("cape");
             result.easy.univ.push("manipal");
             result.easy.univ.push("staffordshire");

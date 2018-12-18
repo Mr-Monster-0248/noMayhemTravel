@@ -3,7 +3,7 @@
         <div class="header" v-bind:style="{ 'background-image': 'url(img/country-panel/'+this.idJson+'.jpg)'}">
             <div class="header-content">
                 <b-row>
-                    <b-col sm="12" md="10">
+                    <b-col md="10" sm="12">
                         <h1>
                             <a :href="destination.link_website" class="dark">{{ destination.university }}</a>
                         </h1>
@@ -20,29 +20,29 @@
             </div>
         </div>
 
-        <b-table striped hover :items="cost"></b-table>
+        <b-table :items="cost" hover striped></b-table>
 
-        <div v-for="info in destination.info" v-bind:key="info.text">
+        <div v-bind:key="info.text" v-for="info in destination.info">
             <b-alert show variant="info">{{ info.text }}</b-alert>
         </div>
         <b-container class="panel-content">
             <b-row>
-                <b-col v-if="destination.comments && destination.comments.length > 0" sm="12" lg="6">
+                <b-col lg="6" sm="12" v-if="destination.comments && destination.comments.length > 0">
                     <h2>Commentaires</h2>
-                    <b-card v-for="comment in destination.comments" v-bind:key="comment.text">
+                    <b-card v-bind:key="comment.text" v-for="comment in destination.comments">
                         <b-media>
                             <h3 v-if="comment.name">{{ comment.name }}</h3>
-                            <b-img slot="aside" blank blank-color="#ccc" width="64" alt="profil picture"/>
+                            <b-img alt="profil picture" blank blank-color="#ccc" slot="aside" width="64"/>
                             <p class="card-text">{{ comment.text }}</p>
                         </b-media>
                     </b-card>
                 </b-col>
-                <b-col v-if="destination.hints && destination.hints.length > 0" sm="12" lg="6">
+                <b-col lg="6" sm="12" v-if="destination.hints && destination.hints.length > 0">
                     <h2>Astuces d'anciens voyageurs</h2>
-                    <div v-for="hint in destination.hints" v-bind:key="hint.text">
+                    <div v-bind:key="hint.text" v-for="hint in destination.hints">
                         <b-card>
                             <b-media>
-                                <b-img slot="aside" blank blank-color="#ccc" width="64" alt="profil picture"/>
+                                <b-img alt="profil picture" blank blank-color="#ccc" slot="aside" width="64"/>
                                 <p class="card-text">{{ hint.text }}</p>
                             </b-media>
                         </b-card>
@@ -69,7 +69,6 @@
         },
         created() {
             // Fetch the right file, put it in this.destination
-
             fetch('country/' + this.idJson + '.json')
                 .then(response => response.text())
                 .then(text => {
@@ -83,8 +82,6 @@
                     }
                 });
             this.cost = this.destination.prices;
-            // console.debug(this.cost);
-            // console.debug("YAS")
         }
     };
 </script>
@@ -121,20 +118,17 @@
         padding: 0 5px;
     }
 
-    .blockquote {
-        margin-bottom: 0rem;
-        font-size: 1rem;
+    @media (min-width: 576px) {
+        .container {
+            max-width: none;
+        }
     }
 
-    @media (min-width: 576px)
-
-    .container {
-        max-width: none;
-    }
 
 </style>
 
 <style>
+    /* Override the modal vue CSS */
     .modal-vue--content {
         padding-left: 0px !important;
         padding-right: 0px !important;
@@ -146,7 +140,7 @@
         text-align: left !important;
     }
 
-    .modal-vue---close-icon{
+    .modal-vue---close-icon {
         z-index: 999;
     }
 </style>

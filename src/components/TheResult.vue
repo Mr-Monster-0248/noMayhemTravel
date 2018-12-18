@@ -2,17 +2,17 @@
     <div id="result">
         <div v-if="this.shown">
             <h2>Découvrez:</h2>
-            <div v-for="res in this.result" v-bind:key="res.univ[0]">
-                <b-card v-for="univ in res.univ" v-bind:key="univ">
+            <div v-bind:key="res.univ[0]" v-for="res in this.result">
+                <b-card v-bind:key="univ" v-for="univ in res.univ">
                     <b-row>
-                        <b-col sm="12" md="10">
+                        <b-col md="10" sm="12">
                             <h3>{{ univInfo[univ].name }}</h3>
                             <p>Prix minimum retrouvé sur nos sondages : {{ univInfo[univ].price }}€</p>
                             <p>Monnaie locale : {{ univInfo[univ].currency }} et un taux de change pour un euros de {{
                                 univInfo[univ].rate}}</p>
                         </b-col>
 
-                        <b-col sm="12" md="2">
+                        <b-col md="2" sm="12">
                             <b-button @click="flyTo(univ)">Voir sur la carte</b-button>
                         </b-col>
                     </b-row>

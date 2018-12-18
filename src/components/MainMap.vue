@@ -1,15 +1,15 @@
 <template>
     <div id="mainMap">
-        <mapbox v-bind:mapOptions="{ style: 'mapbox://styles/thibaultlepez/cjpe5zf7r28d02spc17r22xjy' }"
-                accessToken='pk.eyJ1IjoidGhpYmF1bHRsZXBleiIsImEiOiJjam9rODhlOHIwMXBqM3FteDY3cjVnMmk4In0.1y1C0L8RxjVOkndgeo5xMg'
-                @map-click="mapClicked"
-                @map-mousemove="mouseOverLabel"
-                @map-load="mapLoaded"
-                @map-init="mapInit"
-                :fullscreen-control="{
+        <mapbox :fullscreen-control="{
                     show: true,
                     position: 'top-right'
                 }"
+                @map-click="mapClicked"
+                @map-init="mapInit"
+                @map-load="mapLoaded"
+                @map-mousemove="mouseOverLabel"
+                accessToken='pk.eyJ1IjoidGhpYmF1bHRsZXBleiIsImEiOiJjam9rODhlOHIwMXBqM3FteDY3cjVnMmk4In0.1y1C0L8RxjVOkndgeo5xMg'
+                v-bind:mapOptions="{ style: 'mapbox://styles/thibaultlepez/cjpe5zf7r28d02spc17r22xjy' }"
 
         ></mapbox>
 
@@ -36,7 +36,7 @@
                 source: Object
             }
         },
-        mounted(){
+        mounted() {
             EventBus.$on('flyTo', (id) => {
                 this.flyTo(id);
             })

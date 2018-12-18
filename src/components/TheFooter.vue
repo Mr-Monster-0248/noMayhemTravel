@@ -18,6 +18,7 @@
         background-color: #00222E;
         color: #fff;
     }
+
     a {
         color: #FFD000;
     }

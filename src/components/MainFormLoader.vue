@@ -1,13 +1,12 @@
+<!-- The Round button that expands into the form-->
+
 <template>
-    <div style="
-    height: 100%;
-"><H2>Recherche de destination</H2>
+    <div style="height: 100%;">
+        <H2>Recherche de destination</H2>
         <p>Laissez-vous surprendre !</p>
-        <div class="center" :class="{'open': formOpen}">
-            <div class="open-button" :class="{'open': formOpen}">
-
-                <div class="button-copy" v-show="!formOpen" @click="formOpen = true">
-
+        <div :class="{'open': formOpen}" class="center">
+            <div :class="{'open': formOpen}" class="open-button">
+                <div @click="formOpen = true" class="button-copy" v-show="!formOpen">
                     <span class="button-copy-span">Trouver votre destination</span>
                 </div>
                 <form @submit="cancel()">
@@ -33,7 +32,6 @@
             }
         },
         methods: {
-
             cancel: function () {
                 this.formOpen = false;
             }
@@ -130,15 +128,4 @@
         text-decoration: none;
         cursor: pointer;
     }
-
-    ::selection {
-        background-color: #a81a1a;
-        color: #fff;
-    }
-
-    ::-moz-selection {
-        background-color: #a81a1a;
-        color: #fff;
-    }
-
 </style>

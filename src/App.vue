@@ -7,10 +7,10 @@
         <!-- b-tags are from bootstrap vue -->
         <b-container fluid style="max-width: 1700px;">
             <b-row>
-                <b-col class="maincol" sm="12" md="6">
+                <b-col class="maincol" md="6" sm="12">
                     <MainInfo/>
                 </b-col>
-                <b-col class="maincol" sm="12" md="6">
+                <b-col class="maincol" md="6" sm="12">
                     <MainFormLoader/>
                 </b-col>
             </b-row>
@@ -20,7 +20,7 @@
                     <Result/>
                 </b-col>
             </b-row>
-            
+
         </b-container>
 
         <Footer/>
@@ -68,5 +68,15 @@
     #map {
         width: 100%;
         height: 60vh;
+    }
+
+    ::selection {
+        background-color: #a81a1a;
+        color: #fff;
+    }
+
+    ::-moz-selection {
+        background-color: #a81a1a;
+        color: #fff;
     }
 </style>
