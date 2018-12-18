@@ -26,9 +26,9 @@
   },
   "prices": {
     "total_price": {
-      "min": 1230,
-      "max": 9756,
-      "average": 5493
+      "min": 4600,
+      "max": 38424,
+      "average": 21512
     },
     "plane": {
       "min": 160,
