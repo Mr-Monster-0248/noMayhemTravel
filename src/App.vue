@@ -1,8 +1,10 @@
 <template>
+    <!-- Root of App -->
     <div id="app">
         <Navbar/>
         <MainMap/>
         <MapLegend/>
+        <!-- b-tags are from bootstrap vue -->
         <b-container fluid style="max-width: 1700px;">
             <b-row>
                 <b-col class="maincol" sm="12" md="6">
@@ -22,6 +24,8 @@
         </b-container>
 
         <Footer/>
+
+        <!-- Panel, hidden by default -->
         <CustomPanel/>
 
     </div>

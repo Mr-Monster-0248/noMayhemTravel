@@ -123,7 +123,7 @@
             flyTo(id) {
                 EventBus.$emit('flyTo', id);
                 window.scrollTo(0, 0);
-            }, 
+            },
         },
 
         mounted() {

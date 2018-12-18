@@ -2,6 +2,7 @@
 
 Project aimed to help Efrei students choose their Immersion (abroad study) destination.
 
+
 ## Install
 ### Prerequisites
 - Node 10.X.X with npm
@@ -33,14 +34,13 @@ npm run lint
 ```
 Not implemented at the moment.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Compatibility
 ### Browser targets
 - Chrome 70+
 - Edge 44+
 - Firefox 61+
+- Test only on Chrome (PC/Android)
 
 ### Development
 - Windows 10 October 18
