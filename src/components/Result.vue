@@ -19,14 +19,34 @@
 
         data () {
             return {
-                result: {}
+                result: {},
+                univInfo: {}
             };
         },
 
         mounted() {
             EventBus.$on('displayRes', (result) => {
                 this.result = result;
-            })
+            });
+
+            function loadJson() {
+                for (uni in this.result.easy.univ) {
+                    fetch('country/' + uni + '.json')
+                        .then(response => response.json())
+                        .then(res => {
+                            this.univInfo[uni] = res;
+                        })
+                        .catch(res => console.log("PB"));
+
+                }
+            }
+
+            console.log(JSON.stringify(this.univInfo))
+        },
+
+        created() {
+
+
         }
     }
 </script>

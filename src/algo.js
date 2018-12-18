@@ -20,25 +20,29 @@ export default function findDest (form) {
     }
     else {
         if (form.section === "Internationale") {
-            if (form.moyenne > 12) {
-                if (form.toeic > 700) {
-                    result.easy.univ.push("cork");
+            if (form.moyenne >= 12) {
+                if (form.toeic >= 700) {
                     result.easy.univ.push("coventry");
                     result.easy.univ.push("kaist");
                     result.easy.univ.push("curtin");
+                    result.easy.univ.push("stonybrook");
+                    result.easy.univ.push("cork");
                 }
                 else {
-                    result.easy.univ.push("");
+                    result.easy.univ.push("nanyang");
+                    result.hard.univ.push("cork");
                     result.hard.issue.push("teoic level to low");
-                    result.hard.univ.push("");
                 }
             }
 
         }
 
-        if (form.gpa > 2) {
+        if (form.gpa >= 2) {
             result.easy.univ.push("concordia");
             result.easy.univ.push("malaysia");
+            result.easy.univ.push("cape");
+            result.easy.univ.push("manipal");
+            result.easy.univ.push("staffordshire");
         }
         else {
             result.easy.univ.push("cape");
