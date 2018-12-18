@@ -143,4 +143,12 @@
         padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
+
+    .modal-vue--content-panel {
+        text-align: left !important;
+    }
+
+    .modal-vue---close-icon{
+        z-index: 999;
+    }
 </style>
