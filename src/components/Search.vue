@@ -196,7 +196,7 @@
                 if (this.searchInput) {
                     this.isOpen = true;
                     // console.log(this.searchInput);
-                    this.autocompleteList = this.returnAutocomplete(this.searchInput)//.toLowerCase()
+                    this.autocompleteList = this.returnAutocomplete(this.searchInput.toLowerCase())
                     // console.log(this.returnAutocomplete(this.searchInput))
                 }
             }
