@@ -8,9 +8,14 @@
                             <a :href="destination.link_website" class="dark">{{ destination.university }}</a>
                         </h1>
 
-                        <h2 v-if="destination.country">
+                        <h2 v-if="destination.country.name === destination.city">
+                            <span class="dark">{{destination.city}}</span>
+                        </h2>
+                        <h2 v-else-if="destination.country">
                             <span class="dark">{{destination.city}}, {{ destination.country.name }}</span>
                         </h2>
+
+
                         <!-- TODO : add to h2 {{ destination.country.flag_url }} -->
                     </b-col>
                 </b-row>
@@ -24,7 +29,7 @@
         </div>
         <b-container class="panel-content">
             <b-row>
-                <b-col sm="12" lg="6">
+                <b-col v-if="destination.comments && destination.comments.length > 0" sm="12" lg="6">
                     <h2>Commentaires</h2>
                     <b-card v-for="comment in destination.comments" v-bind:key="comment.text">
                         <b-media>
@@ -34,7 +39,7 @@
                         </b-media>
                     </b-card>
                 </b-col>
-                <b-col sm="12" lg="6">
+                <b-col v-if="destination.hints && destination.hints.length > 0" sm="12" lg="6">
                     <h2>Astuces d'anciens voyageurs</h2>
                     <div v-for="hint in destination.hints" v-bind:key="hint.text">
                         <b-card>
@@ -65,8 +70,6 @@
             };
         },
         created() {
-
-            // console.log("PanelCountry created...");
             // Fetch the right file, put it in this.destination
 
             fetch('country/' + this.idJson + '.json')
@@ -111,7 +114,8 @@
     }
 
     h2 {
-        font-size: 1.6rem
+        font-size: 1.6rem;
+        color: #fff;
     }
 
     .dark {
@@ -123,7 +127,9 @@
         margin-bottom: 0rem;
         font-size: 1rem;
     }
+
     @media (min-width: 576px)
+
     .container {
         max-width: none;
     }
@@ -136,5 +142,13 @@
         padding-right: 0px !important;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
+    }
+
+    .modal-vue--content-panel {
+        text-align: left !important;
+    }
+
+    .modal-vue---close-icon{
+        z-index: 999;
     }
 </style>

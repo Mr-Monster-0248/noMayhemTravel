@@ -6,7 +6,7 @@
     "name": "England",
     "flag_url": "\uD83C\uDDEC\uD83C\uDDE7",
     "currency": {
-      "name" : "Livre Sterling",
+      "name": "Livre Sterling",
       "exchange_rate": 0.89
     }
   },
@@ -54,7 +54,7 @@
       "text": "Beaucoup d'amendes en Angleterre."
     },
     {
-      "text": "Pensez à un adaptateur"
+      "text": "Pensez à un adaptateur secteur."
     },
     {
       "text": "Prenez des habits chauds, il fait froid."

@@ -1,5 +1,6 @@
 {
   "university": "Straffordshire University",
+  "city": "Stoke-on-Trent",
   "link_website": "http://www.staffs.ac.uk/",
   "country": {
     "name": "England",
@@ -29,9 +30,9 @@
   },
   "prices": {
     "total_price": {
-      "min": "4150",
-      "max": "8200",
-      "average": "7850"
+      "min": 3300,
+      "max": 6700,
+      "average": 5000
     },
     "plane": {
       "min": 400,
@@ -44,9 +45,9 @@
       "average": 220
     },
     "rent": {
-      "min": "300",
-      "max": "500",
-      "average": "400"
+      "min": 300,
+      "max": 500,
+      "average": 400
     },
     "trains and bus": {
       "min": 50,

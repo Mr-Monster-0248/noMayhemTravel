@@ -1,63 +1,67 @@
 {
   "university": "Asia-Pasific University",
+  "city": "Kuala Lumpur",
   "link_website": "http://www.apu.edu.my/",
   "country": {
     "name": "Malaysia",
     "flag_url": "\uD83C\uDFF2\uD83C\uDDFE",
-  "currency": "Ringgit -> 1 € = 4.76 MYR"
+    "currency": {
+      "name": "Ringgit",
+      "exchange_rate": 4.76
+    }
   },
   "admission": {
     "gpa": {
-      "min": "1.47",
-      "max": "3.5",
-      "average": "2.5"
+      "min": 1.47,
+      "max": 3.5,
+      "average": 2.5
     },
     "mark": {
-      "min": "12",
-      "max": "15",
-      "average": "13.8"
+      "min": 12,
+      "max": 15,
+      "average": 13.8
     },
     "toeic": {
-      "min": "500",
-      "max": "830",
-      "average": "650"
+      "min": 500,
+      "max": 830,
+      "average": 650
     }
   },
   "prices": {
     "total_price": {
-      "min": "4275",
-      "max": "12100",
-      "average": "6175"
+      "min": 3395,
+      "max": 8640,
+      "average": 6100
     },
     "plane": {
-      "min": "700",
-      "max": "1500",
-      "average": "900"
+      "min": 700,
+      "max": 800,
+      "average": 750
     },
     "food": {
-      "min": "70",
-      "max": "300",
-      "average": "110"
+      "min": 70,
+      "max": 300,
+      "average": 110
     },
     "rent": {
-      "min": "400",
-      "max": "1000",
-      "average": "500"
+      "min": 400,
+      "max": 1000,
+      "average": 500
     },
     "trains and bus": {
-      "min": "25",
-      "max": "50",
-      "average": "30"
+      "min": 25,
+      "max": 50,
+      "average": 30
     },
     "transport": {
-      "min": "20",
-      "max": "50",
-      "average": "35"
+      "min": 20,
+      "max": 50,
+      "average": 35
     },
     "extras": {
-      "min": "60",
-      "max": "420",
-      "average": "200"
+      "min": 60,
+      "max": 420,
+      "average": 200
     }
   },
   "hints": [

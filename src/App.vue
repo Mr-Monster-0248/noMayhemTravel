@@ -12,7 +12,13 @@
                     <MainFormLoader/>
                 </b-col>
             </b-row>
-            <result/>
+
+            <b-row>
+                <b-col cols="12">
+                    <Result/>
+                </b-col>
+            </b-row>
+            
         </b-container>
 
         <Footer/>

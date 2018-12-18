@@ -43,10 +43,18 @@
         "average": 100
       }
     },
-    "hints": [
-      {
-        "text": "Penser à prendre sa carte européenne d'assurance maladie."
-      }
-    ]
-  }
+    "rent": {
+      "link_website": "https://www.ucc.ie/en/campusaccom/student-accom/"
+    },
+    "transport": {
+      "min": 80,
+      "max": 120,
+      "average": 100
+    }
+  },
+  "hints": [
+    {
+      "text": "Penser à prendre sa carte européenne d'assurance maladie."
+    }
+  ]
 }
