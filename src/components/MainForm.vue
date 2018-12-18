@@ -68,7 +68,6 @@
             <b-form-group id="exampleGroup4">
                 <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
                     <b-form-checkbox value="passport">Passport en cours de validité</b-form-checkbox>
-                    <b-form-checkbox value="bourse">Boursier</b-form-checkbox>
                 </b-form-checkbox-group>
             </b-form-group>
             
