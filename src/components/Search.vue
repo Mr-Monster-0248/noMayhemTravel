@@ -20,6 +20,9 @@
 </template>
 
 <script>
+    // TODO: Refactor the search. Not really pretty.
+    // Lots of scope problems etc...
+
     import {EventBus} from './../event-bus.js';
 
     export default {
@@ -41,6 +44,7 @@
                     endSym: this.endSym,
                     insert(word) {
                         var point = this.tree;
+
                         // Add each letter in the array
                         this.wordToLetterArray(word).forEach(function (e, i) {
                             if (!point[e]) {
@@ -52,8 +56,8 @@
                             }
                         });
                     },
-                    wordToLetterArray: function (w) {
-                        return w.split('')
+                    wordToLetterArray: function (word) {
+                        return word.split('')
                     },
                     goTo: function (o, wp) {
                         if (!wp.length) {
@@ -61,33 +65,33 @@
                         }
                         var firstLetter = wp[0];
                         var point = o[firstLetter];
-                        //console.log(o);
                         return point ? this.goTo(point, this.tail(wp)) : {};
                     },
                     tail: function (arr) {
                         return arr.slice(1)
                     },
-                    autoComplete(tree, wp) {
-                        //console.log(wp);
-                        var point = this.goTo(tree.tree, wp);
+                    autoComplete(tree, word_input) {
+                        var point = this.goTo(tree.tree, word_input);
                         /* console.log("tree");
                          console.log(tree.tree);
                          console.log(point);
                          */
                         var stack = [];
 
-                        function reduceObjToArr(o, trace) {
-                            for (var k in o) {
-                                if (o[k][Symbol.for('end')]) {
+                        function reduceObjToArr(obj, trace) {
+                            for (var k in obj) {
+                                if (obj[k][Symbol.for('end')]) {
                                     stack.push(trace + k)
                                 }
-                                reduceObjToArr(o[k], trace + k)
+                                reduceObjToArr(obj[k], trace + k)
                             }
                         }
 
                         reduceObjToArr(point, '')
                         return stack.map(function (e) {
-                            return wp + e
+                            // console.log(word_input)
+                            // console.log(e)
+                            return word_input + e
                         });
                     }
                 },
@@ -95,23 +99,21 @@
             }
         },
         created() {
-
             this.tree = this.createTrie();
             this.dict = [];
-            // this.add("Concordia, Canada", "canada", ["concordia", "concordiaa", "canadaa", "montreala", "canadien"]);
-            //this.add("Cork, Irlande", "cork", ["cork", "corkk", "irlandee", "irelande", "irr"]);
-            this.add("Concordia, Canada", "concordia", ["*a","concordia", "concordiaa", "canadaa", "montreala"]);
-            this.add("Cork, Irlande", "cork", ["*b","cork", "corkk", "irlandee", "irelandee", "ire"]);
-            this.add("AGH, Pologne", "agh", ["*c","agh", "aghh", "polognee", "cracoviee", "polo"]);
-            this.add("CAPE, Afrique du Sud", "cape", ["*d","cape", "capee", "afrique du sude", "cape towne", "afe"]);
-            this.add("Coventry, Angleterre", "coventry", ["*e","coventry", "coventryy", "angleterree", "ane"]);
-            this.add("Curtin, Australie", "curtin", ["*f","curtin", "curtine", "australiee", "ause", "perthe"]);
-            this.add("Kaist, Corée du Sud", "kaist", ["*g","kaist", "kaiste", "corée du sude", "coree", "coree du sude", "daejeonn"]);
-            this.add("Asia-Pasific, Malaisie", "malaysia", ["*h","malaysia", "apu", "apue", "mal", "malaisiee", "malaysiee", "asia-pacificc", "asia pacificc", "kuala lumpur"]);
-            this.add("Manipal, Inde", "manipal", ["*i","manipal", "indee", "manipale", "ind", "mani"]);
-            this.add("Nanyang, Singapour", "nanyang", ["*j","nanyang", "singapoure", "sing", "nanyange"]);
-            this.add("Straffordshire, Angleterre", "straffordshire", ["*k","straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
-            this.add("Stony brook, USA", "stonybrook", ["*l","stonybrook", "stonybrooke", "usaa", "états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
+
+            this.add("Concordia, Canada", "concordia", ["*a", "concordia", "concordiaa", "canadaa", "montreala"]);
+            this.add("Cork, Irlande", "cork", ["*b", "cork", "corkk", "irlandee", "irelandee", "ire"]);
+            this.add("AGH, Pologne", "agh", ["*c", "agh", "aghh", "polognee", "cracoviee", "polo"]);
+            this.add("CAPE, Afrique du Sud", "cape", ["*d", "cape", "capee", "afrique du sude", "cape towne", "afe"]);
+            this.add("Coventry, Angleterre", "coventry", ["*e", "coventry", "coventryy", "angleterree", "ane"]);
+            this.add("Curtin, Australie", "curtin", ["*f", "curtin", "curtine", "australiee", "ause", "perthe"]);
+            this.add("Kaist, Corée du Sud", "kaist", ["*g", "kaist", "kaiste", "corée du sude", "coree", "coree du sude", "daejeonn"]);
+            this.add("Asia-Pasific, Malaisie", "malaysia", ["*h", "malaysia", "apu", "apue", "mal", "malaisiee", "malaysiee", "asia-pacificc", "asia pacificc", "kuala lumpur"]);
+            this.add("Manipal, Inde", "manipal", ["*i", "manipal", "indee", "manipale", "ind", "mani"]);
+            this.add("Nanyang, Singapour", "nanyang", ["*j", "nanyang", "singapoure", "sing", "nanyange"]);
+            this.add("Straffordshire, Angleterre", "straffordshire", ["*k", "straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
+            this.add("Stony brook, USA", "stonybrook", ["*l", "stonybrook", "stonybrooke", "usaa", "états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
             // console.log(this.returnAutocomplete('cor'));
             /* console.log(this.dict);
              console.log(this.TrieProto);

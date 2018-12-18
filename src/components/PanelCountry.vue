@@ -14,8 +14,6 @@
                         <h2 v-else-if="destination.country">
                             <span class="dark">{{destination.city}}, {{ destination.country.name }}</span>
                         </h2>
-
-
                         <!-- TODO : add to h2 {{ destination.country.flag_url }} -->
                     </b-col>
                 </b-row>
@@ -85,7 +83,7 @@
                     }
                 });
             this.cost = this.destination.prices;
-            console.debug(this.cost);
+            // console.debug(this.cost);
             // console.debug("YAS")
         }
     };

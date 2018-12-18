@@ -1,28 +1,24 @@
 <template>
-    <div id="result" v-if="this.result.easy">
-        <h2>Découvrez: </h2>
-
+    <div id="result">
+        <div v-if="this.shown">
+            <h2>Découvrez:</h2>
             <div v-for="res in this.result" v-bind:key="res.univ[0]">
                 <b-card v-for="univ in res.univ" v-bind:key="univ">
-                        <b-row>
-                            <b-col sm="12" md="10">
+                    <b-row>
+                        <b-col sm="12" md="10">
+                            <h3>{{ univInfo[univ].name }}</h3>
+                            <p>Prix minimum retrouvé sur nos sondages : {{ univInfo[univ].price }}€</p>
+                            <p>Monnaie locale : {{ univInfo[univ].currency }} et un taux de change pour un euros de {{
+                                univInfo[univ].rate}}</p>
+                        </b-col>
 
-                                <h3>{{ univInfo[univ].name }}</h3>
-                                <p>Prix minimum retrouvé sur nos sondages : {{ univInfo[univ].price }}€</p>
-                                <p>Monnaie locale : {{ univInfo[univ].currency }} et un taux de change pour un euros de {{ univInfo[univ].rate}}</p>
-
-                            </b-col>
-
-
-                            <b-col sm="12" md="2">
-                                <b-button  @click="flyTo(univ)">Voir sur la carte</b-button>
-                            </b-col>
-                        </b-row>
-
-
+                        <b-col sm="12" md="2">
+                            <b-button @click="flyTo(univ)">Voir sur la carte</b-button>
+                        </b-col>
+                    </b-row>
                 </b-card>
-
             </div>
+        </div>
     </div>
 </template>
 
@@ -32,7 +28,7 @@
     export default {
         name: "Result",
 
-        data () {
+        data() {
             return {
                 result: {
                     easy: {
@@ -44,6 +40,7 @@
                         issue: []
                     }
                 },
+                shown: false,
                 univInfo: {
                     agh: {
                         name: "AGH University",
@@ -51,7 +48,7 @@
                         currency: "Zloty",
                         rate: 4.29
                     },
-                    cape:{
+                    cape: {
                         name: "Cape University of Technology",
                         price: 3350,
                         currency: "Rand",
@@ -126,12 +123,14 @@
             flyTo(id) {
                 EventBus.$emit('flyTo', id);
                 window.scrollTo(0, 0);
-            }
+            }, 
         },
 
         mounted() {
             EventBus.$on('displayRes', (result) => {
                 this.result = result;
+                this.shown = true;
+                location.hash = "#result"
                 /*for (let uni of this.result.easy.univ) {
                     console.log("on est là")
                     fetch('country/' + this.result.easy.univ[uni] + '.json')
