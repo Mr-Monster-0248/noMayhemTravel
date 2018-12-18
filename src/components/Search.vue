@@ -27,7 +27,7 @@
         data() {
             return {
                 searchInput: '',
-                isOpen: true,
+                isOpen: false,
                 endSym: Symbol.for('end'),
                 tree: Object,
                 dict: [],
@@ -98,20 +98,20 @@
 
             this.tree = this.createTrie();
             this.dict = [];
-           // this.add("Concordia, Canada", "canada", ["concordia", "concordiaa", "canadaa", "montreala", "canadien"]);
+            // this.add("Concordia, Canada", "canada", ["concordia", "concordiaa", "canadaa", "montreala", "canadien"]);
             //this.add("Cork, Irlande", "cork", ["cork", "corkk", "irlandee", "irelande", "irr"]);
-            this.add("Concordia, Canada", "concordia", ["concordia", "concordiaa", "canadaa", "montreala"]);
-            this.add("Cork, Irlande", "cork", ["cork", "corkk", "irlandee", "irelandee", "ire"]);
-            this.add("AGH, Pologne", "agh", ["agh", "aghh", "polognee", "cracoviee", "polo"]);
-            this.add("CAPE, Afrique du Sud", "cape", ["cape", "capee", "afrique du sude", "cape towne","afe"]);
-            this.add("Coventry, Angleterre", "coventry", ["coventry", "coventryy", "angleterree", "ane"]);
-            this.add("Curtin, Australie", "curtin", ["curtin", "curtine", "australiee", "ause", "perthe"]);
-            this.add("Kaist, Corée du Sud", "kaist", ["kaist","kaiste", "corée du sude", "coree", "coree du sude", "daejeonn"]);
-            this.add("Asia-Pasific, Malaisie", "malaysia", ["malaysia", "apu", "apue", "mal", "malaisiee", "malaysiee", "asia-pacificc", "asia pacificc", "kuala lumpur"]);
-            this.add("Manipal, Inde", "manipal", ["manipal", "indee", "manipale", "ind", "mani"]);
-            this.add("Nanyang, Singapour", "nanyang", ["nanyang", "singapoure", "sing", "nanyange"]);
-            this.add("Straffordshire, Angleterre", "straffordshire", ["straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
-            this.add("Stony brook, USA", "stonybrook", ["stonybrook", "stonybrooke", "usaa","états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
+            this.add("Concordia, Canada", "concordia", ["*a","concordia", "concordiaa", "canadaa", "montreala"]);
+            this.add("Cork, Irlande", "cork", ["*b","cork", "corkk", "irlandee", "irelandee", "ire"]);
+            this.add("AGH, Pologne", "agh", ["*c","agh", "aghh", "polognee", "cracoviee", "polo"]);
+            this.add("CAPE, Afrique du Sud", "cape", ["*d","cape", "capee", "afrique du sude", "cape towne", "afe"]);
+            this.add("Coventry, Angleterre", "coventry", ["*e","coventry", "coventryy", "angleterree", "ane"]);
+            this.add("Curtin, Australie", "curtin", ["*f","curtin", "curtine", "australiee", "ause", "perthe"]);
+            this.add("Kaist, Corée du Sud", "kaist", ["*g","kaist", "kaiste", "corée du sude", "coree", "coree du sude", "daejeonn"]);
+            this.add("Asia-Pasific, Malaisie", "malaysia", ["*h","malaysia", "apu", "apue", "mal", "malaisiee", "malaysiee", "asia-pacificc", "asia pacificc", "kuala lumpur"]);
+            this.add("Manipal, Inde", "manipal", ["*i","manipal", "indee", "manipale", "ind", "mani"]);
+            this.add("Nanyang, Singapour", "nanyang", ["*j","nanyang", "singapoure", "sing", "nanyange"]);
+            this.add("Straffordshire, Angleterre", "straffordshire", ["*k","straffordshire", "straffordshiree", "ang", "angleterreee", "stoke-on-trente", "stok", "stoke on trente"]);
+            this.add("Stony brook, USA", "stonybrook", ["*l","stonybrook", "stonybrooke", "usaa", "états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
             // console.log(this.returnAutocomplete('cor'));
             /* console.log(this.dict);
              console.log(this.TrieProto);
@@ -173,14 +173,14 @@
             returnAutocomplete: function (input) {
                 var t = this.TrieProto.autoComplete(this.tree, input);
 
-                for ( i = 0; i < t.length; i++) {
+                for (i = 0; i < t.length; i++) {
                     t[i] = this.returnId(t[i])
                 }
-                t= [...new Set(t)];
-               //  console.log(t)
-                var v=[];
+                t = [...new Set(t)];
+                //  console.log(t)
+                var v = [];
                 for (var i = 0; i < t.length; i++) {
-                    v[i]=[];
+                    v[i] = [];
                     v[i][0] = this.returnName(t[i])
                     v[i][1] = this.returnId(t[i])
                     v[i][2] = t[i]
@@ -193,10 +193,12 @@
 
             ,
             search: function () {
-                this.isOpen = true;
-                // console.log(this.searchInput);
-                this.autocompleteList = this.returnAutocomplete(this.searchInput)
-                // console.log(this.returnAutocomplete(this.searchInput))
+                if (this.searchInput) {
+                    this.isOpen = true;
+                    // console.log(this.searchInput);
+                    this.autocompleteList = this.returnAutocomplete(this.searchInput)
+                    // console.log(this.returnAutocomplete(this.searchInput))
+                }
             }
         }
     }
