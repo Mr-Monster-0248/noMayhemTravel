@@ -61,8 +61,7 @@
                         }
                         var firstLetter = wp[0];
                         var point = o[firstLetter];
-                        console.log("YA");
-                        console.log(o);
+                        //console.log(o);
                         return point ? this.goTo(point, this.tail(wp)) : {};
                     },
                     tail: function (arr) {
@@ -71,9 +70,10 @@
                     autoComplete(tree, wp) {
                         //console.log(wp);
                         var point = this.goTo(tree.tree, wp);
-                        console.log("tree");
-                        console.log(tree.tree);
-                        console.log(point);
+                        /* console.log("tree");
+                         console.log(tree.tree);
+                         console.log(point);
+                         */
                         var stack = [];
 
                         function reduceObjToArr(o, trace) {
@@ -95,24 +95,23 @@
             }
         },
         created() {
-            console.log("Loaded!");
 
             this.tree = this.createTrie();
             this.dict = [];
-            this.add("Concordia, Canada", "canada", ["concordia", "canada", "montreal", "canadien"]);
-            this.add("Cork, Irlande", "cork", ["cork", "irland", "ireland", "ir"]);
+            this.add("Concordia, Canada", "canada", ["concordiaa", "canadaa", "montreala", "canadien"]);
+            this.add("Cork, Irlande", "cork", ["corkk", "irlandee", "irelande", "irr"]);
 
-            console.log(this.dict);
-            console.log(this.TrieProto);
-            console.log(this.TrieDesc);
-            console.log(this.tree);
+            /* console.log(this.dict);
+             console.log(this.TrieProto);
+             console.log(this.TrieDesc);
+             console.log(this.tree);
 
-            console.log("Starting...")
-            console.log(this.returnAutocomplete('cork'));
-            console.log(this.returnAutocomplete('cor'));
+             console.log("Starting...")
+             console.log(this.returnAutocomplete('cork'));
+             console.log(this.returnAutocomplete('cor'));
 
-            console.log("Starting...")
-            console.log(this.TrieProto.autoComplete(this.tree, "cor"));
+             console.log("Starting...")
+             console.log(this.TrieProto.autoComplete(this.tree, "cor"));*/
         },
         methods: {
 
@@ -144,8 +143,9 @@
             },
             returnAutocomplete: function (input) {
                 var t = this.TrieProto.autoComplete(this.tree, input);
-                console.log("Improtat");
-                console.log(t);
+                /*                console.log("Improtat");
+                                console.log(t);
+                  */
                 for (var i = 0; i < t.length; i++) {
                     t[i] = this.returnName(t[i])
                 }
@@ -154,9 +154,9 @@
 
             ,
             search: function () {
-                console.log(this.searchInput);
+                // console.log(this.searchInput);
                 this.autocompleteList = this.returnAutocomplete(this.searchInput)
-                console.log(this.returnAutocomplete(this.searchInput))
+                // console.log(this.returnAutocomplete(this.searchInput))
             }
         }
     }
@@ -164,8 +164,9 @@
 
 <style scoped>
     .autocomplete {
-        position: relative;
-        width: 150px;
+        position: absolute;
+        margin-top: 17px;
+        width: 175px;
     }
 
     .autocomplete-results {
@@ -191,55 +192,12 @@
     .autocomplete-result {
         list-style: none;
         text-align: left;
-        padding: 4px 2px;
+        padding: 4px 5px;
         cursor: pointer;
     }
 
     .autocomplete-result:hover {
-        background-color: #4AAE9B;
+        background-color: #A81A1A;
         color: white;
-    }
-    ul.bs-autocomplete-menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-height: 200px;
-        overflow: auto;
-        z-index: 9999;
-        border: 1px solid #eeeeee;
-        border-radius: 4px;
-        background-color: #fff;
-        box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.4);
-    }
-
-    ul.bs-autocomplete-menu a {
-        font-weight: normal;
-        color: #333333;
-    }
-
-    .ui-helper-hidden-accessible {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
-
-    .ui-state-active,
-    .ui-state-focus {
-        color: #23527c;
-        background-color: #eeeeee;
-    }
-
-    .bs-autocomplete-feedback {
-        width: 1.5em;
-        height: 1.5em;
-        overflow: hidden;
-        margin-top: .5em;
-        margin-right: .5em;
     }
 </style>
