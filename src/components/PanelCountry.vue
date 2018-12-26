@@ -69,7 +69,7 @@
         },
         created() {
             // Fetch the right file, put it in this.destination
-            fetch('/country/' + this.idJson + '.json')
+            fetch(process.env.BASE_URL+'country/' + this.idJson + '.json')
                 .then(response => response.text())
                 .then(text => {
                     try {
