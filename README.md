@@ -50,8 +50,20 @@ Not implemented at the moment.
 - VS Code
 
 
-## Dev
+## Deploy
 ### CI
- To skip a build, put "[skip travis]" or "[skip ci]" in the title of your commit.
- <br/>Ex: "[skip ci] Update Readme"
+To skip a build, put "[skip travis]" or "[skip ci]" in the title of your commit.
+<br/>Ex: "[skip ci] Update Readme"
+
+
+### Deploy to GH Pages
+
+ This app is a Single Page App, but uses routing.
+ We cannot modify the behaviour of the server, so we copy index.html to 404.html,
+ the page served by github for a 404. So the app always works.
+
+Issues ?
+- SEO, if HTTP header is of type 404...
+
+
 

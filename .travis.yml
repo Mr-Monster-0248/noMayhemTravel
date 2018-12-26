@@ -5,7 +5,7 @@ node_js:
 install: 'npm ci'
 script: 'npm run build'
 
-before_deploy: 'ls ; cd dist ; ls'
+before_deploy: 'cd dist && cp -v index.html 404.html'
 
 deploy:
   provider: pages
@@ -19,7 +19,6 @@ deploy:
   repo: Dugnychon/ImmersionTime
   name: Immersion Bot
   verbose: true
-
 
 # Optional: disable email notifications about the outcome of your builds
 notifications:
