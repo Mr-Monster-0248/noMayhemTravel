@@ -8,6 +8,7 @@ Vue.use(Router)
 export function createRouter () {
     return new Router({
         mode: 'history',
+        base: process.env.NODE_ENV === 'production' ? '/ImmersionTime/' : '/',
         routes: [
             {
                 path: "/",
