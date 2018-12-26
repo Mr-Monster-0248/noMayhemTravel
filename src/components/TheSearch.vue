@@ -11,7 +11,8 @@
                 v-show="isOpen">
                 <li @click="clickedResult(result[1])"
                     class="autocomplete-result"
-                    v-for="result in autocompleteList">
+                    v-for="result in autocompleteList" :key="result[1]">
+
                     {{ (result[0]) }}
                 </li>
             </ul>
