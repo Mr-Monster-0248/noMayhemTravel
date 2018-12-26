@@ -1,5 +1,4 @@
-# ImmersionTime ! [![Build Status](https://travis-ci.com/Mr-Monster-0248/noMayhemTravel.svg?token=VnzgyfzJ8sr4KrEsgqsq&branch=master)](https://travis-ci.com/Mr-Monster-0248/noMayhemTravel)
-
+# ImmersionTime ! [![Build Status](https://travis-ci.com/Dugnychon/ImmersionTime.svg?token=p5pFoFaqAiLRDSEHnrdp&branch=master)](https://travis-ci.com/Dugnychon/ImmersionTime)
 Project aimed to help Efrei students choose their Immersion (abroad study) destination.
 
 ## Install
