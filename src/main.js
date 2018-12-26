@@ -4,7 +4,7 @@ import bootstrapVue from "bootstrap-vue";
 import VueModalTor from "vue-modaltor";
 import VueRouter from 'vue-router'
 
-import { createRouter } from './router'
+import {createRouter} from './router'
 
 Vue.config.productionTip = false;
 

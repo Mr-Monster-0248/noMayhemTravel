@@ -4,7 +4,8 @@
                       placeholder="Recherche" size="sm"
                       type="search"
                       v-model="searchInput"
-                      v-on:change="search" v-on:keypress="search" v-on:keypress.enter="search" v-on:keyup="search"></b-form-input>
+                      v-on:change="search" v-on:keypress="search" v-on:keypress.enter="search"
+                      v-on:keyup="search"></b-form-input>
         <div class="autocomplete">
             <ul class="autocomplete-results"
                 v-show="isOpen">

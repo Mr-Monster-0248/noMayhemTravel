@@ -44,8 +44,7 @@
 
         methods: {
             launchPanel() {
-console.log("Sent!");
-EventBus.$emit('clickPanel', this.destination.id);
+                EventBus.$emit('clickPanel', this.destination.id);
             }
         },
     }

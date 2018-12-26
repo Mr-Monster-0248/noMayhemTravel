@@ -4,7 +4,7 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
         <b-navbar-brand href="#">
-            <img alt="logo" :src="uri + 'img/logo.png'" style="width: 50px; height: 51px">
+            <img :src="this.base_url + 'img/logo.png'" alt="logo" style="width: 50px; height: 51px">
             IMMERSION TIME
         </b-navbar-brand>
 
@@ -26,9 +26,9 @@
         components: {Search},
         data: function () {
             return {
-                    uri: process.env.BASE_URL
-                };
-            }
+                base_url: process.env.BASE_URL
+            };
+        }
     };
 </script>
 

@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import MapPanel from "./components/MapPanel";
 import MainVue from "./components/MainVue";
 
-Vue.use(Router)
+Vue.use(Router);
 
-export function createRouter () {
+export function createRouter() {
     return new Router({
         mode: 'history',
         base: process.env.NODE_ENV === 'production' ? '/ImmersionTime/' : '/',
