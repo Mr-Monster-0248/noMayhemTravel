@@ -1,58 +1,19 @@
 <template>
     <!-- Root of App -->
     <div id="app">
-        <Navbar/>
-        <MainMap/>
-        <MapLegend/>
-        <!-- b-tags are from bootstrap vue -->
-        <b-container fluid style="max-width: 1700px;">
-            <b-row>
-                <b-col class="maincol" md="6" sm="12">
-                    <MainInfo/>
-                </b-col>
-                <b-col class="maincol" md="6" sm="12">
-                    <MainFormLoader/>
-                </b-col>
-            </b-row>
-
-            <b-row>
-                <b-col cols="12">
-                    <Result/>
-                </b-col>
-            </b-row>
-
-        </b-container>
-
-        <Footer/>
-
-        <!-- Panel, hidden by default -->
-        <CustomPanel/>
+        <MainVue></MainVue>
 
     </div>
 </template>
 
 <script>
-    import MainMap from "./components/MainMap";
-    import Navbar from "./components/TheNavbar";
-    import MainFormLoader from "./components/MainFormLoader";
-    import MainInfo from "./components/MainInfo";
-    import Footer from "./components/TheFooter"
-    import CustomPanel from "./components/MapPanel"
-    import MapLegend from "./components/MapLegend";
-    import Result from "./components/TheResult";
-
+    import MainVue from "./components/MainVue";
 
     export default {
         name: "app",
         components: {
-            Result,
-            MapLegend,
-            Footer,
-            MainFormLoader,
-            Navbar,
-            MainMap,
-            CustomPanel,
-            MainInfo
+
+            MainVue,
         },
 
         methods: {}

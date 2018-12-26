@@ -17,25 +17,6 @@
                         </b-button>
                     </div>
                 </div>
-
-            </b-card>
-            <b-card :header="'<h1 class=\'popup\'>'+this.destination.country+'</h1>'"
-                    bg-variant="dark"
-                    class="text-center"
-                    text-variant="white"
-                    v-else>
-                <div class="row align-items-center">
-                    <div class="popuptext">
-                        <h2 class='popup'>{{ this.destination.name }}</h2>
-                        <div class="button">
-                            <b-button @click="launchPanel"
-                                      class="d-flex align-items-end"
-                                      variant="primary">En savoir plus
-                            </b-button>
-                        </div>
-                    </div>
-                </div>
-
             </b-card>
         </div>
 
@@ -53,7 +34,8 @@
                 country: "",
                 id: "",
                 city: ""
-            }
+            },
+
         },
 
         data() {
@@ -62,7 +44,8 @@
 
         methods: {
             launchPanel() {
-                EventBus.$emit('clickPanel', this.destination.id);
+console.log("Sent!");
+EventBus.$emit('clickPanel', this.destination.id);
             }
         },
     }

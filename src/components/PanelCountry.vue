@@ -1,6 +1,6 @@
 <template>
     <div id="panelCountry" v-if="ok">
-        <div class="header" v-bind:style="{ 'background-image': 'url(img/country-panel/'+this.idJson+'.jpg)'}">
+        <div class="header" v-bind:style="{ 'background-image': 'url(/img/country-panel/'+this.idJson+'.jpg)'}">
             <div class="header-content">
                 <b-row>
                     <b-col md="10" sm="12">
@@ -69,7 +69,7 @@
         },
         created() {
             // Fetch the right file, put it in this.destination
-            fetch('country/' + this.idJson + '.json')
+            fetch('/country/' + this.idJson + '.json')
                 .then(response => response.text())
                 .then(text => {
                     try {
