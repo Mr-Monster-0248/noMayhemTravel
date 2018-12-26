@@ -49,3 +49,9 @@ Not implemented at the moment.
 -- Plugins: Markdown Navigator
 - VS Code
 
+
+## Dev
+### CI
+ To skip a build, put "[skip travis]" or "[skip ci]" in the title of your commit.
+ <br/>Ex: "[skip ci] Update Readme"
+
