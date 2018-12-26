@@ -4,7 +4,7 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
         <b-navbar-brand href="#">
-            <img alt="logo" src="/../../img/logo.png" style="width: 50px; height: 51px">
+            <img alt="logo" :src="uri + 'img/logo.png'" style="width: 50px; height: 51px">
             IMMERSION TIME
         </b-navbar-brand>
 
@@ -23,7 +23,12 @@
 
     export default {
         name: "Navbar",
-        components: {Search}
+        components: {Search},
+        data: function () {
+            return {
+                    uri: process.env.BASE_URL
+                };
+            }
     };
 </script>
 
