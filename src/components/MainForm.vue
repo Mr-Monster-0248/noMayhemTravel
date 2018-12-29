@@ -108,7 +108,7 @@
                     this.form.choices = [];
                 }
 
-                EventBus.$emit("displayRes", findDest(this.form))
+                EventBus.$emit("displayRes", findDest(this.form));
             },
             onReset(evt) {
                 evt.preventDefault();

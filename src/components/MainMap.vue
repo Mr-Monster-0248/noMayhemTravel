@@ -118,7 +118,7 @@
                     propsData: {
                         destination: place.properties
                     }
-                }).$mount("#vue-popup-content")
+                }).$mount("#vue-popup-content");
             },
             flyTo(id) {
                 var data = this.source;

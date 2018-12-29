@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import MainForm from "./MainForm"
+    import MainForm from "./MainForm";
 
     export default {
         name: "MainFormLoader",
