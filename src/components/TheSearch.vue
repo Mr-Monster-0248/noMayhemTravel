@@ -28,15 +28,15 @@
     // Vue component mixed with trie
     // My heads hurts
 
-    import {EventBus} from './../event-bus.js';
+    import {EventBus} from "./../event-bus.js";
 
     export default {
         name: "Search",
         data() {
             return {
-                searchInput: '',
+                searchInput: "",
                 isOpen: false,
-                endSym: Symbol.for('end'),
+                endSym: Symbol.for("end"),
                 tree: Object,
                 dict: [],
                 TrieDesc: {
@@ -57,23 +57,23 @@
                             }
                             point = point[e];
                             if (word.length - 1 === i) {
-                                point[Symbol.for('end')] = true
+                                point[Symbol.for("end")] = true;
                             }
                         });
                     },
                     wordToLetterArray: function (word) {
-                        return word.split('')
+                        return word.split("");
                     },
                     goTo: function (o, wp) {
                         if (!wp.length) {
-                            return o
+                            return o;
                         }
                         var firstLetter = wp[0];
                         var point = o[firstLetter];
                         return point ? this.goTo(point, this.tail(wp)) : {};
                     },
                     tail: function (arr) {
-                        return arr.slice(1)
+                        return arr.slice(1);
                     },
                     autoComplete(tree, word_input) {
                         var point = this.goTo(tree.tree, word_input);
@@ -81,16 +81,16 @@
 
                         function reduceObjToArr(obj, trace) {
                             for (var k in obj) {
-                                if (obj[k][Symbol.for('end')]) {
-                                    stack.push(trace + k)
+                                if (obj[k][Symbol.for("end")]) {
+                                    stack.push(trace + k);
                                 }
-                                reduceObjToArr(obj[k], trace + k)
+                                reduceObjToArr(obj[k], trace + k);
                             }
                         }
 
-                        reduceObjToArr(point, '');
+                        reduceObjToArr(point, "");
                         return stack.map(function (e) {
-                            return word_input + e
+                            return word_input + e;
                         });
                     }
                 },
@@ -117,14 +117,14 @@
             this.add("Stony brook, USA", "stonybrook", ["*l", "stonybrook", "stonybrooke", "usaa", "états uniss", "etats uniss", "etat uniss", "état unis", "stony brookk", "stonybrooke", "new yorkk", "newyorkk"]);
         },
         mounted() {
-            document.addEventListener('click', this.handleClickOutside)
+            document.addEventListener("click", this.handleClickOutside);
         },
         destroyed() {
-            document.removeEventListener('click', this.handleClickOutside)
+            document.removeEventListener("click", this.handleClickOutside);
         },
         methods: {
             clickedResult(id) {
-                EventBus.$emit('flyTo', id);
+                EventBus.$emit("flyTo", id);
                 this.isOpen = false;
             },
             handleClickOutside: function (evt) {
@@ -150,13 +150,13 @@
             },
             returnName: function (alias) {
                 for (var i = 0; i < this.dict.length; i++) {
-                    if (this.dict[i]["key"] == alias) {
+                    if (this.dict[i]["key"] === alias) {
                         return this.dict[i].name;
                     }
                 }
             }, returnId: function (alias) {
                 for (var i = 0; i < this.dict.length; i++) {
-                    if (this.dict[i]["key"] == alias) {
+                    if (this.dict[i]["key"] === alias) {
                         return this.dict[i].id;
                     }
                 }
@@ -165,14 +165,14 @@
                 var t = this.TrieProto.autoComplete(this.tree, input);
 
                 for (i = 0; i < t.length; i++) {
-                    t[i] = this.returnId(t[i])
+                    t[i] = this.returnId(t[i]);
                 }
                 t = [...new Set(t)];
                 var v = [];
                 for (var i = 0; i < t.length; i++) {
                     v[i] = [];
                     v[i][0] = this.returnName(t[i]);
-                    v[i][1] = this.returnId(t[i])
+                    v[i][1] = this.returnId(t[i]);
                 }
                 return v;
             }
@@ -181,7 +181,7 @@
             search: function () {
                 if (this.searchInput) {
                     this.isOpen = true;
-                    this.autocompleteList = this.returnAutocomplete(this.searchInput.toLowerCase())
+                    this.autocompleteList = this.returnAutocomplete(this.searchInput.toLowerCase());
                 }
             }
         }
@@ -199,6 +199,7 @@
         padding: 0;
         margin: 0;
         border: 1px solid #eeeeee;
+        border-radius: 4px;
         height: 120px;
         overflow: auto;
 
@@ -207,10 +208,8 @@
         left: 0;
         width: 100%;
         max-height: 200px;
-        overflow: auto;
         z-index: 9999;
-        border: 1px solid #eeeeee;
-        border-radius: 4px;
+
         background-color: #fff;
         box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.4);
     }
