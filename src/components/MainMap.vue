@@ -17,7 +17,7 @@
     </div>
 </template>
 <script>
-    import {EventBus} from './../event-bus.js';
+    import {EventBus} from "./../event-bus.js";
 
     import Mapbox from "mapbox-gl-vue";
     import PopupCard from "./MapPopup";
@@ -37,50 +37,49 @@
             }
         },
         mounted() {
-            EventBus.$on('flyTo', (id) => {
+            EventBus.$on("flyTo", (id) => {
                 this.flyTo(id);
             })
         },
         methods: {
-            mapInit: function (map) {
+            mapInit(map) {
                 this.map = map;
             },
-            mapLoaded: function (map) {
+            mapLoaded(map) {
                 // list all layers
-                // console.log(map.getSource('composite').vectorLayerIds);
+                // console.log(map.getSource("composite").vectorLayerIds);
 
                 // Get all points from our layers
-                var source_solo = map.querySourceFeatures('composite', {
-                    'sourceLayer': 'solo'
+                const sourceSolo = map.querySourceFeatures("composite", {
+                    "sourceLayer": "solo"
                 });
-                var source_group = map.querySourceFeatures('composite', {
-                    'sourceLayer': 'test'
+                const sourceGroup = map.querySourceFeatures("composite", {
+                    "sourceLayer": "test"
                 });
 
                 // Merge them and keep only the geometry (coordinates)
-                var ar = {};
-                var i;
-                for (i = 0; i < source_group.length; i++) {
-                    // console.log(source_group[i]);
-                    ar[source_group[i].properties.id] = source_group[i].geometry;
+                let  ar = {};
+                let i;
+                for (i = 0; i < sourceGroup.length; i++) {
+                    // console.log(sourceGroup[i]);
+                    ar[sourceGroup[i].properties.id] = sourceGroup[i].geometry;
                 }
-                for (i = 0; i < source_solo.length; i++) {
-                    //  console.log(source_solo[i]);
-                    ar[source_solo[i].properties.id] = source_solo[i].geometry;
+                for (i = 0; i < sourceSolo.length; i++) {
+                    //  console.log(sourceSolo[i]);
+                    ar[sourceSolo[i].properties.id] = sourceSolo[i].geometry;
                 }
                 this.source = ar;
             },
-            mouseOverLabel: function (map, e) {
+            mouseOverLabel(map, e) {
                 // Put the click cursor on our markers
                 const features = map.queryRenderedFeatures(e.point, {
-                    layers: ['group', 'group_label', 'solo', 'solo_label']
+                    layers: ["group", "group_label", "solo", "solo_label"]
                 });
-                map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+                map.getCanvas().style.cursor = (features.length) ? "pointer" : "";
             },
-            mapClicked: function (map, e) {
+            mapClicked(map, e) {
                 // We get the features from the point we clicked
-
-                var features = map.queryRenderedFeatures(e.point);
+                const features = map.queryRenderedFeatures(e.point);
                 // console.log(features);
                 // If clicked on a point of our layers...
                 if (features.length !== 0) {
@@ -90,20 +89,20 @@
                         || features[0].layer.id === "group_label"
                     ) {
                         // Select the main feature (our layer is first)
-                        var clickedPoint = features[0];
+                        const clickedPoint = features[0];
                         this.createPopUp(map, clickedPoint);
                     }
                 }
             },
 
-            createPopUp: function (map, place) {
+            createPopUp(map, place) {
                 // To check if properties were updated by Mapbox
                 map.flyTo({
                     center: place.geometry.coordinates
                 });
                 // Create an element <div id="vue-popup-content">
-                var div = window.document.createElement('div');
-                div.id = 'vue-popup-content';
+                var div = window.document.createElement("div");
+                div.id = "vue-popup-content";
                 // Add a 100px square in the div so it will go in the right place
                 div.style.height = "160px";
                 div.style.width = "260px";
@@ -119,9 +118,9 @@
                     propsData: {
                         destination: place.properties
                     }
-                }).$mount('#vue-popup-content')
+                }).$mount("#vue-popup-content")
             },
-            flyTo: function (id) {
+            flyTo(id) {
                 var data = this.source;
                 var goToFeature = data[id];
 

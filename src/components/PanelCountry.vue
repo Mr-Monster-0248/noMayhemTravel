@@ -59,8 +59,8 @@
 
 <script>
     export default {
-        name: 'PanelCountry',
-        props: ['idJson'],
+        name: "PanelCountry",
+        props: ["idJson"],
         data: function () {
             return {
                 base_url: process.env.BASE_URL,
@@ -71,12 +71,11 @@
         },
         created() {
             // Fetch the right file, put it in this.destination
-            fetch(process.env.BASE_URL + 'country/' + this.idJson + '.json')
+            fetch(process.env.BASE_URL + "country/" + this.idJson + ".json")
                 .then(response => response.text())
                 .then(text => {
                     try {
-                        const data = JSON.parse(text);
-                        this.destination = data;
+                        this.destination = JSON.parse(text);
                         this.ok = true;
                     } catch (err) {
                         // It is text, do you text handling here

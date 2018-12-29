@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import {EventBus} from './../event-bus.js';
+    import {EventBus} from "./../event-bus.js";
     import PanelCountry from "./PanelCountry";
 
     export default {
@@ -36,14 +36,14 @@
             return {
                 open: false,
                 // open: this.$route.meta.showModal,
-                idJson: 'none'
+                idJson: "none"
             }
         },
 
         mounted() {
             this.open = this.$route.meta.showModal;
-            EventBus.$on('clickPanel', (idJson) => {
-                this.$router.push({name: 'destination', params: {id: idJson}});
+            EventBus.$on("clickPanel", (idJson) => {
+                this.$router.push({name: "destination", params: {id: idJson}});
                 //  this.open = !this.open;
                 //this.idJson = idJson;
             })

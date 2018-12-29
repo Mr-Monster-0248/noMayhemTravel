@@ -9,7 +9,7 @@
 
                 <div class="row align-items-center">
                     <div class="popuptext">
-                        <h2 class='popup'>{{ this.destination.name }}</h2>
+                        <h2 class="popup">{{ this.destination.name }}</h2>
 
                         <b-button @click="launchPanel"
                                   class="d-flex align-items-end"
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-    import {EventBus} from './../event-bus.js';
+    import {EventBus} from "./../event-bus.js";
 
     export default {
         name: "PopupCard",
@@ -44,7 +44,7 @@
 
         methods: {
             launchPanel() {
-                EventBus.$emit('clickPanel', this.destination.id);
+                EventBus.$emit("clickPanel", this.destination.id);
             }
         },
     }

@@ -19,11 +19,11 @@
 
 <script>
     const items = [
-        {Nom: 'Gabriel DUGNY', poste: 'Chef de projet'},
-        {Nom: 'Thibault LEPEZ', poste: 'Responsable technique'},
-        {Nom: 'Aïda LEMDANI', poste: 'Responsable design'},
-        {Nom: 'Louise BOUREY', poste: 'Responsable communication'},
-        {Nom: 'Vincent LACROUTS', poste: 'Testeur agile'}
+        {Nom: "Gabriel DUGNY", poste: "Chef de projet"},
+        {Nom: "Thibault LEPEZ", poste: "Responsable technique"},
+        {Nom: "Aïda LEMDANI", poste: "Responsable design"},
+        {Nom: "Louise BOUREY", poste: "Responsable communication"},
+        {Nom: "Vincent LACROUTS", poste: "Testeur agile"}
 
     ];
 
@@ -31,8 +31,7 @@
         data() {
             return {
                 name: "MainInfo",
-
-                items: items
+                items
             }
         }
     }

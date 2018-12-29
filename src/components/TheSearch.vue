@@ -76,11 +76,11 @@
                         return arr.slice(1);
                     },
                     autoComplete(tree, word_input) {
-                        var point = this.goTo(tree.tree, word_input);
-                        var stack = [];
+                        const point = this.goTo(tree.tree, word_input);
+                        let stack = [];
 
                         function reduceObjToArr(obj, trace) {
-                            for (var k in obj) {
+                            for (const k in obj) {
                                 if (obj[k][Symbol.for("end")]) {
                                     stack.push(trace + k);
                                 }
@@ -136,7 +136,7 @@
                 return Object.create(this.TrieProto, this.TrieDesc);
             },
             add: function (name, id, id_aliases) {
-                for (var i = 0; i < id_aliases.length; i++) {
+                for (let i = 0; i < id_aliases.length; i++) {
                     this.addToDic(name, id, id_aliases[i]);
                     this.tree.insert(id_aliases[i]);
                 }
@@ -149,27 +149,27 @@
                 });
             },
             returnName: function (alias) {
-                for (var i = 0; i < this.dict.length; i++) {
+                for (let i = 0; i < this.dict.length; i++) {
                     if (this.dict[i]["key"] === alias) {
                         return this.dict[i].name;
                     }
                 }
             }, returnId: function (alias) {
-                for (var i = 0; i < this.dict.length; i++) {
+                for (let i = 0; i < this.dict.length; i++) {
                     if (this.dict[i]["key"] === alias) {
                         return this.dict[i].id;
                     }
                 }
             },
             returnAutocomplete: function (input) {
-                var t = this.TrieProto.autoComplete(this.tree, input);
+                let t = this.TrieProto.autoComplete(this.tree, input);
 
-                for (i = 0; i < t.length; i++) {
+                for (let i = 0; i < t.length; i++) {
                     t[i] = this.returnId(t[i]);
                 }
                 t = [...new Set(t)];
                 var v = [];
-                for (var i = 0; i < t.length; i++) {
+                for (let i = 0; i < t.length; i++) {
                     v[i] = [];
                     v[i][0] = this.returnName(t[i]);
                     v[i][1] = this.returnId(t[i]);
