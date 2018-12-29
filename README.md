@@ -1,5 +1,4 @@
-# ImmersionTime ! [![Build Status](https://travis-ci.com/Dugnychon/ImmersionTime.svg?token=p5pFoFaqAiLRDSEHnrdp&branch=master)](https://travis-ci.com/Dugnychon/ImmersionTime)
-
+# ImmersionTime ! [![Build Status](https://travis-ci.com/Dugnychon/ImmersionTime.svg?token=p5pFoFaqAiLRDSEHnrdp&branch=master)](https://travis-ci.com/Dugnychon/ImmersionTime) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6fc05f8e22cf4ba1b00fafde61f788f2)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Dugnychon/ImmersionTime&amp;utm_campaign=Badge_Grade)
 Project aimed to help Efrei students choose their Immersion (abroad study) destination.
 
 ## Install
