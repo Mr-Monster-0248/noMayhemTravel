@@ -130,7 +130,7 @@
             EventBus.$on("displayRes", (result) => {
                 this.result = result;
                 this.shown = true;
-                location.hash = "#result"
+                location.hash = "#result";
                 /*for (let uni of this.result.easy.univ) {
                     console.log("on est là")
                     fetch("country/" + this.result.easy.univ[uni] + ".json")

@@ -1,7 +1,7 @@
 <template>
     <div id="panelCountry" v-if="ok">
         <div class="header"
-             v-bind:style="{ 'background-image': 'url('+this.base_url+'img/country-panel/'+this.idJson+'.jpg)'}">
+             v-bind:style="{ 'background-image': 'url('+this.baseUrl+'img/country-panel/'+this.idJson+'.jpg)'}">
             <div class="header-content">
                 <b-row>
                     <b-col md="10" sm="12">
@@ -63,7 +63,7 @@
         props: ["idJson"],
         data: function () {
             return {
-                base_url: process.env.BASE_URL,
+                baseUrl: process.env.BASE_URL,
                 destination: {},
                 cost: {},
                 ok: false
@@ -72,8 +72,8 @@
         created() {
             // Fetch the right file, put it in this.destination
             fetch(process.env.BASE_URL + "country/" + this.idJson + ".json")
-                .then(response => response.text())
-                .then(text => {
+                .then((response) => response.text())
+                .then((text) => {
                     try {
                         this.destination = JSON.parse(text);
                         this.ok = true;

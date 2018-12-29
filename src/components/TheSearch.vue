@@ -75,8 +75,8 @@
                     tail: function (arr) {
                         return arr.slice(1);
                     },
-                    autoComplete(tree, word_input) {
-                        const point = this.goTo(tree.tree, word_input);
+                    autoComplete(tree, wordInput) {
+                        const point = this.goTo(tree.tree, wordInput);
                         let stack = [];
 
                         function reduceObjToArr(obj, trace) {
@@ -90,7 +90,7 @@
 
                         reduceObjToArr(point, "");
                         return stack.map(function (e) {
-                            return word_input + e;
+                            return wordInput + e;
                         });
                     }
                 },
@@ -127,41 +127,41 @@
                 EventBus.$emit("flyTo", id);
                 this.isOpen = false;
             },
-            handleClickOutside: function (evt) {
+            handleClickOutside(evt) {
                 if (!this.$el.contains(evt.target)) {
                     this.isOpen = false;
                 }
             },
-            createTrie: function () {
+            createTrie() {
                 return Object.create(this.TrieProto, this.TrieDesc);
             },
-            add: function (name, id, id_aliases) {
+            add(name, id, id_aliases) {
                 for (let i = 0; i < id_aliases.length; i++) {
                     this.addToDic(name, id, id_aliases[i]);
                     this.tree.insert(id_aliases[i]);
                 }
             },
-            addToDic: function (name, id, alias) {
+            addToDic(name, id, alias) {
                 this.dict.push({
                     key: alias,
-                    id: id,
-                    name: name
+                    id,
+                    name
                 });
             },
-            returnName: function (alias) {
+            returnName(alias) {
                 for (let i = 0; i < this.dict.length; i++) {
                     if (this.dict[i]["key"] === alias) {
                         return this.dict[i].name;
                     }
                 }
-            }, returnId: function (alias) {
+            }, returnId(alias) {
                 for (let i = 0; i < this.dict.length; i++) {
                     if (this.dict[i]["key"] === alias) {
                         return this.dict[i].id;
                     }
                 }
             },
-            returnAutocomplete: function (input) {
+            returnAutocomplete(input) {
                 let t = this.TrieProto.autoComplete(this.tree, input);
 
                 for (let i = 0; i < t.length; i++) {
