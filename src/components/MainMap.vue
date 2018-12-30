@@ -153,11 +153,11 @@
             setLayer(id, state) {
                 if (this.successLoaded) {
                     if (!state) {
-                        this.map.setLayoutProperty(id, 'visibility', 'none');
-                        this.map.setLayoutProperty(id + "_label", 'visibility', 'none');
+                        this.map.setLayoutProperty(id, "visibility", "none");
+                        this.map.setLayoutProperty(id + "_label", "visibility", "none");
                     } else {
-                        this.map.setLayoutProperty(id, 'visibility', 'visible');
-                        this.map.setLayoutProperty(id + "_label", 'visibility', 'visible');
+                        this.map.setLayoutProperty(id, "visibility", "visible");
+                        this.map.setLayoutProperty(id + "_label", "visibility", "visible");
                     }
                 }
             }

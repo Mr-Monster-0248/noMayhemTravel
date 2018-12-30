@@ -50,6 +50,7 @@
 <style scoped>
     .legendbar {
         background-color: #00222E;
+        font-size: 0.8rem;
         color: white;
         min-height: 30px;
     }
