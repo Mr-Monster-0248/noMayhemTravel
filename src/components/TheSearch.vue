@@ -61,10 +61,10 @@
                             }
                         });
                     },
-                    wordToLetterArray: function (word) {
+                    wordToLetterArray(word) {
                         return word.split("");
                     },
-                    goTo: function (o, wp) {
+                    goTo(o, wp) {
                         if (!wp.length) {
                             return o;
                         }
@@ -72,7 +72,7 @@
                         var point = o[firstLetter];
                         return point ? this.goTo(point, this.tail(wp)) : {};
                     },
-                    tail: function (arr) {
+                    tail(arr) {
                         return arr.slice(1);
                     },
                     autoComplete(tree, wordInput) {
@@ -135,10 +135,10 @@
             createTrie() {
                 return Object.create(this.TrieProto, this.TrieDesc);
             },
-            add(name, id, id_aliases) {
-                for (let i = 0; i < id_aliases.length; i++) {
-                    this.addToDic(name, id, id_aliases[i]);
-                    this.tree.insert(id_aliases[i]);
+            add(name, id, idAliases) {
+                for (let i = 0; i < idAliases.length; i++) {
+                    this.addToDic(name, id, idAliases[i]);
+                    this.tree.insert(idAliases[i]);
                 }
             },
             addToDic(name, id, alias) {

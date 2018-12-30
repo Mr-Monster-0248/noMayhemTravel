@@ -2,8 +2,15 @@
     <b-container class="legendbar" fluid>
         <div class="d-flex justify-content-between">
             <div>
-                <p><span class="dot dest-group"></span> Destination en groupe <span class="dot dest-solo"></span>
-                    Destination en solo </p>
+                <p>
+                    <switches v-model="group" @input="switchGroup" theme="custom"
+                              color="group"></switches>
+                    Destination en groupe
+
+                    <switches v-model="solo" @input="switchSolo" theme="custom"
+                              color="solo"></switches>
+                    Destination en solo (INT)
+                </p>
             </div>
             <div>
                 <p>Cliquez sur une destination pour en savoir plus.</p>
@@ -14,8 +21,29 @@
 </template>
 
 <script>
+    import Switches from "vue-switches";
+
+    import {EventBus} from "./../event-bus.js";
+
     export default {
-        name: "MapLegend"
+        name: "MapLegend",
+        components: {
+            Switches
+        },
+        data() {
+            return {
+                solo: true,
+                group: true
+            }
+        },
+        methods: {
+            switchSolo(state) {
+                EventBus.$emit("setLayer", "solo", state)
+            },
+            switchGroup(state) {
+                EventBus.$emit("setLayer", "group", state)
+            }
+        }
     }
 </script>
 
@@ -30,19 +58,50 @@
         padding-top: 2px;
         margin-bottom: 0px;
     }
+</style>
 
-    .dot {
-        height: 13px;
-        width: 13px;
-        border-radius: 50%;
-        display: inline-block;
+<style lang="scss">
+    .vue-switcher-theme--custom {
+        &.vue-switcher-color--group {
+            div {
+                background-color: lighten(#a81a1a, 10%);
+
+                &:after {
+                    background-color: darken(#a81a1a, 5%);
+                }
+            }
+
+            &.vue-switcher--unchecked {
+                div {
+                    background-color: lighten(#a81a1a, 30%);
+
+                    &:after {
+                        background-color: lighten(#a81a1a, 10%);
+                    }
+                }
+            }
+        }
     }
 
-    .dest-group {
-        background-color: #a81a1a;
-    }
+    .vue-switcher-theme--custom {
+        &.vue-switcher-color--solo {
+            div {
+                background-color: lighten(#ffd000, 10%);
 
-    .dest-solo {
-        background-color: #ffd000;
+                &:after {
+                    background-color: darken(#ffd000, 5%);
+                }
+            }
+
+            &.vue-switcher--unchecked {
+                div {
+                    background-color: lighten(#ffd000, 30%);
+
+                    &:after {
+                        background-color: lighten(#ffd000, 10%);
+                    }
+                }
+            }
+        }
     }
 </style>

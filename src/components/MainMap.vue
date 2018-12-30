@@ -13,7 +13,7 @@
 
         ></mapbox>
 
-        <!--<button v-on:click="flyTo('cork')">Test FlyTo cork</button>-->
+        <!--<button v-on:click="switchLayer('solo', 'solo_label')">Test</button>-->
     </div>
 </template>
 <script>
@@ -33,13 +33,20 @@
             return {
                 PopupContent: Vue.extend(PopupCard),
                 map: Object,
-                source: Object
+                source: Object,
+                successLoaded: false
             }
         },
         mounted() {
             EventBus.$on("flyTo", (id) => {
                 this.flyTo(id);
-            })
+            });
+            /* EventBus.$on("switchLayer", (id) => {
+                this.switchLayer(id);
+            }); */
+            EventBus.$on("setLayer", (id, state) => {
+                this.setLayer(id, state);
+            });
         },
         methods: {
             mapInit(map) {
@@ -58,7 +65,7 @@
                 });
 
                 // Merge them and keep only the geometry (coordinates)
-                let  ar = {};
+                let ar = {};
                 let i;
                 for (i = 0; i < sourceGroup.length; i++) {
                     // console.log(sourceGroup[i]);
@@ -69,6 +76,7 @@
                     ar[sourceSolo[i].properties.id] = sourceSolo[i].geometry;
                 }
                 this.source = ar;
+                this.successLoaded = true;
             },
             mouseOverLabel(map, e) {
                 // Put the click cursor on our markers
@@ -94,7 +102,6 @@
                     }
                 }
             },
-
             createPopUp(map, place) {
                 // To check if properties were updated by Mapbox
                 map.flyTo({
@@ -106,7 +113,6 @@
                 // Add a 100px square in the div so it will go in the right place
                 div.style.height = "160px";
                 div.style.width = "260px";
-
 
                 // Create a new Mapbox Popup, put it in the DOM
                 new mapboxgl.Popup({closeOnClick: true})
@@ -129,10 +135,34 @@
                     zoom: 6
                 });
 
+            },
+            /*switchLayer(id) {
+                for (var i=0; i < arguments.length; i++) {
+                    id = arguments[i];
+                    const visibility = this.map.getLayoutProperty(id, 'visibility');
+                    if (visibility === 'visible') {
+                        this.map.setLayoutProperty(id, 'visibility', 'none');
+                        this.className = '';
+                    } else {
+                        this.className = 'active';
+                        this.map.setLayoutProperty(id, 'visibility', 'visible');
+                    }
+                }
+
+            },*/
+            setLayer(id, state) {
+                if (this.successLoaded) {
+                    if (!state) {
+                        this.map.setLayoutProperty(id, 'visibility', 'none');
+                        this.map.setLayoutProperty(id + "_label", 'visibility', 'none');
+                    } else {
+                        this.map.setLayoutProperty(id, 'visibility', 'visible');
+                        this.map.setLayoutProperty(id + "_label", 'visibility', 'visible');
+                    }
+                }
             }
         }
-    }
-    ;
+    };
 </script>
 
 <style>

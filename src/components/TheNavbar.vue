@@ -23,7 +23,7 @@
     export default {
         name: "Navbar",
         components: {Search},
-        data: function () {
+        data() {
             return {
                 baseUrl: process.env.BASE_URL
             };
