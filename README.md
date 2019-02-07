@@ -63,6 +63,6 @@ Ex: "\[skip ci] Update Readme"
  We cannot modify the behaviour of the server, so we copy index.html to 404.html,
  the page served by github for a 404. So the app always works.
 
-Issues ?
+#### Issues ?
 
 -   SEO, if HTTP header is of type 404...
