@@ -14,9 +14,9 @@ deploy:
   keep-history: true
   on:
     branch: master
-  target-branch: gh-pages
+  target-branch: master
   local-dir: '${TRAVIS_BUILD_DIR}/dist'
-  repo: Dugnychon/ImmersionTime
+  repo: immersiontime/immersiontime.github.io
   name: Immersion Bot
   verbose: true
 
