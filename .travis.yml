@@ -5,19 +5,25 @@ node_js:
 install: 'npm ci'
 script: 'npm run build'
 
-# Optional: disable email notifications about the outcome of your builds
-notifications:
-  email: false
+before_deploy: 'cd dist && cp -v index.html 404.html'
 
 deploy:
   provider: pages
-  skip-cleanup: true
+  skip-cleanup: true # So travis doesn't erase everything before deploying...
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
     branch: master
-  target-branch: master
+  target-branch: gh-pages
   local-dir: '${TRAVIS_BUILD_DIR}/dist'
-  repo: immersiontime/immersiontime.github.io
+  repo: Dugnychon/ImmersionTime
   name: Immersion Bot
   verbose: true
+
+# Optional: disable email notifications about the outcome of your builds
+notifications:
+  email: false
+
+# We don't need the 50 last commit to build (no git operation performed)
+git:
+  depth: 3

@@ -16,7 +16,7 @@
                     <b-form-group id="inputToeicGroup"
                                   label="Toeic en fin L1"
                                   label-for="inputToiec"
-                                  v-if="form.section == 'Internationale'">
+                                  v-if="form.section == "Internationale"">
                         <b-form-input id="inputToiec"
                                       placeholder="Votre Toeic en fin L1"
                                       required
@@ -79,8 +79,8 @@
 </template>
 
 <script>
-    import findDest from './../algo';
-    import {EventBus} from './../event-bus.js';
+    import findDest from "./../algo";
+    import {EventBus} from "./../event-bus.js";
 
 
     export default {
@@ -96,7 +96,7 @@
                     budget: null,
                     checked: [],
                 },
-                section: ['Internationale', 'Classique', 'Bio-numérique', 'Renforcée'],
+                section: ["Internationale", "Classique", "Bio-numérique", "Renforcée"],
                 show: false
             }
         },
@@ -105,10 +105,10 @@
             onSubmit(evt) {
                 evt.preventDefault();
                 if (this.show === false) {
-                    this.form.choices = []
+                    this.form.choices = [];
                 }
 
-                EventBus.$emit('displayRes', findDest(this.form))
+                EventBus.$emit("displayRes", findDest(this.form));
             },
             onReset(evt) {
                 evt.preventDefault();
@@ -121,11 +121,11 @@
                 this.form.checked = [];
                 /* Trick to reset/clear native browser form validation state */
                 this.$nextTick(() => {
-                    this.show = true
+                    this.show = true;
                 });
             },
         }
-    }
+    };
 </script>
 
 <style scoped>

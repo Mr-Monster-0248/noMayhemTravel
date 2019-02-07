@@ -4,12 +4,11 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
         <b-navbar-brand href="#">
-            <img alt="logo" src="img/logo.png" style="width: 50px; height: 51px">
+            <img :src="this.baseUrl + 'img/logo.png'" alt="logo" style="width: 50px; height: 51px">
             IMMERSION TIME
         </b-navbar-brand>
 
         <b-collapse id="nav_collapse" is-nav>
-
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
                 <search></search>
@@ -23,7 +22,12 @@
 
     export default {
         name: "Navbar",
-        components: {Search}
+        components: {Search},
+        data() {
+            return {
+                baseUrl: process.env.BASE_URL
+            };
+        }
     };
 </script>
 

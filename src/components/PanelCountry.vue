@@ -1,6 +1,7 @@
 <template>
     <div id="panelCountry" v-if="ok">
-        <div class="header" v-bind:style="{ 'background-image': 'url(img/country-panel/'+this.idJson+'.jpg)'}">
+        <div class="header"
+             v-bind:style="{ 'background-image': 'url('+this.baseUrl+'img/country-panel/'+this.idJson+'.jpg)'}">
             <div class="header-content">
                 <b-row>
                     <b-col md="10" sm="12">
@@ -58,10 +59,11 @@
 
 <script>
     export default {
-        name: 'PanelCountry',
-        props: ['idJson'],
+        name: "PanelCountry",
+        props: ["idJson"],
         data: function () {
             return {
+                baseUrl: process.env.BASE_URL,
                 destination: {},
                 cost: {},
                 ok: false
@@ -69,12 +71,11 @@
         },
         created() {
             // Fetch the right file, put it in this.destination
-            fetch('country/' + this.idJson + '.json')
-                .then(response => response.text())
-                .then(text => {
+            fetch(process.env.BASE_URL + "country/" + this.idJson + ".json")
+                .then((response) => response.text())
+                .then((text) => {
                     try {
-                        const data = JSON.parse(text);
-                        this.destination = data;
+                        this.destination = JSON.parse(text);
                         this.ok = true;
                     } catch (err) {
                         // It is text, do you text handling here

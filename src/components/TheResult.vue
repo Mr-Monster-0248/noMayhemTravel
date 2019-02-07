@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import {EventBus} from './../event-bus.js';
+    import {EventBus} from "./../event-bus.js";
 
     export default {
         name: "Result",
@@ -121,19 +121,19 @@
 
         methods: {
             flyTo(id) {
-                EventBus.$emit('flyTo', id);
+                EventBus.$emit("flyTo", id);
                 window.scrollTo(0, 0);
             },
         },
 
         mounted() {
-            EventBus.$on('displayRes', (result) => {
+            EventBus.$on("displayRes", (result) => {
                 this.result = result;
                 this.shown = true;
-                location.hash = "#result"
+                location.hash = "#result";
                 /*for (let uni of this.result.easy.univ) {
                     console.log("on est là")
-                    fetch('country/' + this.result.easy.univ[uni] + '.json')
+                    fetch("country/" + this.result.easy.univ[uni] + ".json")
                         .then(response => response.text())
                         .then(text => {
                             try {
